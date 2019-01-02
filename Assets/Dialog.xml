@@ -1,0 +1,25 @@
+<XmlLayout xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Packages/ThirdParty/XmlLayout/UI/XmlLayout/Configuration/XmlLayout.xsd">
+	<Include path="Ui/Xml/Design/DesignStyles.xml" />
+	
+	<Panel id="panel" showAnimation="FadeIn" hideAnimation="FadeOut" animationDuration="0.1" class="dialog-background">
+		<Panel id="form" class="panel border" width="70%" height="70%" padding="20">
+			<TextMeshPro class="text-lg" text="EDIT PART XML" rectAlignment="UpperCenter" height="40" alignment="Top" />
+			<VerticalLayout spacing="10" childAlignment="UpperCenter" childForceExpandHeight="false" offsetMax="0 -40">
+				<Panel class="row" preferredHeight="300">
+					<TextMeshProInputField id="xml-input" width="100%" height="100%" padding="10" lineType="MultiLineNewline" text="">
+						<TMP_Placeholder text="Part XML" alignment="TopLeft" />
+						<TMP_Text text="" alignment="TopLeft" />
+					</TextMeshProInputField>
+				</Panel>
+			</VerticalLayout>
+			<HorizontalLayout preferredHeight="50" childForceExpandWidth="false" alignment="right">
+				<Button id="cancel-button" class="btn btn-danger" preferredWidth="150" onclick="OnCancelButtonClicked()" alignment="right">
+					<TextMeshPro text="CANCEL" />
+				</Button>
+				<Button id="save-button" class="btn btn-primary" preferredWidth="150" onclick="OnApplyButtonClicked()" alignment="right">
+					<TextMeshPro text="APPLY" />
+				</Button>
+			</HorizontalLayout>
+		</Panel>
+	</Panel>
+</XmlLayout>

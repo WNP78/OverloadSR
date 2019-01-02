@@ -1,0 +1,63 @@
+<XmlLayout>
+	<Include path="Ui/Xml/Design/DesignStyles.xml" />
+	<Include path="Ui/Xml/Styles.xml" />
+	<Defaults>
+		<Spinner class="overload-main-spinner" onClickSound="Ui/Audio/ButtonClicked" buttonColors="Button|ButtonHover|ButtonPressed|ButtonDisabled" rectAlignment="MiddleRight" width="200" />
+		<TextMeshProInputField class="item-input" preferredHeight="30" flexibleWidth="1" tooltipPosition="Below" navigation="Horizontal" />
+		<Button class="overload-delete-button" preferredWidth="30" flexibleWidth="0" tooltipPosition="Left" tooltip="Remove"/>
+		<Button class="overload-add-button" tooltipPosition="Below" tooltip="Add Item"/>
+		<HorizontalLayout class="overload-list-item" childForceExpandWidth="false" childForceExpandHeight="false" spacing="3" preferredHeight="20"/>
+		<Panel class="overload-group" preferredHeight="30" colors="ButtonHover|ButtonPressed|ButtonHover|Button"/>
+		<VerticalLayout class="overload-list-group" childForceExpandHeight="false" spacing="3" />
+		<Image class="group-arrow" color="LabelText" pivot="0.5 0.5" sprite="Ui/Sprites/Design/IconArrowRight" width="10" height="10" />
+		<HorizontalLayout class="overload-list-group>overload-list-item" padding="10 0 0 0" />
+		<VerticalLayout class="overload-list-group>overload-list-group" padding="10 0 0 0" />
+		
+		<Panel
+         class="group-expand-button"
+         preferredWidth="30"
+         preferredHeight="30"
+         borderSprite="Ui/Sprites/Border/Edge-Left-1px"
+         hoverClass="group-expand-button-hover"
+         pressClass="group-expand-button-pressed"
+         raycastTarget="true" color="Button"
+		onClickSound="Ui/Audio/ButtonClicked" audioMode="OneShot" />
+
+		<Panel class="group-expand-button-hover" color="ButtonHover" />
+		<Panel class="group-expand-button-pressed" color="ButtonPressed" />
+	</Defaults>
+	<VerticalLayout childForceExpandHeight="false" padding="10" spacing="10" pivot="0 1">
+		<TextMeshPro id="no-part" text="No part selected." class="label" alignment="top"/>
+		<Spinner id="element-spinner" class="overload-main-spinner">
+			<TextMeshPro text="Part"/>
+		</Spinner>
+		<VerticalLayout id="items-root" childForceExpandHeight="false" padding="0" spacing="3" pivot="0 1">
+			<HorizontalLayout id="overload-template-item" class="overload-list-item" active="false">
+				<TextMeshProInputField internalId="name-input" text="" class="item-input" tooltip="Item Name">
+					<TMP_Placeholder text="Name" alignment="left"/>
+					<TMP_Text text="" alignment="left"/>
+				</TextMeshProInputField>
+				<TextMeshProInputField internalId="value-input" text="" class="item-input" tooltip="Item Value">
+					<TMP_Placeholder text="Value" alignment="left"/>
+					<TMP_Text text="" alignment="left"/>
+				</TextMeshProInputField>
+				<Button internalId="delete-button" class="overload-delete-button btn audio-btn-big" >
+					<Text align="MiddleCenter">X</Text>
+				</Button>
+			</HorizontalLayout>
+			<HorizontalLayout childForceExpandHeight="false" childForceExpandWidth="true" spacing="3" flexibleWidth="1">
+				<Button id="overload-add-button" class="overload-add-button btn btn-big audio-btn-big">
+					<TextMeshPro align="center">Add Element</TextMeshPro>
+				</Button>
+			</HorizontalLayout>
+		</VerticalLayout>
+		<HorizontalLayout childForceExpandHeight="false" spacing="10">
+			<Button id="overload-reset-button" class="btn" text="Reset">
+				<TextMeshPro/>
+			</Button>
+			<Button id="overload-save-button" class="btn btn-primary" text="Save">
+				<TextMeshPro/>
+			</Button>
+		</HorizontalLayout>
+	</VerticalLayout>
+</XmlLayout>
