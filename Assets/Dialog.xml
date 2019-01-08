@@ -1,4 +1,4 @@
-<XmlLayout xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Packages/ThirdParty/XmlLayout/UI/XmlLayout/Configuration/XmlLayout.xsd">
+<XmlLayout xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Include path="Ui/Xml/Design/DesignStyles.xml" />
 	
 	<Panel id="panel" showAnimation="FadeIn" hideAnimation="FadeOut" animationDuration="0.1" class="dialog-background">
