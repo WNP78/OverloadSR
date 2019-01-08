@@ -7,7 +7,7 @@ namespace WNP78
 {
     public static class ReflectionUtils
     {
-        public static string tsn(this Array a)
+        public static string ToArrayString(this Array a)
         {
             string s = "{ ";
             foreach (object v in a)
