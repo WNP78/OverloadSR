@@ -52,6 +52,8 @@ namespace WNP78.Overload
                 */
                 var root = layout.GetElementById<RectTransform>("content-root");
                 GameObject obj = (GameObject)UiUtilities.CallS("CreateUiGameObject", "OverloadButton", root);
+                obj.AddComponent<LayoutElement>().minHeight = 30;
+                obj.transform.SetAsFirstSibling();
 
                 UiUtilities.GetMethods(ReflectionUtils.allBindingFlags).First(m => m.Name == "CreateXmlLayoutFromXml" && m.GetParameters().Length == 4).Invoke(null, new object[] { ButtonXML, obj, null, (Action<IXmlLayoutController>)OnButtonLayoutRebuilt });
             }
