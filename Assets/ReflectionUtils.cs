@@ -1,6 +1,7 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Linq;
+using System.Reflection;
 using System.Collections.Generic;
-using System;
 
 namespace WNP78
 {
@@ -35,6 +36,7 @@ namespace WNP78
             foreach (var asm in assemblies)
             {
                 t = asm.GetType(name);
+                if (t != null) { break; }
             }
             cachedTypes.Add(name, t);
             return t;
@@ -47,6 +49,10 @@ namespace WNP78
         public static object Call(this object obj, string name, params object[] args)
         {
             return GetMethodFast(obj.GetType(), name).Invoke(obj, args);
+        }
+        public static object CallO(this object obj, string name, params object[] args)
+        {
+            return GetMethodFast(obj.GetType(), name, args).Invoke(obj, args);
         }
         public static object GetP(this object obj, string name, params object[] index)
         {
@@ -84,6 +90,10 @@ namespace WNP78
         {
             return GetMethodFast(t, name).Invoke(null, args);
         }
+        public static object CallSO(this Type t, string name, params object[] args)
+        {
+            return GetMethodFast(t, name, args).Invoke(null, args);
+        }
         public static PropertyInfo GetPropFast(Type tp, string name)
         {
             Init();
@@ -102,9 +112,13 @@ namespace WNP78
             cachedProperties[tp].Add(name, pt);
             return pt;
         }
-        public static MethodInfo GetMethodFast(Type tp, string name)
+        public static MethodInfo GetMethodFast(Type tp, string name, object[] args = null)
         {
             Init();
+            if (args != null)
+            {
+                return tp.GetMethod(name, allBindingFlags, null, args.Select(a => a.GetType()).ToArray(), null);
+            }
             if (cachedMethods.ContainsKey(tp))
             {
                 if (cachedMethods[tp].ContainsKey(name))
@@ -147,8 +161,8 @@ namespace WNP78
                 cachedProperties = new Dictionary<Type, Dictionary<string, PropertyInfo>>();
                 cachedMethods = new Dictionary<Type, Dictionary<string, MethodInfo>>();
                 cachedFields = new Dictionary<Type, Dictionary<string, FieldInfo>>();
-                assemblies.Add(GetAssembly("Assembly-CSharp"));
                 assemblies.Add(GetAssembly("SimpleRockets2"));
+                assemblies.Add(GetAssembly("XmlLayout"));
             }
         }
         public static Assembly GetAssembly(string name)
