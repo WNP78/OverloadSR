@@ -82,6 +82,8 @@ namespace WNP78.Overload
         public static void SaveXML(XElement xml)
         {
             var partData = part.Data;
+            var oldConns = partData.PartConnections;
+            var oldAPs = partData.AttachPoints;
             var partType = GetPartType(Utilities.GetStringAttribute(xml, "partType", ""));
             if (partType == null)
             {
@@ -97,6 +99,8 @@ namespace WNP78.Overload
                 ServiceProvider.Instance.Game.Designer.DesignerUi.ShowMessage("XML Load error (check console for details). Reverting");
                 PartDataConstructor.Invoke(partData, new object[] { backupXml, Designer.CraftScript.Data.XmlVersion, partType });
             }
+            partData.SetP("PartConnections", oldConns);
+            partData.SetP("AttachPoints", oldAPs); // because private setter
 
             var oldSlice = part.SymmetrySlice;
 
