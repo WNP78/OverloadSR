@@ -75,7 +75,7 @@ namespace WNP78.Overload
         public static XElement GetXML()
         {
             part = Designer.SelectedPart;
-            var res = part.Data.GenerateXml(part.Transform, false);
+            var res = part.Data.GenerateXml(part.CraftScript.Transform, false);
             backupXml = XElement.Parse(res.ToString(SaveOptions.DisableFormatting));
             return res;
         }
@@ -109,7 +109,7 @@ namespace WNP78.Overload
         }
         static PartType GetPartType(string name)
         {
-            return (PartType)ServiceProvider.Instance.Game.GetP("PartTypeList").Call("GetPartType", name);
+            return (PartType)ServiceProvider.Instance.Game.GetP("PartTypes").Call("GetPartType", name);
         }
     }
 }

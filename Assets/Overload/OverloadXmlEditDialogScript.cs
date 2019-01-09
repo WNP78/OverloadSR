@@ -43,5 +43,11 @@ namespace WNP78.Overload
         {
             Close();
         }
+
+        public override void Close()
+        {
+            base.Close();
+            Destroy(gameObject);
+        }
     }
 }
