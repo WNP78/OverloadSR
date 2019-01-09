@@ -15,11 +15,12 @@ namespace WNP78.Overload
     public static class OverloadMain
     {
         static IDesigner Designer;
-        static Type CraftBuilder;
-        static Type UiUtilities;
-        static Type Symmmetry;
-        static string DialogXML;
-        static string ButtonXML;
+        public static Type CraftBuilder;
+        public static Type UiUtilities;
+        public static Type Symmmetry;
+        public static MethodInfo CreateXmlLayoutFromXml;
+        public static string DialogXML;
+        public static string ButtonXML;
         static ConstructorInfo PartDataConstructor;
         static GameObject OverloadButtonObject;
         public static void Init()
@@ -30,6 +31,7 @@ namespace WNP78.Overload
             Symmmetry = ReflectionUtils.GetType("Assets.Scripts.Design.Symmetry");
             DialogXML = ServiceProvider.Instance.ResourceLoader.LoadAsset<TextAsset>("Assets/Dialog.xml").text;
             ButtonXML = ServiceProvider.Instance.ResourceLoader.LoadAsset<TextAsset>("Assets/Button.xml").text;
+            CreateXmlLayoutFromXml = UiUtilities.GetMethods(ReflectionUtils.allBindingFlags).First(m => m.Name == "CreateXmlLayoutFromXml" && m.GetParameters().Length == 4);
             PartDataConstructor = typeof(PartData).GetConstructor(new Type[] { typeof(XElement), typeof(int), typeof(PartType) });
         }
         static void OnSceneLoaded(object sender, ModApi.Scenes.Events.SceneEventArgs e)
@@ -38,24 +40,15 @@ namespace WNP78.Overload
             {
                 Designer = ServiceProvider.Instance.Game.Designer;
                 var flyout = Designer.DesignerUi.Flyouts.PartProperties;
-                flyout.Opened += PartPropertiesOpened;
                 Designer.SelectedPartChanged += SelectedPartChanged;
 
                 var layout = flyout.Transform.GetComponentInChildren<IXmlLayout>();
-                /*var el = XElement.Parse(layout.Xml);
-                var root = el.Descendants().First(x => Utilities.GetStringAttribute(x, "id", "") == "content-root");
-                var btEl = XElement.Parse("<Button id=\"overload-button\" class=\"btn\" width=\"150\"><TextMeshPro text=\"EDIT XML\" /></Button>");
-                root.AddFirst(btEl);
-                layout.Xml = el.ToString();
-                layout.RebuildLayout(false, true);
-                OverloadButtonObject = layout.GetElementById<RectTransform>("overload-button").gameObject;
-                */
                 var root = layout.GetElementById<RectTransform>("content-root");
                 GameObject obj = (GameObject)UiUtilities.CallS("CreateUiGameObject", "OverloadButton", root);
                 obj.AddComponent<LayoutElement>().minHeight = 30;
                 obj.transform.SetAsFirstSibling();
 
-                UiUtilities.GetMethods(ReflectionUtils.allBindingFlags).First(m => m.Name == "CreateXmlLayoutFromXml" && m.GetParameters().Length == 4).Invoke(null, new object[] { ButtonXML, obj, null, (Action<IXmlLayoutController>)OnButtonLayoutRebuilt });
+                CreateXmlLayoutFromXml.Invoke(null, new object[] { ButtonXML, obj, null, (Action<IXmlLayoutController>)OnButtonLayoutRebuilt });
             }
             else
             {
@@ -68,17 +61,13 @@ namespace WNP78.Overload
             OverloadButtonObject.GetComponent<Button>().onClick.AddListener(EditXmlButtonClicked);
             SelectedPartChanged(null, Designer.SelectedPart);
         }
-        static void PartPropertiesOpened(IFlyout flyout)
-        {
-            Debug.Log("opened: " + flyout.Transform);
-        }
         static void SelectedPartChanged(IPartScript oldPart, IPartScript newPart)
         {
             OverloadButtonObject?.SetActive(newPart != null);
         }
         static void EditXmlButtonClicked()
         {
-            Debug.Log("Edit Xml!");
+            OverloadXmlEditDialogScript.Create(Designer.DesignerUi.Transform, GetXML(), SaveXML);
         }
 
         static IPartScript part;
@@ -120,7 +109,7 @@ namespace WNP78.Overload
         }
         static PartType GetPartType(string name)
         {
-            return (PartType)ServiceProvider.Instance.Game.GetP("PartTypeList").GetP("GetPartType", name);
+            return (PartType)ServiceProvider.Instance.Game.GetP("PartTypeList").Call("GetPartType", name);
         }
     }
 }
