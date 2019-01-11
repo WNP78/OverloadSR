@@ -63,7 +63,10 @@ namespace WNP78.Overload
         }
         static void SelectedPartChanged(IPartScript oldPart, IPartScript newPart)
         {
-            OverloadButtonObject?.SetActive(newPart != null);
+            if (OverloadButtonObject != null)
+            {
+                OverloadButtonObject.SetActive(newPart != null);
+            }
         }
         static void EditXmlButtonClicked()
         {
