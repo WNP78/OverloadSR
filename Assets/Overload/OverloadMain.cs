@@ -14,6 +14,10 @@ namespace WNP78.Overload
 {
     public static class OverloadMain
     {
+        public static bool Active
+        {
+            get { return Designer != null; }
+        }
         static IDesigner Designer;
         public static Type CraftBuilder;
         public static Type UiUtilities;
@@ -33,6 +37,13 @@ namespace WNP78.Overload
             ButtonXML = ServiceProvider.Instance.ResourceLoader.LoadAsset<TextAsset>("Assets/Button.xml").text;
             CreateXmlLayoutFromXml = UiUtilities.GetMethods(ReflectionUtils.allBindingFlags).First(m => m.Name == "CreateXmlLayoutFromXml" && m.GetParameters().Length == 4);
             PartDataConstructor = typeof(PartData).GetConstructor(new Type[] { typeof(XElement), typeof(int), typeof(PartType) });
+            ServiceProvider.Instance.DevConsole.RegisterCommand<string>("LoadDialogXmlFromPath", LoadDialogXmlFromPath);
+            
+        }
+        static void LoadDialogXmlFromPath(string path)
+        {
+            if (!Active) { return; }
+            DialogXML = System.IO.File.ReadAllText(path);
         }
         static void OnSceneLoaded(object sender, ModApi.Scenes.Events.SceneEventArgs e)
         {
@@ -63,10 +74,11 @@ namespace WNP78.Overload
         }
         static void SelectedPartChanged(IPartScript oldPart, IPartScript newPart)
         {
-            if (OverloadButtonObject != null)
+            try
             {
                 OverloadButtonObject.SetActive(newPart != null);
             }
+            catch (NullReferenceException) { }
         }
         static void EditXmlButtonClicked()
         {
@@ -112,7 +124,10 @@ namespace WNP78.Overload
             Designer.SelectPart(partData.PartScript, null, true);
 
             partData.PartScript.SymmetrySlice = oldSlice;
+
             Symmmetry.CallS("SynchronizeParts", partData.PartScript, true);
+
+            Designer.CraftScript.RaiseDesignerCraftStructureChangedEvent();
         }
         static PartType GetPartType(string name)
         {
