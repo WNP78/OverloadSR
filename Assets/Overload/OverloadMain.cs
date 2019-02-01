@@ -97,6 +97,7 @@ namespace WNP78.Overload
         {
             part = Designer.SelectedPart;
             var res = part.Data.GenerateXml(part.CraftScript.Transform, false);
+            res.SetAttributeValue("activated", part.Data.Activated); // temp fix for activated bug.
             backupXml = XElement.Parse(res.ToString(SaveOptions.DisableFormatting));
             return res;
         }
