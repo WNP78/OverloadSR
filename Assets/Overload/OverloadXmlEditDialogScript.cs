@@ -34,6 +34,7 @@ namespace WNP78.Overload
             inputField.richText = false;
             inputField.text = xml;
             inputField.GetComponentInChildren<TMP_Text>().SetText(inputField.text);
+            inputField.onFocusSelectAll = false;
 
             inputField.ForceLabelUpdate();
             StartCoroutine(LayoutRebuilt());
