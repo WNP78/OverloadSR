@@ -3,6 +3,8 @@ using ModApi.Design;
 using ModApi.Ui;
 using System.Xml.Linq;
 using System;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Linq;
 using System.Reflection;
 using System.Collections.Generic;
@@ -27,6 +29,10 @@ namespace WNP78.Overload
         public static string ButtonXML;
         static ConstructorInfo PartDataConstructor;
         static GameObject OverloadButtonObject;
+
+        static readonly Regex Regex1 = new Regex("(.*?)<(\\w+) ([^>/]+)(\\/?>)"); // selects element bodies
+        static readonly Regex Regex2 = new Regex("\\s*(\\w+=\"[^\"]*\")\\s*"); // separates out attributes
+
         public static void Init()
         {
             ServiceProvider.Instance.Game.SceneManager.SceneLoaded += OnSceneLoaded;
@@ -82,7 +88,7 @@ namespace WNP78.Overload
         }
         static void EditXmlButtonClicked()
         {
-            OverloadXmlEditDialogScript.Create(Designer.DesignerUi.Transform, GetXML(), SaveXML);
+            OverloadXmlEditDialogScript.Create(Designer.DesignerUi.Transform, PrettifyXml(GetXML().ToString()), SaveXML);
         }
 
         static IPartScript part;
@@ -132,6 +138,20 @@ namespace WNP78.Overload
         static PartType GetPartType(string name)
         {
             return (PartType)ServiceProvider.Instance.Game.GetP("PartTypes").Call("GetPartType", name);
+        }
+        static string PrettifyXml(string xmlIn)
+        {
+            return Regex1.Replace(xmlIn, match =>
+            {
+                StringBuilder s = new StringBuilder();
+                s.Append(match.Groups[1].Value);
+                s.Append("<");
+                s.AppendLine(match.Groups[2].Value);
+                s.Append(Regex2.Replace(match.Groups[3].Value, match.Groups[1].Value + "  $1\n"));
+                s.Append(match.Groups[1].Value);
+                s.Append(match.Groups[4].Value);
+                return s.ToString();
+            });
         }
     }
 }
