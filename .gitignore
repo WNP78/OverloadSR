@@ -18,6 +18,7 @@ UIElementsSchema/
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
+PlayerBuild/
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
