@@ -35,6 +35,7 @@ namespace WNP78.Overload
             inputField.text = xml;
             inputField.GetComponentInChildren<TMP_Text>().SetText(inputField.text);
             inputField.onFocusSelectAll = false;
+            inputField.scrollSensitivity = 5f;
 
             inputField.ForceLabelUpdate();
             StartCoroutine(LayoutRebuilt());
