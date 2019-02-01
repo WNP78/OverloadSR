@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Xml.Linq;
 using UnityEngine;
@@ -33,6 +34,15 @@ namespace WNP78.Overload
             inputField.richText = false;
             inputField.text = xElement.ToString();
             inputField.GetComponentInChildren<TMP_Text>().SetText(inputField.text);
+
+            inputField.ForceLabelUpdate();
+            StartCoroutine(LayoutRebuilt());
+        }
+        IEnumerator LayoutRebuilt()
+        {
+            yield return null;
+            yield return null;
+            inputField.ForceLabelUpdate();
         }
         void OnSaveButtonClicked()
         {
