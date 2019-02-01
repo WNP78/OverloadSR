@@ -892,6 +892,98 @@
              <param name="y">The second value to compare.</param>
              <returns><c>true</c> if the values are equal, otherwise <c>false</c>.</returns>
             </member>
+        <member name="T:ModApi.Common.Collections.GameObjectCollection">
+             <summary>
+             Provides a collection of game objects and utility methods that can operate on that collection.
+             </summary>
+            </member>
+        <member name="F:ModApi.Common.Collections.GameObjectCollection._maps">
+             <summary>
+             The maps
+             </summary>
+            </member>
+        <member name="P:ModApi.Common.Collections.GameObjectCollection.Count">
+             <summary>
+             Gets the count.
+             </summary>
+             <value>
+             The count.
+             </value>
+            </member>
+        <member name="P:ModApi.Common.Collections.GameObjectCollection.IsReadOnly">
+             <summary>
+             Gets a value indicating whether this instance is read only.
+             </summary>
+             <value>
+               <c>true</c> if this instance is read only; otherwise, <c>false</c>.
+             </value>
+            </member>
+        <member name="M:ModApi.Common.Collections.GameObjectCollection.Add(UnityEngine.GameObject)">
+             <summary>
+             Adds the specified game object.
+             </summary>
+             <param name="gameObject">The game object.</param>
+            </member>
+        <member name="M:ModApi.Common.Collections.GameObjectCollection.Clear">
+             <summary>
+             Clears the game objects from the collection.
+             </summary>
+            </member>
+        <member name="M:ModApi.Common.Collections.GameObjectCollection.Contains(UnityEngine.GameObject)">
+             <summary>
+             Determines whether the collection contains the specified game object.
+             </summary>
+             <param name="item">The item.</param>
+             <returns>
+               <c>true</c> if the collection contains the specified game object; otherwise, <c>false</c>.
+             </returns>
+            </member>
+        <member name="M:ModApi.Common.Collections.GameObjectCollection.CopyTo(UnityEngine.GameObject[],System.Int32)">
+             <summary>
+             Copies to the array starting at the specified arrayIndex.
+             </summary>
+             <param name="array">The array.</param>
+             <param name="arrayIndex">Index of the array.</param>
+            </member>
+        <member name="M:ModApi.Common.Collections.GameObjectCollection.Remove(UnityEngine.GameObject)">
+             <summary>
+             Removes the specified item.
+             </summary>
+             <param name="item">The item.</param>
+             <returns>True if the item was removed. Otherwise false.</returns>
+            </member>
+        <member name="M:ModApi.Common.Collections.GameObjectCollection.RestoreLayers">
+             <summary>
+             Restores the layers of the game objects after they have been assigned to a temporary layer.
+             </summary>
+            </member>
+        <member name="M:ModApi.Common.Collections.GameObjectCollection.SetTemporaryLayer(System.Int32)">
+             <summary>
+             Sets the layer of all game objects in the collection to a temporary layer.
+             </summary>
+             <param name="temporaryLayer">The temporary layer.</param>
+            </member>
+        <member name="T:ModApi.Common.Collections.GameObjectCollection.GameObjectMap">
+             <summary>
+             Maps a game object to a layer.
+             </summary>
+            </member>
+        <member name="P:ModApi.Common.Collections.GameObjectCollection.GameObjectMap.GameObject">
+             <summary>
+             Gets or sets the game object.
+             </summary>
+             <value>
+             The game object.
+             </value>
+            </member>
+        <member name="P:ModApi.Common.Collections.GameObjectCollection.GameObjectMap.Layer">
+             <summary>
+             Gets or sets the layer.
+             </summary>
+             <value>
+             The layer.
+             </value>
+            </member>
         <member name="T:ModApi.Common.Coroutines.RunOnceOnNextUpdate">
              <summary>
              A helper class that wraps the functionality necessary to queue an action to run once on the next update cycle.
@@ -948,6 +1040,47 @@
              The MonoBehaviour responsible for managing the active coroutines.
              It just needs to sit and look pretty and not be destroyed or disabled.
              </summary>
+            </member>
+        <member name="T:ModApi.Common.Cryptography.Hash">
+             <summary>
+             A utility class for working with hashing algorithms.
+             </summary>
+            </member>
+        <member name="F:ModApi.Common.Cryptography.Hash._byteToHexLookup">
+             <summary>
+             The byte to hexadecimal lookup table.
+             </summary>
+            </member>
+        <member name="M:ModApi.Common.Cryptography.Hash.MD5(System.String,System.Text.Encoding)">
+             <summary>
+             Creates an MD5 hash from the specified string value.
+             </summary>
+             <param name="value">The string from which to create a hash.</param>
+             <param name="encoding">The encoding of the string. (<c>null</c> to use default encoding)</param>
+             <returns>The hexadecimal string representing the MD5 hash of the input.</returns>
+            </member>
+        <member name="M:ModApi.Common.Cryptography.Hash.MD5(System.Xml.Linq.XNode,System.Text.Encoding)">
+             <summary>
+             Creates an MD5 hash from the specified XML element.
+             </summary>
+             <param name="xml">The XML from which to create a hash.</param>
+             <param name="encoding">The encoding of the XML. (<c>null</c> to use UT8 encoding)</param>
+             <returns>The hexadecimal string representing the MD5 hash of the input.</returns>
+            </member>
+        <member name="M:ModApi.Common.Cryptography.Hash.MD5(System.Byte[])">
+             <summary>
+             Creates an MD5 hash from the specified data.
+             </summary>
+             <param name="bytes">The data from which to create a hash.</param>
+             <returns>The hexadecimal string representing the MD5 hash of the data.</returns>
+            </member>
+        <member name="M:ModApi.Common.Cryptography.Hash.ComputeHash(System.Security.Cryptography.HashAlgorithm,System.Byte[])">
+             <summary>
+             Computes the hash of the specified data using the specified hashing algorithm, formatting the result as hexadecimal string.
+             </summary>
+             <param name="algorithm">The hash algorithm.</param>
+             <param name="bytes">The data from which to create a hash.</param>
+             <returns>The hexadecimal string representing the hash of the data.</returns>
             </member>
         <member name="T:ModApi.Common.DebugUtils.DebugUtility">
              <summary>
@@ -2566,6 +2699,281 @@
              The original resource request.
              </value>
             </member>
+        <member name="T:ModApi.Common.SimpleTypes.StringValueTypeWrapper">
+             <summary>
+             A simple value type that wraps a string.
+             </summary>
+             <seealso cref="T:System.IComparable" />
+             <seealso cref="T:System.ICloneable" />
+             <seealso cref="T:System.IConvertible" />
+             <seealso cref="T:System.Collections.IEnumerable" />
+             <seealso cref="!:System.IComparable&lt;System.String&gt;" />
+             <seealso cref="!:System.Collections.Generic.IEnumerable&lt;System.Char&gt;" />
+             <seealso cref="!:System.IEquatable&lt;System.String&gt;" />
+             <seealso cref="!:System.IComparable&lt;ModApi.Common.SimpleTypes.StringValueTypeWrapper&gt;" />
+             <seealso cref="!:System.IEquatable&lt;ModApi.Common.SimpleTypes.StringValueTypeWrapper&gt;" />
+            </member>
+        <member name="F:ModApi.Common.SimpleTypes.StringValueTypeWrapper.Value">
+             <summary>
+             The string value.
+             </summary>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.#ctor(System.String)">
+             <summary>
+             Initializes a new instance of the <see cref="T:ModApi.Common.SimpleTypes.StringValueTypeWrapper" /> struct.
+             </summary>
+             <param name="value">The string value.</param>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.op_Implicit(ModApi.Common.SimpleTypes.StringValueTypeWrapper)~System.String">
+             <summary>
+             Performs an implicit conversion from <see cref="T:ModApi.Common.SimpleTypes.StringValueTypeWrapper" /> to <see cref="T:System.String" />.
+             </summary>
+             <param name="value">The value.</param>
+             <returns>
+             The result of the conversion.
+             </returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.op_Implicit(System.String)~ModApi.Common.SimpleTypes.StringValueTypeWrapper">
+             <summary>
+             Performs an implicit conversion from <see cref="T:System.String" /> to <see cref="T:ModApi.Common.SimpleTypes.StringValueTypeWrapper" />.
+             </summary>
+             <param name="value">The value.</param>
+             <returns>
+             The result of the conversion.
+             </returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.op_Inequality(ModApi.Common.SimpleTypes.StringValueTypeWrapper,ModApi.Common.SimpleTypes.StringValueTypeWrapper)">
+             <summary>
+             Implements the operator !=.
+             </summary>
+             <param name="lhs">The left hand side.</param>
+             <param name="rhs">The right hand side.</param>
+             <returns>
+             The result of the operator.
+             </returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.op_Equality(ModApi.Common.SimpleTypes.StringValueTypeWrapper,ModApi.Common.SimpleTypes.StringValueTypeWrapper)">
+             <summary>
+             Implements the operator ==.
+             </summary>
+             <param name="lhs">The left hand side.</param>
+             <param name="rhs">The right hand side.</param>
+             <returns>
+             The result of the operator.
+             </returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.Clone">
+             <summary>
+             Returns a reference to this instance of <see cref="T:ModApi.Common.SimpleTypes.StringValueTypeWrapper" />.
+             </summary>
+             <returns>
+             This instance of <see cref="T:ModApi.Common.SimpleTypes.StringValueTypeWrapper" />.
+             </returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.CompareTo(System.Object)">
+             <summary>
+             Compares this instance with a specified <see cref="T:System.Object" /> and indicates whether this instance precedes, follows, or appears in the same position in the sort order as the specified <see cref="T:System.Object" />.
+             </summary>
+             <param name="other">An object that evaluates to a <see cref="T:System.String" />. </param>
+             <returns>
+             A 32-bit signed integer that indicates whether this instance precedes, follows, or appears in the same position in the sort order as the <paramref name="other" /> parameter.Value Condition Less than zero This instance precedes <paramref name="other" />. Zero This instance has the same position in the sort order as <paramref name="other" />. Greater than zero This instance follows <paramref name="other" />.-or- <paramref name="other" /> is null.
+             </returns>
+             <exception cref="T:System.ArgumentException"><paramref name="other" /> is not a <see cref="T:System.String" /> or <see cref="T:ModApi.Common.SimpleTypes.StringValueTypeWrapper" />.</exception>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.CompareTo(System.String)">
+             <summary>
+             Compares this instance with a specified <see cref="T:System.String" /> object and indicates whether this instance precedes, follows, or appears in the same position in the sort order as the specified <see cref="T:System.String" />.
+             </summary>
+             <param name="other">The string to compare with this instance. </param>
+             <returns>
+             A 32-bit signed integer that indicates whether this instance precedes, follows, or appears in the same position in the sort order as the <paramref name="other" /> parameter. Value Condition Less than zero This instance precedes <paramref name="other" />. Zero This instance has the same position in the sort order as <paramref name="other" />. Greater than zero This instance follows <paramref name="other" />.-or- <paramref name="other" /> is null.
+             </returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.CompareTo(ModApi.Common.SimpleTypes.StringValueTypeWrapper)">
+             <summary>
+             Compares this instance with a specified <see cref="T:ModApi.Common.SimpleTypes.StringValueTypeWrapper" /> object and indicates whether this instance precedes, follows, or appears in the same position in the sort order as the specified <see cref="T:ModApi.Common.SimpleTypes.StringValueTypeWrapper" />.
+             </summary>
+             <param name="other">The other string wrapper to compare with this instance. </param>
+             <returns>
+             A 32-bit signed integer that indicates whether this instance precedes, follows, or appears in the same position in the sort order as the <paramref name="other" /> parameter. Value Condition Less than zero This instance precedes <paramref name="other" />. Zero This instance has the same position in the sort order as <paramref name="other" />. Greater than zero This instance follows <paramref name="other" />.-or- <paramref name="other" /> is null.
+             </returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.Equals(System.String)">
+             <summary>
+             Determines whether this instance and another specified <see cref="T:System.String" /> object have the same value.
+             </summary>
+             <param name="other">The string to compare to this instance.</param>
+             <returns>
+             true if the value of the <paramref name="other" /> parameter is the same as this instance; otherwise, false.
+             </returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.Equals(System.Object)">
+             <summary>
+             Determines whether the specified <see cref="T:System.Object" />, is equal to this instance.
+             </summary>
+             <param name="obj">The <see cref="T:System.Object" /> to compare with this instance.</param>
+             <returns>
+               <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+             </returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.Equals(ModApi.Common.SimpleTypes.StringValueTypeWrapper)">
+             <summary>
+             Determines whether this instance and another specified <see cref="T:ModApi.Common.SimpleTypes.StringValueTypeWrapper" /> object have the same value.
+             </summary>
+             <param name="value">The value to compare to this instance.</param>
+             <returns>
+             true if the value of the <paramref name="value" /> parameter is the same as this instance; otherwise, false.
+             </returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.GetEnumerator">
+             <summary>
+             Retrieves an object that can iterate through the individual characters in this string.
+             </summary>
+             <returns>An enumerator object.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#Collections#Generic#IEnumerable{System#Char}#GetEnumerator">
+             <summary>
+             Retrieves an object that can iterate through the individual characters in this string.
+             </summary>
+             <returns>An enumerator object.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.GetHashCode">
+             <summary>
+             Returns a hash code for this instance.
+             </summary>
+             <returns>
+             A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
+             </returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#GetTypeCode">
+             <summary>
+             Returns the <see cref="T:System.TypeCode" /> for class <see cref="T:System.String" />.
+             </summary>
+             <returns>The enumerated constant, <see cref="F:System.TypeCode.String" />.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#ToBoolean(System.IFormatProvider)">
+             <summary>
+             Converts the value of this instance to an equivalent Boolean value using the specified culture-specific formatting information.
+             </summary>
+             <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+             <returns>A Boolean value equivalent to the value of this instance.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#ToByte(System.IFormatProvider)">
+             <summary>
+             Converts the value of this instance to an equivalent 8-bit unsigned integer using the specified culture-specific formatting information.
+             </summary>
+             <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+             <returns>An 8-bit unsigned integer equivalent to the value of this instance.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#ToChar(System.IFormatProvider)">
+             <summary>
+             Converts the value of this instance to an equivalent Unicode character using the specified culture-specific formatting information.
+             </summary>
+             <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+             <returns>A Unicode character equivalent to the value of this instance.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#ToDateTime(System.IFormatProvider)">
+             <summary>
+             Converts the value of this instance to an equivalent <see cref="T:System.DateTime" /> using the specified culture-specific formatting information.
+             </summary>
+             <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+             <returns>A <see cref="T:System.DateTime" /> instance equivalent to the value of this instance.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#ToDecimal(System.IFormatProvider)">
+             <summary>
+             Converts the value of this instance to an equivalent <see cref="T:System.Decimal" /> number using the specified culture-specific formatting information.
+             </summary>
+             <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+             <returns>A <see cref="T:System.Decimal" /> number equivalent to the value of this instance.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#ToDouble(System.IFormatProvider)">
+             <summary>
+             Converts the value of this instance to an equivalent double-precision floating-point number using the specified culture-specific formatting information.
+             </summary>
+             <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+             <returns>A double-precision floating-point number equivalent to the value of this instance.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#ToInt16(System.IFormatProvider)">
+             <summary>
+             Converts the value of this instance to an equivalent 16-bit signed integer using the specified culture-specific formatting information.
+             </summary>
+             <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+             <returns>An 16-bit signed integer equivalent to the value of this instance.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#ToInt32(System.IFormatProvider)">
+             <summary>
+             Converts the value of this instance to an equivalent 32-bit signed integer using the specified culture-specific formatting information.
+             </summary>
+             <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+             <returns>An 32-bit signed integer equivalent to the value of this instance.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#ToInt64(System.IFormatProvider)">
+             <summary>
+             Converts the value of this instance to an equivalent 64-bit signed integer using the specified culture-specific formatting information.
+             </summary>
+             <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+             <returns>An 64-bit signed integer equivalent to the value of this instance.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#ToSByte(System.IFormatProvider)">
+             <summary>
+             Converts the value of this instance to an equivalent 8-bit signed integer using the specified culture-specific formatting information.
+             </summary>
+             <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+             <returns>An 8-bit signed integer equivalent to the value of this instance.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#ToSingle(System.IFormatProvider)">
+             <summary>
+             Converts the value of this instance to an equivalent single-precision floating-point number using the specified culture-specific formatting information.
+             </summary>
+             <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+             <returns>A single-precision floating-point number equivalent to the value of this instance.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.ToString">
+             <summary>
+             Returns a <see cref="T:System.String" /> that represents this instance.
+             </summary>
+             <returns>
+             A <see cref="T:System.String" /> that represents this instance.
+             </returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#ToString(System.IFormatProvider)">
+             <summary>
+             Converts the value of this instance to an equivalent <see cref="T:System.String" /> using the specified culture-specific formatting information.
+             </summary>
+             <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+             <returns>A <see cref="T:System.String" /> instance equivalent to the value of this instance.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#ToType(System.Type,System.IFormatProvider)">
+             <summary>
+             Converts the value of this instance to an <see cref="T:System.Object" /> of the specified <see cref="T:System.Type" /> that has an equivalent value, using the specified culture-specific formatting information.
+             </summary>
+             <param name="conversionType">The <see cref="T:System.Type" /> to which the value of this instance is converted. </param>
+             <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+             <returns>
+             An <see cref="T:System.Object" /> instance of type <paramref name="conversionType" /> whose value is equivalent to the value of this instance.
+             </returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#ToUInt16(System.IFormatProvider)">
+             <summary>
+             Converts the value of this instance to an equivalent 16-bit unsigned integer using the specified culture-specific formatting information.
+             </summary>
+             <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+             <returns>An 16-bit unsigned integer equivalent to the value of this instance.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#ToUInt32(System.IFormatProvider)">
+             <summary>
+             Converts the value of this instance to an equivalent 32-bit unsigned integer using the specified culture-specific formatting information.
+             </summary>
+             <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+             <returns>An 32-bit unsigned integer equivalent to the value of this instance.</returns>
+            </member>
+        <member name="M:ModApi.Common.SimpleTypes.StringValueTypeWrapper.System#IConvertible#ToUInt64(System.IFormatProvider)">
+             <summary>
+             Converts the value of this instance to an equivalent 64-bit unsigned integer using the specified culture-specific formatting information.
+             </summary>
+             <param name="provider">An <see cref="T:System.IFormatProvider" /> interface implementation that supplies culture-specific formatting information. </param>
+             <returns>An 64-bit unsigned integer equivalent to the value of this instance.</returns>
+            </member>
         <member name="T:ModApi.Common.Textures.Screenshots">
              <summary>
              Functionality related to taking screen-shots.
@@ -2831,6 +3239,11 @@
         <member name="F:ModApi.Constants.UiSoundVolume">
              <summary>
              The default UI sound volume.
+             </summary>
+            </member>
+        <member name="F:ModApi.Constants.UnifiedAtomicMassToKg">
+             <summary>
+             The unified atomic mass to kg
              </summary>
             </member>
         <member name="F:ModApi.Constants.WaterDensity">
@@ -4188,6 +4601,13 @@
              </summary>
              <param name="themeData">The theme data.</param>
             </member>
+        <member name="M:ModApi.Craft.CraftData.FindModifierById(System.String)">
+             <summary>
+             Finds the first part modifier by its id.
+             </summary>
+             <param name="id">The id of the modifier to find.</param>
+             <returns>The requested modifier or <c>null</c> if it could not be found.</returns>
+            </member>
         <member name="M:ModApi.Craft.CraftData.GenerateXml(UnityEngine.Transform,System.Boolean)">
              <summary>
              Generates the XElement to fully describe this object for serialization purposes.
@@ -4867,6 +5287,14 @@
              Occurs when the body script has been unloaded from the game view.
              </summary>
             </member>
+        <member name="P:ModApi.Craft.IBodyScript.Acceleration">
+             <summary>
+             Gets the acceleration of the body for this frame, in m/s.
+             </summary>
+             <value>
+             The acceleration of the body for this frame, in m/s.
+             </value>
+            </member>
         <member name="P:ModApi.Craft.IBodyScript.ApplyStandardForces">
              <summary>
              Gets or sets a value indicating whether to apply standard forces such as drag, gravity, buoyancy, etc.
@@ -4949,6 +5377,14 @@
              The joints.
              </value>
             </member>
+        <member name="P:ModApi.Craft.IBodyScript.MachNumber">
+             <summary>
+             Gets the Mach number.
+             </summary>
+             <value>
+             The Mach number.
+             </value>
+            </member>
         <member name="P:ModApi.Craft.IBodyScript.PartGroups">
              <summary>
              Gets the part groups.
@@ -4972,14 +5408,6 @@
              </summary>
              <value>
              The rigidbody.
-             </value>
-            </member>
-        <member name="P:ModApi.Craft.IBodyScript.StagnationPointTemperature">
-             <summary>
-             Gets the stagnation point temperature, in Kelvin.
-             </summary>
-             <value>
-             The stagnation point temperature.
              </value>
             </member>
         <member name="P:ModApi.Craft.IBodyScript.SurfaceVelocity">
@@ -5433,6 +5861,14 @@
              The gravity vector, normalized.
              </value>
             </member>
+        <member name="P:ModApi.Craft.ICraftScript.InletAir">
+             <summary>
+             Gets the inlet air.
+             </summary>
+             <value>
+             The inlet air.
+             </value>
+            </member>
         <member name="P:ModApi.Craft.ICraftScript.IsPhysicsEnabled">
              <summary>
              Gets a value indicating whether the craft currently has physics enabled.
@@ -5587,9 +6023,62 @@
              Sets a flag causing the StructureChangedEvent to be called at the end of the frame.
              </summary>
             </member>
+        <member name="T:ModApi.Craft.InletAir">
+             <summary>
+             Tracks how much air is being added and used each frame.
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.InletAir._availableAir">
+             <summary>
+             The total amount of air available this frame.
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.InletAir._usedAir">
+             <summary>
+             The total amount of air used this frame.
+             </summary>
+            </member>
+        <member name="P:ModApi.Craft.InletAir.AirEfficiency">
+             <summary>
+             Gets the air efficiency, which is 1 unless the used air exceeds the available air.
+             </summary>
+             <value>
+             The air efficiency.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.InletAir.AvailableAir">
+             <summary>
+             Gets the available air.
+             </summary>
+             <value>
+             The available air.
+             </value>
+            </member>
+        <member name="M:ModApi.Craft.InletAir.AddAir(System.Single)">
+             <summary>
+             Adds the specified amount of air.
+             </summary>
+             <param name="air">The air.</param>
+            </member>
+        <member name="M:ModApi.Craft.InletAir.Update">
+             <summary>
+             Updates this instance.
+             </summary>
+            </member>
+        <member name="M:ModApi.Craft.InletAir.UseAir(System.Single)">
+             <summary>
+             Uses the specified amount of air.
+             </summary>
+             <param name="air">The air.</param>
+            </member>
         <member name="T:ModApi.Craft.ITheme">
              <summary>
              An interface for working with the theme of a craft.
+             </summary>
+            </member>
+        <member name="E:ModApi.Craft.ITheme.PartMaterialsChanged">
+             <summary>
+             Occurs when one or more part materials change.
              </summary>
             </member>
         <member name="P:ModApi.Craft.ITheme.PartMaterialsAttached">
@@ -6352,6 +6841,14 @@
                <c>true</c> if the header should start collapsed; otherwise, <c>false</c>.
              </value>
             </member>
+        <member name="P:ModApi.Craft.Parts.Attributes.DesignerPropertyAttribute.IsHidden">
+             <summary>
+             Gets or sets a value indicating whether this property is hidden by default in the designer.
+             </summary>
+             <value>
+               <c>true</c> if this property is hidden by default in the designer; otherwise, <c>false</c>.
+             </value>
+            </member>
         <member name="P:ModApi.Craft.Parts.Attributes.DesignerPropertyAttribute.Label">
              <summary>
              Gets or sets the label text for the property.
@@ -6456,6 +6953,12 @@
              The automatic format style which inserts spaces between words indicated by capitalizing their first characters.
              </summary>
             </member>
+        <member name="F:ModApi.Craft.Parts.Attributes.DesignerPropertySpinnerTextFormat.InputAuto">
+             <summary>
+             The automatic format style, specifically for input controllers, which inserts spaces between words indicated by capitalizing their first characters.
+             The automatic formatting only applies to input values targeting specific classes used as input providers.
+             </summary>
+            </member>
         <member name="T:ModApi.Craft.Parts.Attributes.DesignerPropertySpinnerAttribute">
              <summary>
              An attribute used to flag a part modifier's field as being modifiable in the designer via a spinner control.
@@ -6503,6 +7006,14 @@
              <param name="max">The maximum value of the spinner control.</param>
              <param name="stepSize">The size of each step (i.e. the amount added or subtracted each time the user activates a spinner button).</param>
             </member>
+        <member name="P:ModApi.Craft.Parts.Attributes.DesignerPropertySpinnerAttribute.AllowManualInput">
+             <summary>
+             Gets or sets a value indicating whether manual inputs are allowed.
+             </summary>
+             <value>
+               <c>true</c> if manual inputs are allowed; otherwise, <c>false</c>.
+             </value>
+            </member>
         <member name="P:ModApi.Craft.Parts.Attributes.DesignerPropertySpinnerAttribute.IsTextSpinner">
              <summary>
              Gets a value indicating whether this instance is text spinner.
@@ -6543,6 +7054,14 @@
              The text format style to use for the spinner label.
              </value>
             </member>
+        <member name="P:ModApi.Craft.Parts.Attributes.DesignerPropertySpinnerAttribute.ValidateManualInput">
+             <summary>
+             Gets or sets a value indicating whether manual inputs are validated (min/max values enforced or text values must be defined options).
+             </summary>
+             <value>
+               <c>true</c> if manual inputs are validated; otherwise, <c>false</c>.
+             </value>
+            </member>
         <member name="P:ModApi.Craft.Parts.Attributes.DesignerPropertySpinnerAttribute.Values">
              <summary>
              Gets or sets the list of possible values to be cycled through.
@@ -6550,6 +7069,16 @@
              <value>
              The list of possible values to be cycled through.
              </value>
+            </member>
+        <member name="T:ModApi.Craft.Parts.Attributes.DesignerPropertyTextInputAttribute">
+             <summary>
+             An attribute used to flag a part modifier's field as being displayed as a text input in the designer.
+             </summary>
+            </member>
+        <member name="M:ModApi.Craft.Parts.Attributes.DesignerPropertyTextInputAttribute.#ctor">
+             <summary>
+             Initializes a new instance of the <see cref="T:ModApi.Craft.Parts.Attributes.DesignerPropertyTextInputAttribute" /> class.
+             </summary>
             </member>
         <member name="T:ModApi.Craft.Parts.Attributes.DesignerPropertyToggleButtonAttribute">
              <summary>
@@ -6756,6 +7285,11 @@
         <member name="F:ModApi.Craft.Parts.Editor.PartDefinition.SubpartsSharePartStyle">
              <summary>
              A flag indicating if all subparts share the same part style.
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Editor.PartDefinition.StylesShareHeader">
+             <summary>
+             Indicates whether the styles in this part share the same header in the part properties.
              </summary>
             </member>
         <member name="M:ModApi.Craft.Parts.Editor.PartDefinition.Clone(System.Xml.Linq.XElement)">
@@ -7152,6 +7686,11 @@
              The prefab identifier.
              </summary>
             </member>
+        <member name="T:ModApi.Craft.Parts.EditorTools.Modifiers.Autogenerated.ConfigEditorScript">
+             <summary>
+             Auto-generated class used to associated part modifiers with game objects when defining parts.
+             </summary>
+            </member>
         <member name="T:ModApi.Craft.Parts.EnabledScript">
              <summary>
              Script that lets game objects be enabled in either runtime or designer, but not both.
@@ -7213,7 +7752,7 @@
             </member>
         <member name="F:ModApi.Craft.Parts.FuelType.RP1">
              <summary>
-             The rocket propellent 1 fuel type.
+             The rocket propellant 1 fuel type.
              </summary>
             </member>
         <member name="F:ModApi.Craft.Parts.FuelType.Monopropellant">
@@ -7229,6 +7768,11 @@
         <member name="F:ModApi.Craft.Parts.FuelType.Battery">
              <summary>
              The battery fuel type.
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.FuelType.Jet">
+             <summary>
+             The jet propellant fuel type.
              </summary>
             </member>
         <member name="T:ModApi.Craft.Parts.JointType">
@@ -7770,16 +8314,6 @@
              <value>
              The value of the input.
              </value>
-            </member>
-        <member name="M:ModApi.Craft.Parts.Input.IInputControllerInput.IsInputAvailable(ModApi.Craft.Parts.IPartScript)">
-             <summary>
-             Determines whether this input is available for the specified part.
-             If an input is no longer available, it will be permanently disconnected.
-             </summary>
-             <param name="partScript">The part script.</param>
-             <returns>
-               <c>true</c> if this input is available for the specified part; otherwise, <c>false</c>.
-             </returns>
             </member>
         <member name="T:ModApi.Craft.Parts.Input.SimpleInputController">
              <summary>
@@ -8682,6 +9216,464 @@
              <param name="layer">The layer in to which to move the renderer's game object.</param>
              <param name="material">The material to use for the temporary render.</param>
             </member>
+        <member name="T:ModApi.Craft.Parts.Modifiers.ConfigData">
+             <summary>
+             Part modifier for general data about a part.
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._buoyancyBaseScale">
+             <summary>
+             The buoyancy base scale
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._buoyancyUserScale">
+             <summary>
+             The buoyancy user scale
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._centerOfMass">
+             <summary>
+             The center of mass
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._collisionDisconnectImpulse">
+             <summary>
+             The collision disconnect impulse
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._collisionDisconnectVelocity">
+             <summary>
+             The collision disconnect velocity
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._collisionExplodeImpulse">
+             <summary>
+             The collision explode impulse
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._collisionExplodeVelocity">
+             <summary>
+             The collision explode velocity
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._collisionVelocityMode">
+             <summary>
+             The collision velocity mode
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._descriptionLabel">
+             <summary>
+             The debug label
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._dragScale">
+             <summary>
+             The drag scale for the part.
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._fuelLine">
+             <summary>
+             The fuel line override
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._heatShield">
+             <summary>
+             The heat shield
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._includeInDrag">
+             <summary>
+             The include in drag flag.
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._inertiaTensorBaseScale">
+             <summary>
+             The inertia tensor base scale
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._inertiaTensorMin">
+             <summary>
+             The inertia tensor minimum
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._inertiaTensorUserScale">
+             <summary>
+             The inertia tensor user scale
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._massScale">
+             <summary>
+             The mass scale
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._maxDamage">
+             <summary>
+             The maximum damage
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._maxTemperature">
+             <summary>
+             The maximum temperature
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._partCollisionHandling">
+             <summary>
+             The part collision handling
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._partCollisionResponse">
+             <summary>
+             The part collision response
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._partIdLabel">
+             <summary>
+             The part identifier label
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._partScale">
+             <summary>
+             The part scale
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._partScaleMagnitude">
+             <summary>
+             The part scale magnitude
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._raiseWaterEventsEvenIfNotBuoyant">
+             <summary>
+             The raise water events even if not buoyant
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._showHiddenPartProperties">
+             <summary>
+             A value indicating whether hidden part properties should be shown.
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._stageActivationType">
+             <summary>
+             The stage activation type
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._supportsActivation">
+             <summary>
+             The supports activation
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._thermalMassRatio">
+             <summary>
+             The thermal mass ratio
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigData._tinkerPanelEnabled">
+             <summary>
+             The tinker panel enabled
+             </summary>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.BuoyancyBaseScale">
+             <summary>
+             Gets the base value to scale this part's buoyancy by.
+             </summary>
+             <value>
+             The base value to scale this part's buoyancy by.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.BuoyancyUserScale">
+             <summary>
+             Gets the user-configurable value to scale buoyancy by.
+             </summary>
+             <value>
+             The value to scale this part's buoyancy by.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.CanExplode">
+             <summary>
+             Gets a value indicating whether this part can explode.
+             </summary>
+             <value>
+               <c>true</c> if this part can explode; otherwise, <c>false</c>.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.CenterOfMass">
+             <summary>
+             Gets or sets the center of mass.
+             </summary>
+             <value>
+             The center of mass.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.CollisionDisconnectImpulse">
+             <summary>
+             Gets the maximum impulse this part can absorb from a collision before it disconnects.
+             </summary>
+             <value>
+             The collision impulse in scaled Newton seconds.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.CollisionDisconnectVelocity">
+             <summary>
+             Gets the maximum velocity this part can absorb from a collision before it disconnects.
+             </summary>
+             <value>
+             The collision velocity in m/s.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.CollisionExplodeImpulse">
+             <summary>
+             Gets the maximum impulse this part can absorb from a collision before it explodes.
+             </summary>
+             <value>
+             The collision impulse in scaled Newton seconds.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.CollisionExplodeVelocity">
+             <summary>
+             Gets the maximum velocity this part can absorb from a collision before it explodes.
+             </summary>
+             <value>
+             The collision velocity in m/s.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.CollisionVelocityMode">
+             <summary>
+             Gets the collision velocity mode, which is used to determine how to use the velocity in
+             a collision when calculating if the part should disconnect/explode.
+             </summary>
+             <value>
+             The collision velocity mode.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.DragScale">
+             <summary>
+             Gets the drag scale, which can be used to increase or decrease the amount of drag the
+             part receives.
+             </summary>
+             <value>
+             The drag scale.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.FuelLineOverride">
+             <summary>
+             Gets a value indicating whether this part has a fuel line override enabled.
+             This will allow fuel to pass through any attach points on this part.
+             </summary>
+             <value>
+             <c>true</c> if fuel line override is enabled; otherwise, <c>false</c>.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.HeatShield">
+             <summary>
+             Gets or sets the heat shield for this part.
+             </summary>
+             <value>
+             The heat shield.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.IncludeInDrag">
+             <summary>
+             Gets a value indicating whether to include this part in the drag calculation. If this is false
+             then the part will not be included and parts that would otherwise be occluded by this part will
+             start to receive drag.
+             </summary>
+             <value>
+               <c>true</c> if include this part is included in the drag calculation; otherwise, <c>false</c>.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.InertiaTensorBaseScale">
+             <summary>
+             Gets the inertia tensor base scale, which is multiplied by the body's inertia tensor containing
+             this part. This can be used to increase stability for wobbly parts.
+             part
+             </summary>
+             <value>
+             The inertia tensor scale.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.InertiaTensorMin">
+             <summary>
+             Gets the inertia tensor minimum, which is the minimum amount of inertia tensor to use
+             in a body that contains this part.
+             </summary>
+             <value>
+             The inertia tensor minimum.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.InertiaTensorUserScale">
+             <summary>
+             Gets the user-defined inertia tensor scale.
+             part
+             </summary>
+             <value>
+             The user-defined inertia tensor scale.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.MassScale">
+             <summary>
+             Gets the mass scale, which can be used to manipulate the mass of a part.
+             Normally, this this is set to 1.0.
+             </summary>
+             <value>
+             The mass scale.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.MaxDamage">
+             <summary>
+             Gets the maximum damage the part can take before exploding.
+             </summary>
+             <value>
+             The maximum damage.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.MaxTemperature">
+             <summary>
+             Gets the maximum temperature, in Kelvin, that a part can withstand. Anything above this
+             begins damaging the part.
+             </summary>
+             <value>
+             The maximum temperature.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.PartCollisionHandling">
+             <summary>
+             Gets the part collision handling method. If this is default, then it will fall back
+             to the collision method defined on the PartType.
+             </summary>
+             <value>
+             The part collision handling method.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.PartCollisionResponse">
+             <summary>
+             Gets the part collision response.
+             </summary>
+             <value>
+             The part collision response.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.PartScale">
+             <summary>
+             Gets the part scale.
+             </summary>
+             <value>
+             The part scale.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.PartThermalMassRatio">
+             <summary>
+             Gets the thermal mass ratio, which is the percentage of the part's mass that should be used
+             when calculating its thermal qualities, such as temperature.
+             </summary>
+             <value>
+             The thermal mass ratio.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.RaiseWaterEventsEvenIfNotBuoyant">
+             <summary>
+             Gets a value indicating whether to raise water events even if the part is not buoyant.
+             </summary>
+             <value>
+               <c>true</c> if water events should be raised even if the part is not buoyant; otherwise, <c>false</c>.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.ShowHiddenPartProperties">
+             <summary>
+             Gets or sets a value indicating whether hidden part properties should be shown.
+             </summary>
+             <value>
+               <c>true</c> if hidden part properties should be shown; otherwise, <c>false</c>.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.StageActivationType">
+             <summary>
+             Gets the stage activation type for this part.
+             </summary>
+             <value>
+             The stage activation type for this part.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.SupportsActivation">
+             <summary>
+             Gets a value indicating whether this part can be activated.
+             </summary>
+             <value>
+             <c>true</c> if the part can be activated; otherwise, <c>false</c>.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.Modifiers.ConfigData.TinkerPanelEnabled">
+             <summary>
+             Gets or sets a value indicating whether the tinker panel is enabled.
+             </summary>
+             <value>
+               <c>true</c> if the tinker panel is enabled; otherwise, <c>false</c>.
+             </value>
+            </member>
+        <member name="M:ModApi.Craft.Parts.Modifiers.ConfigData.OnDesignerCraftStructureChanged">
+             <summary>
+             Called when the craft structure has changed.
+             </summary>
+            </member>
+        <member name="M:ModApi.Craft.Parts.Modifiers.ConfigData.CreateScriptComponent(ModApi.Craft.Parts.IPartScript)">
+             <summary>
+             Creates the Unity MonoBehaviour for the part modifier and associates it with a game object.
+             </summary>
+             <param name="partScript">The part script.</param>
+             <returns>
+             The created part modifier script.
+             </returns>
+            </member>
+        <member name="M:ModApi.Craft.Parts.Modifiers.ConfigData.OnCreated(System.Xml.Linq.XElement)">
+             <summary>
+             Called when the part modifier is created.
+             This is where the default values are read from the part modifier definition and loaded as the modifier's default values.
+             </summary>
+             <param name="partModifierXml">The XML that defines the part modifier and its default values.</param>
+            </member>
+        <member name="M:ModApi.Craft.Parts.Modifiers.ConfigData.OnDesignerInitialization(ModApi.Design.PartProperties.IDesignerPartPropertiesModifierInterface)">
+             <summary>
+             Called when the part modifier data is initialized in the designer scene.
+             </summary>
+             <param name="d">The designer part properties.</param>
+            </member>
+        <member name="M:ModApi.Craft.Parts.Modifiers.ConfigData.UpdatePartScale(System.Single)">
+             <summary>
+             Updates the part scale.
+             </summary>
+             <param name="scale">The scale.</param>
+            </member>
+        <member name="M:ModApi.Craft.Parts.Modifiers.ConfigData.UpdateSymmetryAndCraftStructure">
+             <summary>
+             Updates the symmetry and craft structure.
+             </summary>
+            </member>
+        <member name="T:ModApi.Craft.Parts.Modifiers.ConfigScript">
+             <summary>
+             Script for the General modifier.
+             </summary>
+             <seealso cref="!:ModApi.Craft.Parts.PartModifierScript&lt;ModApi.Craft.Parts.Modifiers.ConfigData&gt;" />
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigScript._bodiesOutdated">
+             <summary>
+             The bodies outdated
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.Modifiers.ConfigScript._bodyId">
+             <summary>
+             The current body identifier
+             </summary>
+            </member>
+        <member name="M:ModApi.Craft.Parts.Modifiers.ConfigScript.GetBodyId">
+             <summary>
+             Gets the current body ID for this part. If necessary, the body data lists will be recalculated.
+             </summary>
+             <returns>The body ID.</returns>
+            </member>
+        <member name="M:ModApi.Craft.Parts.Modifiers.ConfigScript.OnCraftStructureChanged(ModApi.Craft.ICraftScript)">
+             <summary>
+             Called when the craft structure has changed.
+             </summary>
+             <param name="craftScript">The craft script.</param>
+            </member>
         <member name="T:ModApi.Craft.Parts.PartCategories">
              <summary>
              Part categories.
@@ -9568,6 +10560,13 @@
              A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
              </returns>
             </member>
+        <member name="M:ModApi.Craft.Parts.PartData.GetMaterial(ModApi.Craft.Parts.PartMeshMaterialLevel)">
+             <summary>
+             Gets the part material of the specified level for this part.
+             </summary>
+             <param name="level">The material level of the material to retrieve.</param>
+             <returns>The requested material.</returns>
+            </member>
         <member name="M:ModApi.Craft.Parts.PartData.GetModifier``1">
              <summary>
              Gets the modifier.
@@ -9612,11 +10611,17 @@
              Destroys the part.
              </summary>
             </member>
-        <member name="M:ModApi.Craft.Parts.PartData.RegisterModifier(ModApi.Craft.Parts.PartModifierData)">
+        <member name="M:ModApi.Craft.Parts.PartData.OnModifierAdded(ModApi.Craft.Parts.PartModifierData)">
              <summary>
-             Registers the modifier.
+             Called when a modifier is being added to the part.
              </summary>
-             <param name="partModifierData">The part modifier data.</param>
+             <param name="partModifierData">The part modifier data for the modifier that is being added.</param>
+            </member>
+        <member name="M:ModApi.Craft.Parts.PartData.OnModifierRemoved(ModApi.Craft.Parts.PartModifierData)">
+             <summary>
+             Called when a modifier is being removed from the part.
+             </summary>
+             <param name="modifier">The part modifier data for the modifier that is being removed.</param>
             </member>
         <member name="M:ModApi.Craft.Parts.PartData.InitializeConfigModifier">
              <summary>
@@ -9845,6 +10850,11 @@
              The base class for all part modifier data classes.
              </summary>
             </member>
+        <member name="F:ModApi.Craft.Parts.PartModifierData._EmptyEnumerableInt">
+             <summary>
+             The empty integer enumerable.
+             </summary>
+            </member>
         <member name="F:ModApi.Craft.Parts.PartModifierData._allPropertiesLookup">
              <summary>
              The cached lookup table of type keys to their associated list of member names
@@ -9889,6 +10899,11 @@
              The designer part properties object.
              </summary>
             </member>
+        <member name="F:ModApi.Craft.Parts.PartModifierData._disposed">
+             <summary>
+             A value indicating whether this modifier has been disposed.
+             </summary>
+            </member>
         <member name="F:ModApi.Craft.Parts.PartModifierData._id">
              <summary>
              The optional identifier for the part modifier.
@@ -9901,7 +10916,12 @@
             </member>
         <member name="F:ModApi.Craft.Parts.PartModifierData._inspectorEnabled">
              <summary>
-             The flag that determines if this part modifier should be visible in the inspector.
+             The flag that determines if this part modifier should be visible in the inspector in flight.
+             </summary>
+            </member>
+        <member name="F:ModApi.Craft.Parts.PartModifierData._partPropertiesEnabled">
+             <summary>
+             The flag that determines if this part modifier should be visible in the part properties in the designer.
              </summary>
             </member>
         <member name="F:ModApi.Craft.Parts.PartModifierData._symmetryId">
@@ -9953,10 +10973,10 @@
             </member>
         <member name="P:ModApi.Craft.Parts.PartModifierData.InspectorEnabled">
              <summary>
-             Gets or sets a value indicating whether the part should be visible in the inspector.
+             Gets or sets a value indicating whether the part modifier should be visible in the inspector in flight.
              </summary>
              <value>
-               <c>true</c> if [inspector enabled]; otherwise, <c>false</c>.
+               <c>true</c> if visible in the inspector in flight; otherwise, <c>false</c>.
              </value>
             </member>
         <member name="P:ModApi.Craft.Parts.PartModifierData.Mass">
@@ -9990,6 +11010,14 @@
              </summary>
              <value>
              The part modifier data.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.PartModifierData.PartPropertiesEnabled">
+             <summary>
+             Gets or sets a value indicating whether the part modifier should be visible in the part properties in the designer.
+             </summary>
+             <value>
+               <c>true</c> if visible in the part properties; otherwise, <c>false</c>.
              </value>
             </member>
         <member name="P:ModApi.Craft.Parts.PartModifierData.Price">
@@ -10120,6 +11148,11 @@
              Called when the part modifier needs to destroy its part modifier script.
              </summary>
             </member>
+        <member name="M:ModApi.Craft.Parts.PartModifierData.System#IDisposable#Dispose">
+             <summary>
+             Releases unmanaged and - optionally - managed resources.
+             </summary>
+            </member>
         <member name="M:ModApi.Craft.Parts.PartModifierData.GenerateCompleteXml">
              <summary>
              Generates the XML that defines the modifier.
@@ -10135,6 +11168,12 @@
              The XElement to fully describe this object for serialization purposes.
              </returns>
             </member>
+        <member name="M:ModApi.Craft.Parts.PartModifierData.GetAssociatedActivationGroups">
+             <summary>
+             Gets the activation groups associated with the modifier.
+             </summary>
+             <returns>The set of activation groups that are associated with the modifier.</returns>
+            </member>
         <member name="M:ModApi.Craft.Parts.PartModifierData.GetScript">
              <summary>
              Gets the behavior script associated with the modifier if it has been initialized. <c>null</c> if uninitialized.
@@ -10142,6 +11181,11 @@
              <returns>
              The behavior script associated with the modifier if it has been initialized. <c>null</c> if uninitialized.
              </returns>
+            </member>
+        <member name="M:ModApi.Craft.Parts.PartModifierData.RemoveModifier">
+             <summary>
+             Removes the part modifier from the part.
+             </summary>
             </member>
         <member name="M:ModApi.Craft.Parts.PartModifierData.RestoreFromState(System.Xml.Linq.XElement,System.Boolean)">
              <summary>
@@ -10171,6 +11215,16 @@
              Called when the part modifier data is initialized in the designer scene.
              </summary>
              <param name="d">The designer part properties.</param>
+            </member>
+        <member name="M:ModApi.Craft.Parts.PartModifierData.OnDisposed">
+             <summary>
+             Called when the modifier is disposed.
+             </summary>
+            </member>
+        <member name="M:ModApi.Craft.Parts.PartModifierData.OnRemoveModifier">
+             <summary>
+             Called when the modifier is removed.
+             </summary>
             </member>
         <member name="M:ModApi.Craft.Parts.PartModifierData.OnUpgrade(System.Int32)">
              <summary>
@@ -10227,11 +11281,6 @@
              </summary>
              <returns>The part modifier type identifier.</returns>
             </member>
-        <member name="M:ModApi.Craft.Parts.PartModifierData.OnDesignerInitialization">
-             <summary>
-             Called when the part modifier data is initialized in the designer scene.
-             </summary>
-            </member>
         <member name="T:ModApi.Craft.Parts.PartModifierData.MembersToSerialize">
              <summary>
              A class containing information about members to be serialized.
@@ -10280,7 +11329,6 @@
              The created part modifier script, or <c>null</c> if it was not created.
              </returns>
              <exception cref="T:System.Exception">The part modifier already has a script.</exception>
-             <exception cref="T:System.Exception">The part modifier has already been initialized</exception>
             </member>
         <member name="M:ModApi.Craft.Parts.PartModifierData`1.DestroyScript">
              <summary>
@@ -10342,6 +11390,11 @@
         <member name="M:ModApi.Craft.Parts.PartModifierScript.DesignUpdate">
              <summary>
              Update method that is only called in the design scene.
+             </summary>
+            </member>
+        <member name="M:ModApi.Craft.Parts.PartModifierScript.System#IDisposable#Dispose">
+             <summary>
+             Releases unmanaged and - optionally - managed resources.
              </summary>
             </member>
         <member name="M:ModApi.Craft.Parts.PartModifierScript.FlightEnd">
@@ -10419,6 +11472,12 @@
              Called when a part is activated.
              </summary>
             </member>
+        <member name="M:ModApi.Craft.Parts.PartModifierScript.OnAddedToCraftInDesigner(System.Boolean)">
+             <summary>
+             Called when the part is added to the craft in the designer.
+             </summary>
+             <param name="isSubassembly">if set to <c>true</c> then this part is contained in a new subassembly.</param>
+            </member>
         <member name="M:ModApi.Craft.Parts.PartModifierScript.OnCollision(ModApi.Craft.Parts.IPartFlightCollision)">
              <summary>
              Called when a part has been involved in a collision.
@@ -10460,20 +11519,15 @@
              </summary>
              <param name="model">The inspector model.</param>
             </member>
+        <member name="M:ModApi.Craft.Parts.PartModifierScript.OnModifiersCreated">
+             <summary>
+             Called after all of the part's modifiers have been created.
+             </summary>
+            </member>
         <member name="M:ModApi.Craft.Parts.PartModifierScript.OnPartDestroyed">
              <summary>
              Called when the part owning this modifier is destroyed.
              </summary>
-            </member>
-        <member name="M:ModApi.Craft.Parts.PartModifierScript.OnPartModifierDataDestroyScriptCalled">
-             <summary>
-             Called when this modifier's PartModifierData.DestroyScript method has been called for this modifier.
-             </summary>
-             <remarks>
-             Note: The name is intentionally long and specific b/c it isn't a general-purpose OnModifierDestroyed notification.
-             It is specific to PartModiferData.DestroyScript() being called in cases where a modifier must know immediately
-             when it is destroyed via this mechanism and can't wait on Unity's OnDestroy() to be called at the end of the frame.
-             </remarks>
             </member>
         <member name="M:ModApi.Craft.Parts.PartModifierScript.OnPhysicsChanged(System.Boolean)">
              <summary>
@@ -10488,6 +11542,11 @@
              <param name="mode">The symmetry mode.</param>
              <param name="originalPart">The original part.</param>
              <param name="created">if set to <c>true</c> then the part has been created. False indicates the part is being updated.</param>
+            </member>
+        <member name="M:ModApi.Craft.Parts.PartModifierScript.PrepareForPartIcon">
+             <summary>
+             Called when the part is about to have its picture taken for the part icons. Try and look your best and say cheese!
+             </summary>
             </member>
         <member name="M:ModApi.Craft.Parts.PartModifierScript.RecalculateFrameState(UnityEngine.Vector3,UnityEngine.Vector3)">
              <summary>
@@ -10504,6 +11563,16 @@
              updated such as while warping.  If subscribing to GameViewScript.ReferenceFrameRecentered event, do not also add deltas in response
              to that or they'll be added in twice.
              </remarks>
+            </member>
+        <member name="M:ModApi.Craft.Parts.PartModifierScript.OnRemoveModifier">
+             <summary>
+             Called when the modifier is removed from a part.
+             </summary>
+            </member>
+        <member name="M:ModApi.Craft.Parts.PartModifierScript.OnDisposed">
+             <summary>
+             Called when the modifier script is disposed.
+             </summary>
             </member>
         <member name="T:ModApi.Craft.Parts.PartModifierScript`1">
              <summary>
@@ -10710,6 +11779,14 @@
              </summary>
              <value>
              The snapshot rotation.
+             </value>
+            </member>
+        <member name="P:ModApi.Craft.Parts.PartType.StylesShareHeader">
+             <summary>
+             Gets a value indicating whether the styles in this part share the same header in the part properties.
+             </summary>
+             <value>
+               <c>true</c> if the styles share the same header in the designer; otherwise, <c>false</c>.
              </value>
             </member>
         <member name="P:ModApi.Craft.Parts.PartType.Subparts">
@@ -11991,6 +13068,14 @@
              The selected part.
              </value>
             </member>
+        <member name="P:ModApi.Design.IDesigner.Symmetry">
+             <summary>
+             Gets the symmetry utility.
+             </summary>
+             <value>
+             The symmetry utility.
+             </value>
+            </member>
         <member name="P:ModApi.Design.IDesigner.Tools">
              <summary>
              Gets the tools.
@@ -12017,6 +13102,11 @@
         <member name="M:ModApi.Design.IDesigner.BeginFlight">
              <summary>
              Begins the flight scene with the current design.
+             </summary>
+            </member>
+        <member name="M:ModApi.Design.IDesigner.CreateCraftBodyDatas">
+             <summary>
+             Creates and assigns the body-data for the designer craft.
              </summary>
             </member>
         <member name="M:ModApi.Design.IDesigner.CreateNewCraft">
@@ -12420,6 +13510,154 @@
              The tools flyout.
              </value>
             </member>
+        <member name="T:ModApi.Design.ISymmetry">
+             <summary>
+             An interface for a class containing methods for working with parts in symmetry mode.
+             </summary>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.DeleteSymmetricParts(System.Collections.Generic.List{ModApi.Craft.Parts.IPartScript})">
+             <summary>
+             Deletes all symmetric parts corresponding to these parts and removes these parts from their current SymmetricSlice.
+             </summary>
+             <param name="partScripts">The part scripts.</param>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.DuplicateParts(ModApi.Craft.Parts.IPartScript)">
+             <summary>
+             Duplicates the parts and their part connections.
+             </summary>
+             <param name="rootPart">The root part.</param>
+             <returns>The cloned parts.</returns>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.EnumerateSymmetricPartScripts(ModApi.Craft.Parts.IPartScript)">
+             <summary>
+             Enumerates all parts that are symmetric to the specified part script.
+             </summary>
+             <param name="partScript">The part script.</param>
+             <returns>The enumerable list of parts.</returns>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.ExecuteOnSymmetricPartModifiers``1(``0,System.Boolean,System.Action{``0})">
+             <summary>
+             Executes the specified action on all symmetric part modifiers and optionally on the specified modifier as well.
+             </summary>
+             <typeparam name="TModifier">The type of the modifier.</typeparam>
+             <param name="modifier">The modifier.</param>
+             <param name="includeSourceModifier">If set to <c>true</c>, the action will be executed on the specified modifier as well.</param>
+             <param name="action">The action to execute for each symmetric modifier.</param>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.ExecuteOnSymmetricPartModifiers``2(``0,System.Boolean,``1,System.Action{``0,``1})">
+             <summary>
+             Executes the specified action on all symmetric part modifiers and optionally on the specified modifier as well.
+             This takes a value parameter and passes that same parameter to all modifiers executing the action.
+             </summary>
+             <typeparam name="TModifier">The type of the modifier.</typeparam>
+             <typeparam name="TValue">The type of the value.</typeparam>
+             <param name="modifier">The modifier.</param>
+             <param name="includeSourceModifier">If set to <c>true</c>, the action will be executed on the specified modifier as well.</param>
+             <param name="value">The value to pass to the action.</param>
+             <param name="action">The action to execute for each symmetric modifier.</param>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.GenerateSymmetryXml(ModApi.Craft.Assembly)">
+             <summary>
+             Generates the XML.
+             </summary>
+             <param name="assembly">The assembly.</param>
+             <returns>The Symmetry XML element.</returns>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.GetSymmetricPartModifier``1(``0,ModApi.Craft.Parts.PartData)">
+             <summary>
+             Gets the part modifier in part that is symmetric to the specified part modifier.
+             </summary>
+             <typeparam name="T">The part modifier type.</typeparam>
+             <param name="sourceModifier">The non-symmetric part modifier.</param>
+             <param name="symmetricPart">The symmetric part to check for a part modifier that is symmetric to the source modifier.</param>
+             <returns>The symmetric part modifier or null if there are none.</returns>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.GetSymmetricPartScripts(ModApi.Craft.Parts.IPartScript)">
+             <summary>
+             Gets the all parts that are symmetric to the specified part script.
+             </summary>
+             <param name="partScript">The part script.</param>
+             <returns>The list of symmetric parts.</returns>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.LoadSymmetryXml(System.Xml.Linq.XElement,ModApi.Craft.Assembly)">
+             <summary>
+             Reads the XML and loads in the symmetric groups and slices.
+             </summary>
+             <param name="symmetryElement">The symmetry XML element.</param>
+             <param name="assembly">The assembly to access parts from.</param>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.RemovePartConnection(ModApi.Craft.Parts.IPartScript,ModApi.Craft.Parts.PartConnection)">
+             <summary>
+             Removes the part connection from all symmetric parts.
+             </summary>
+             <param name="partScript">The part script.</param>
+             <param name="partConnection">The part connection.</param>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.RemovePartModifier(ModApi.Craft.Parts.IPartScript,ModApi.Craft.Parts.PartModifierData)">
+             <summary>
+             Removes the part modifier from all symmetric parts.
+             </summary>
+             <param name="partScript">The part script.</param>
+             <param name="partModifier">The part modifier.</param>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.RemoveSymmetryGroup(ModApi.Design.ISymmetryGroup)">
+             <summary>
+             Removes symmetry from all parts in the group. This also removes all references to the symmetry group
+             since only parts reference a symmetry slice and its symmetry group.
+             </summary>
+             <param name="symmetryGroup">The symmetry group.</param>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.SetSymmetryMode(ModApi.Craft.Parts.IPartScript,ModApi.Design.SymmetryMode,ModApi.Design.IDesignerUi)">
+             <summary>
+             Sets the symmetry mode on the specified part.
+             </summary>
+             <param name="partScript">The part for which to set symmetry.</param>
+             <param name="symmetryMode">The symmetry mode.</param>
+             <param name="designerUi">The designer UI.</param>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.SynchronizePartConnections(ModApi.Craft.Parts.IPartScript)">
+             <summary>
+             Synchronizes the part connections of the part with its symmetric parts (if it has any).
+             </summary>
+             <param name="partScript">The part script.</param>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.SynchronizePartModifiers(ModApi.Craft.Parts.IPartScript)">
+             <summary>
+             Synchronizes the part modifiers of the part with its symmetric parts (if it has any).
+             </summary>
+             <param name="partScript">The part script.</param>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.SynchronizeParts(ModApi.Craft.Parts.IPartScript,System.Boolean)">
+             <summary>
+             Synchronizes the symmetric parts with the given part's properties
+             Note: when new properties are added that should be synced, they need to be added manually
+             </summary>
+             <param name="partScript">The part script.</param>
+             <param name="synchronizeModifiers">if set to <c>true</c> [synchronize modifiers].</param>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.SynchronizePartStyles(ModApi.Craft.Parts.IPartScript,System.Collections.Generic.List{ModApi.Craft.Parts.IPartScript})">
+             <summary>
+             Synchronizes the part styles.
+             </summary>
+             <param name="partScript">The part script.</param>
+             <param name="symmetricParts">The symmetric parts. Use <c>null</c> to automatically determine symmetric parts.</param>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.UpdatePartPositions(System.Collections.Generic.List{ModApi.Craft.Parts.IPartScript})">
+             <summary>
+             Updates the position of the symmetric clones of the specified parts.
+             </summary>
+             <param name="parts">The parts.</param>
+            </member>
+        <member name="M:ModApi.Design.ISymmetry.UpdateSymmetry(System.Collections.Generic.List{ModApi.Craft.Parts.IPartScript},ModApi.Craft.Parts.IPartScript,ModApi.Craft.Parts.AttachPoint)">
+             <summary>
+             Updates the symmetry of the parts after a part has been repositioned via the MovePartTool. This includes
+             possibly creating new SymmetricGroups, SymmetricSlices, and new clones of the parts, which are linked
+             via a SymmetryId guid.
+             </summary>
+             <param name="parts">The parts.</param>
+             <param name="partScript">The part script that is being connected to the craft.</param>
+             <param name="craftAttachPoint">The attach point on the craft that partScript is connecting to.</param>
+            </member>
         <member name="T:ModApi.Design.ISymmetryGroup">
              <summary>
              Interface for SymmetryGroup (Contains information about a group of parts in symmetry mode).
@@ -12559,6 +13797,14 @@
              An interface for interacting with part properties in the designer.
              </summary>
             </member>
+        <member name="P:ModApi.Design.PartProperties.IDesignerPartProperties.Flyout">
+             <summary>
+             Gets the part properties flyout.
+             </summary>
+             <value>
+             The part properties flyout.
+             </value>
+            </member>
         <member name="M:ModApi.Design.PartProperties.IDesignerPartProperties.GetProperty``1(System.Reflection.FieldInfo)">
              <summary>
              Gets the property for the specified field or <c>null</c> if an acceptable property can not be found.
@@ -12619,11 +13865,12 @@
              <param name="value">The value for which to get the display text.</param>
              <returns>The display text for the specified value.</returns>
             </member>
-        <member name="M:ModApi.Design.PartProperties.IDesignerPartPropertiesDesignerInterface.IsVisible(System.Reflection.FieldInfo)">
+        <member name="M:ModApi.Design.PartProperties.IDesignerPartPropertiesDesignerInterface.IsVisible(System.Reflection.FieldInfo,System.Boolean)">
              <summary>
              Determines whether the specified field is visible.
              </summary>
              <param name="field">The field for which to determine visibility.</param>
+             <param name="showHiddenFields">A value indicating whether the option to show hidden fields has been toggled on.</param>
              <returns><c>true</c> if the field should be visible, <c>false</c> otherwise.</returns>
             </member>
         <member name="M:ModApi.Design.PartProperties.IDesignerPartPropertiesDesignerInterface.OnActivated(ModApi.Design.PartProperties.IDesignerPartProperties)">
@@ -12637,6 +13884,11 @@
              Called when the part properties UI is deactivated for this part modifier.
              </summary>
              <param name="partPropertiesScript">The part properties script.</param>
+            </member>
+        <member name="M:ModApi.Design.PartProperties.IDesignerPartPropertiesDesignerInterface.OnPartMaterialsChanged">
+             <summary>
+             Called when part materials may have changed.
+             </summary>
             </member>
         <member name="M:ModApi.Design.PartProperties.IDesignerPartPropertiesDesignerInterface.OnPartStyleChanged(ModApi.Craft.Parts.Styles.IPartStyle,ModApi.Craft.Parts.Styles.IPartStyle)">
              <summary>
@@ -12796,6 +14048,12 @@
              <param name="fieldSelector">The field selector. This should specify a field for which to subscribe to the event. Example: "() =&gt; this._myField".</param>
              <param name="action">The action to execute when the field is activated. The action parameter is the property interface associated with the field.</param>
             </member>
+        <member name="M:ModApi.Design.PartProperties.IDesignerPartPropertiesModifierInterface.OnPartMaterialsChanged(System.Action)">
+             <summary>
+             Subscribes to the event that occurs when part materials may have changed.
+             </summary>
+             <param name="action">The action to execute when the part materials may have changed.</param>
+            </member>
         <member name="M:ModApi.Design.PartProperties.IDesignerPartPropertiesModifierInterface.OnPartStyleChanged(ModApi.Design.PartProperties.StyleChangedDelegate{ModApi.Craft.Parts.Styles.IPartStyle})">
              <summary>
              Subscribes to the event that occurs when that part style changes in the designer.
@@ -12874,14 +14132,16 @@
              <param name="fieldSelector">The field selector. This should specify the field for which the value is being displayed. Example: "() =&gt; this._myField".</param>
              <param name="label">The function that takes the value to be displayed and returns it in string format.</param>
             </member>
-        <member name="M:ModApi.Design.PartProperties.IDesignerPartPropertiesModifierInterface.OnVisibilityRequested``1(System.Linq.Expressions.Expression{System.Func{``0}},System.Func{System.Boolean})">
+        <member name="M:ModApi.Design.PartProperties.IDesignerPartPropertiesModifierInterface.OnVisibilityRequested``1(System.Linq.Expressions.Expression{System.Func{``0}},System.Func{System.Boolean,System.Boolean})">
              <summary>
              Sets a visibility function for the specified field in the designer part properties user interface.
              This visibility function executes whenever a part property changes and determines whether or not the specified field should be visible.
              </summary>
              <typeparam name="TValue">The type of the value.</typeparam>
              <param name="fieldSelector">The field selector. This should specify the field for which to set the visibility function. Example: "() =&gt; this._myField".</param>
-             <param name="visibilityTest">The visibility test. This should return <c>true</c> if the field should be visible or <c>false</c> if it should be hidden.</param>
+             <param name="visibilityTest">The visibility test. 
+             This should return <c>true</c> if the field should be visible or <c>false</c> if it should be hidden.
+             The parameter indicates whether the option to show hidden fields is enabled (<c>true</c>) or disabled (<c>false</c>).</param>
             </member>
         <member name="T:ModApi.Design.PartProperties.ILabelProperty">
              <summary>
@@ -13041,6 +14301,27 @@
              <param name="maxValue">The maximum value for the spinner.</param>
              <param name="stepSize">The step size for the spinner.</param>
             </member>
+        <member name="T:ModApi.Design.PartProperties.ITextInputProperty">
+             <summary>
+             An interface representing a part modifier's property that is configurable in the designer via a text input control.
+             </summary>
+            </member>
+        <member name="P:ModApi.Design.PartProperties.ITextInputProperty.LabelValue">
+             <summary>
+             Gets or sets the label value.
+             </summary>
+             <value>
+             The label value.
+             </value>
+            </member>
+        <member name="P:ModApi.Design.PartProperties.ITextInputProperty.Value">
+             <summary>
+             Gets the text value of the property.
+             </summary>
+             <value>
+             The text value of the property.
+             </value>
+            </member>
         <member name="T:ModApi.Design.PartProperties.IToggleButtonProperty">
              <summary>
              An interface representing a part modifier's property that is configurable in the designer via a toggle button control.
@@ -13093,6 +14374,11 @@
         <member name="F:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties._headerLabelFunction">
              <summary>
              The designer property header label function.
+             </summary>
+            </member>
+        <member name="F:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties._onPartMaterialsChangedActions">
+             <summary>
+             The designer part materials changed actions.
              </summary>
             </member>
         <member name="F:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties._onPartStyleChangedActions">
@@ -13163,6 +14449,11 @@
              <value>
              The part modifier data.
              </value>
+            </member>
+        <member name="M:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties.Dispose">
+             <summary>
+             Releases unmanaged and - optionally - managed resources.
+             </summary>
             </member>
         <member name="M:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties.GetCenterButtonProperty``1(System.Linq.Expressions.Expression{System.Func{``0}})">
              <summary>
@@ -13242,11 +14533,12 @@
              <param name="value">The value for which to get the display text.</param>
              <returns>The display text for the specified value.</returns>
             </member>
-        <member name="M:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties.ModApi#Design#PartProperties#IDesignerPartPropertiesDesignerInterface#IsVisible(System.Reflection.FieldInfo)">
+        <member name="M:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties.ModApi#Design#PartProperties#IDesignerPartPropertiesDesignerInterface#IsVisible(System.Reflection.FieldInfo,System.Boolean)">
              <summary>
              Determines whether the specified field is visible.
              </summary>
              <param name="field">The field for which to determine visibility.</param>
+             <param name="showHiddenFields">A value indicating whether the option to show hidden fields has been toggled on.</param>
              <returns>
                <c>true</c> if the field should be visible, <c>false</c> otherwise.
              </returns>
@@ -13298,6 +14590,17 @@
              <typeparam name="TValue">The type of the value.</typeparam>
              <param name="fieldSelector">The field selector. This should specify a field for which to subscribe to the event. Example: "() =&gt; this._myField".</param>
              <param name="action">The action to execute when the field is activated. The action parameter is the property interface associated with the field.</param>
+            </member>
+        <member name="M:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties.OnPartMaterialsChanged(System.Action)">
+             <summary>
+             Subscribes to the event that occurs when part materials may have changed.
+             </summary>
+             <param name="action">The action to execute when the part materials may have changed.</param>
+            </member>
+        <member name="M:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties.ModApi#Design#PartProperties#IDesignerPartPropertiesDesignerInterface#OnPartMaterialsChanged">
+             <summary>
+             Called when part materials may have changed.
+             </summary>
             </member>
         <member name="M:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties.ModApi#Design#PartProperties#IDesignerPartPropertiesDesignerInterface#OnPartStyleChanged(ModApi.Craft.Parts.Styles.IPartStyle,ModApi.Craft.Parts.Styles.IPartStyle)">
              <summary>
@@ -13420,14 +14723,16 @@
              <param name="fieldSelector">The field selector. This should specify the field for which the value is being displayed. Example: "() =&gt; this._myField".</param>
              <param name="label">The function that takes the value to be displayed and returns it in string format.</param>
             </member>
-        <member name="M:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties.OnVisibilityRequested``1(System.Linq.Expressions.Expression{System.Func{``0}},System.Func{System.Boolean})">
+        <member name="M:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties.OnVisibilityRequested``1(System.Linq.Expressions.Expression{System.Func{``0}},System.Func{System.Boolean,System.Boolean})">
              <summary>
              Sets a visibility function for the specified field in the designer part properties user interface.
              This visibility function executes whenever a part property changes and determines whether or not the specified field should be visible.
              </summary>
              <typeparam name="TValue">The type of the value.</typeparam>
              <param name="fieldSelector">The field selector. This should specify the field for which to set the visibility function. Example: "() =&gt; this._myField".</param>
-             <param name="visibilityTest">The visibility test. This should return <c>true</c> if the field should be visible or <c>false</c> if it should be hidden.</param>
+             <param name="visibilityTest">The visibility test. 
+             This should return <c>true</c> if the field should be visible or <c>false</c> if it should be hidden.
+             The parameter indicates whether the option to show hidden fields is enabled (<c>true</c>) or disabled (<c>false</c>).</param>
             </member>
         <member name="M:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties.ModApi#Design#PartProperties#IDesignerPartPropertiesDesignerInterface#SetVisible(System.Reflection.FieldInfo,System.Boolean)">
              <summary>
@@ -13459,6 +14764,13 @@
              <param name="fieldSelector">The field selector for which to get the part property interface.</param>
              <returns>The requested part property interface or <c>null</c> if an acceptable match could not be found.</returns>
             </member>
+        <member name="M:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties.OnPartMaterialsChanged(System.Object,System.EventArgs)">
+             <summary>
+             Called when part materials may have changed.
+             </summary>
+             <param name="sender">The sender.</param>
+             <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
+            </member>
         <member name="M:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties.OnPropertyActivated``1(System.Linq.Expressions.Expression{System.Func{``0}},System.Delegate)">
              <summary>
              Subscribes to the event that occurs when a designer part property is activated.
@@ -13468,13 +14780,15 @@
              <param name="fieldSelector">The field selector. This should specify a field for which to subscribe to the event. Example: "() =&gt; this._myField".</param>
              <param name="action">The action to execute when the field is activated.</param>
             </member>
-        <member name="M:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties.OnVisibilityRequested(System.Reflection.FieldInfo,System.Func{System.Boolean})">
+        <member name="M:ModApi.Design.PartProperties.PartModifierDataDesignerPartProperties.OnVisibilityRequested(System.Reflection.FieldInfo,System.Func{System.Boolean,System.Boolean})">
              <summary>
              Sets a visibility function for the specified field in the designer part properties user interface.
              This visibility function executes whenever a part property changes and determines whether or not the specified field should be visible.
              </summary>
              <param name="field">The field for which to set the visibility function.</param>
-             <param name="visibilityTest">The visibility test. This should return <c>true</c> if the field should be visible or <c>false</c> if it should be hidden.</param>
+             <param name="visibilityTest">The visibility test. 
+             This should return <c>true</c> if the field should be visible or <c>false</c> if it should be hidden.
+             The parameter indicates whether the option to show hidden fields is enabled (<c>true</c>) or disabled (<c>false</c>).</param>
             </member>
         <member name="T:ModApi.Design.PartProperties.PartPropertiesScript">
              <summary>
@@ -13492,6 +14806,14 @@
              </summary>
              <value>
              The designer attribute for the part modifier type (if any)
+             </value>
+            </member>
+        <member name="P:ModApi.Design.PartProperties.PartPropertiesScript.Flyout">
+             <summary>
+             Gets the part properties flyout script.
+             </summary>
+             <value>
+             The part properties flyout script.
              </value>
             </member>
         <member name="P:ModApi.Design.PartProperties.PartPropertiesScript.HandlesMultipleModifiers">
@@ -13545,14 +14867,6 @@
              </summary>
              <value>
              The designer script.
-             </value>
-            </member>
-        <member name="P:ModApi.Design.PartProperties.PartPropertiesScript.Flyout">
-             <summary>
-             Gets the part properties flyout script.
-             </summary>
-             <value>
-             The part properties flyout script.
              </value>
             </member>
         <member name="M:ModApi.Design.PartProperties.PartPropertiesScript.Initialize(ModApi.Design.IDesigner,ModApi.Design.PartProperties.IPartPropertiesFlyout,System.Type,System.Int32,ModApi.Craft.Parts.Attributes.DesignerPartModifierAttribute)">
@@ -17359,6 +18673,14 @@
              The scene manager.
              </value>
             </member>
+        <member name="P:ModApi.IGame.Settings">
+             <summary>
+             Gets the application settings.
+             </summary>
+             <value>
+             The application settings.
+             </value>
+            </member>
         <member name="P:ModApi.IGame.SolarSystemManager">
              <summary>
              Gets the solar system manager.
@@ -18022,6 +19344,14 @@
              The pitch input.
              </value>
             </member>
+        <member name="P:ModApi.Input.IGameInputs.PreventPartSelection">
+             <summary>
+             Gets the prevent part selection input.
+             </summary>
+             <value>
+             The prevent part selection input.
+             </value>
+            </member>
         <member name="P:ModApi.Input.IGameInputs.QuickLoad">
              <summary>
              Gets the quick load input.
@@ -18036,6 +19366,14 @@
              </summary>
              <value>
              The quick save input.
+             </value>
+            </member>
+        <member name="P:ModApi.Input.IGameInputs.ReattachSelectedPart">
+             <summary>
+             Gets the reattach selected part input.
+             </summary>
+             <value>
+             The reattach selected part input.
              </value>
             </member>
         <member name="P:ModApi.Input.IGameInputs.Redo">
@@ -20785,6 +22123,13 @@
              <param name="acceleration">The acceleration in m/s^2.</param>
              <returns>The acceleration string.</returns>
             </member>
+        <member name="M:ModApi.Math.Units.GetAngularVelocityString(System.Single)">
+             <summary>
+             Gets the angular velocity string.
+             </summary>
+             <param name="v">The velocity in degrees per second.</param>
+             <returns>The angular velocity string.</returns>
+            </member>
         <member name="M:ModApi.Math.Units.GetDensityString(System.Single)">
              <summary>
              Gets the density string.
@@ -20821,6 +22166,13 @@
              <returns>
              The Isp string
              </returns>
+            </member>
+        <member name="M:ModApi.Math.Units.GetMassFlowRateString(System.Single)">
+             <summary>
+             Gets the mass flow rate string.
+             </summary>
+             <param name="currentMassFlowRate">The current mass flow rate.</param>
+             <returns>The mass flow rate string.</returns>
             </member>
         <member name="M:ModApi.Math.Units.GetMassString(System.Single)">
              <summary>
@@ -21258,6 +22610,117 @@
              </summary>
              <param name="lhs"></param>
              <param name="rhs"></param>
+            </member>
+        <member name="T:ModApi.Mocks.ApplicationSettingsMock">
+             <summary>
+             A mock class for application settings.
+             </summary>
+            </member>
+        <member name="P:ModApi.Mocks.ApplicationSettingsMock.AppVersionLastRun">
+             <summary>
+             Gets or sets the application version last run.
+             </summary>
+             <value>
+             The application version last run.
+             </value>
+            </member>
+        <member name="P:ModApi.Mocks.ApplicationSettingsMock.CurrentXmlVersion">
+             <summary>
+             Gets or sets the current XML version.
+             </summary>
+             <value>
+             The current XML version.
+             </value>
+            </member>
+        <member name="P:ModApi.Mocks.ApplicationSettingsMock.DeviceId">
+             <summary>
+             Gets or sets the device identifier.
+             </summary>
+             <value>
+             The device identifier.
+             </value>
+            </member>
+        <member name="P:ModApi.Mocks.ApplicationSettingsMock.EnabledMods">
+             <summary>
+             Gets or sets the enabled mods.
+             </summary>
+             <value>
+             The enabled mods.
+             </value>
+            </member>
+        <member name="P:ModApi.Mocks.ApplicationSettingsMock.Game">
+             <summary>
+             Gets or sets the game settings.
+             </summary>
+             <value>
+             The game settings.
+             </value>
+            </member>
+        <member name="P:ModApi.Mocks.ApplicationSettingsMock.GameStateId">
+             <summary>
+             Gets or sets the ID of the most recent Game State that the player was using.
+             </summary>
+             <value>
+             The game state ID.
+             </value>
+            </member>
+        <member name="P:ModApi.Mocks.ApplicationSettingsMock.NumberOfApplicationRuns">
+             <summary>
+             Gets or sets the number of application runs.
+             </summary>
+             <value>
+             The number of application runs.
+             </value>
+            </member>
+        <member name="P:ModApi.Mocks.ApplicationSettingsMock.Quality">
+             <summary>
+             Gets or sets the game quality settings.
+             </summary>
+             <value>
+             The game quality settings.
+             </value>
+            </member>
+        <member name="P:ModApi.Mocks.ApplicationSettingsMock.ShowWhatsNew">
+             <summary>
+             Gets or sets a value indicating whether to show the whats new panel in the main menu.
+             </summary>
+             <value>
+               <c>true</c> if it should show the whats new; otherwise, <c>false</c>.
+             </value>
+            </member>
+        <member name="P:ModApi.Mocks.ApplicationSettingsMock.UserName">
+             <summary>
+             Gets or sets the name of the user.
+             </summary>
+             <value>
+             The name of the user.
+             </value>
+            </member>
+        <member name="P:ModApi.Mocks.ApplicationSettingsMock.VisibleFlightInputSliders">
+             <summary>
+             Gets or sets the open flight input sliders.
+             </summary>
+             <value>
+             The open flight input sliders.
+             </value>
+            </member>
+        <member name="M:ModApi.Mocks.ApplicationSettingsMock.Save">
+             <summary>
+             Saves the settings to file.
+             </summary>
+            </member>
+        <member name="M:ModApi.Mocks.ApplicationSettingsMock.SaveIfNecessary">
+             <summary>
+             Saves the settings to file if there are any pending unsaved changes.
+             </summary>
+            </member>
+        <member name="M:ModApi.Mocks.ApplicationSettingsMock.SaveXml">
+             <summary>
+             Saves the XML.
+             </summary>
+             <returns>
+             The settings XML.
+             </returns>
             </member>
         <member name="T:ModApi.Mocks.AudioPlayerMock">
              <summary>
@@ -22321,6 +23784,14 @@
              The pitch input.
              </value>
             </member>
+        <member name="P:ModApi.Mocks.GameInputsMock.PreventPartSelection">
+             <summary>
+             Gets or sets the prevent part selection input.
+             </summary>
+             <value>
+             The prevent part selection input.
+             </value>
+            </member>
         <member name="P:ModApi.Mocks.GameInputsMock.QuickLoad">
              <summary>
              Gets or sets the quick load input.
@@ -22335,6 +23806,14 @@
              </summary>
              <value>
              The quick save input.
+             </value>
+            </member>
+        <member name="P:ModApi.Mocks.GameInputsMock.ReattachSelectedPart">
+             <summary>
+             Gets or sets the reattach selected part input.
+             </summary>
+             <value>
+             The reattach selected part input.
              </value>
             </member>
         <member name="P:ModApi.Mocks.GameInputsMock.Redo">
@@ -22763,6 +24242,22 @@
              The mock class for the scene manager.
              </value>
             </member>
+        <member name="P:ModApi.Mocks.GameMock.Settings">
+             <summary>
+             Gets the application settings.
+             </summary>
+             <value>
+             The application settings.
+             </value>
+            </member>
+        <member name="P:ModApi.Mocks.GameMock.SettingsMock">
+             <summary>
+             Gets the mock class for the application settings.
+             </summary>
+             <value>
+             The mock class for the application settings.
+             </value>
+            </member>
         <member name="P:ModApi.Mocks.GameMock.SolarSystemManager">
              <summary>
              Gets the solar system manager.
@@ -22839,6 +24334,14 @@
              </summary>
              <value>
              The display quality settings.
+             </value>
+            </member>
+        <member name="P:ModApi.Mocks.GameQualitySettingsMock.ImageEffects">
+             <summary>
+             Gets or sets the image effects.
+             </summary>
+             <value>
+             The image effects.
              </value>
             </member>
         <member name="P:ModApi.Mocks.GameQualitySettingsMock.Physics">
@@ -30405,6 +31908,7 @@
              This pass is responsible for setting the biome strength values.
              It may also set any other output data as well.
              The input position is available in this pass but the normal is not available.
+             This pass is only ran for common modifiers and will not be executed for biome specific modifiers.
              </summary>
             </member>
         <member name="F:ModApi.Planet.Modifiers.VertexDataPlanetModifierPassType.Height">
@@ -30413,6 +31917,7 @@
              This pass runs after the 'Biome' pass and is responsible for setting the height value.
              It may also set any other output data as well other than the biome strength values.
              The input position is available in this pass but the normal is not available.
+             This pass is ran for common modifiers first and then executed for biome specific modifiers second.
              </summary>
             </member>
         <member name="F:ModApi.Planet.Modifiers.VertexDataPlanetModifierPassType.HeightFinal">
@@ -30421,6 +31926,7 @@
              This pass is just like the Height pass but it runs after it and is useful for 
              common modifiers that need to run after biome specific height pass modifiers.
              The input position is available in this pass but the normal is not available.
+             This pass is only ran for common modifiers and will not be executed for biome specific modifiers.
              </summary>
             </member>
         <member name="F:ModApi.Planet.Modifiers.VertexDataPlanetModifierPassType.Final">
@@ -30429,6 +31935,7 @@
              This pass runs after all other passes and is responsible for setting any remaining vertex data that has not been set.
              It may set any data other than the biome strength values and the height value.
              The input position and the normal position are both available in this pass.
+             This pass is ran for common modifiers first and then executed for biome specific modifiers second.
              </summary>
             </member>
         <member name="T:ModApi.Planet.IPlanetAtmosphereData">
@@ -30552,6 +32059,11 @@
              The atmospheric pressure crush altitude.
              </summary>
             </member>
+        <member name="F:ModApi.Planet.PlanetAtmosphereData._description">
+             <summary>
+             The description of the atmosphere.
+             </summary>
+            </member>
         <member name="F:ModApi.Planet.PlanetAtmosphereData._hasPhysicsAtmosphere">
              <summary>
              A value indicating whether this planet has an atmosphere.
@@ -30584,11 +32096,6 @@
         <member name="F:ModApi.Planet.PlanetAtmosphereData._surfaceAirDensity">
              <summary>
              The air density (kg/m^3) of the atmosphere at sea level.
-             </summary>
-            </member>
-        <member name="F:ModApi.Planet.PlanetAtmosphereData._description">
-             <summary>
-             The description of the atmosphere.
              </summary>
             </member>
         <member name="M:ModApi.Planet.PlanetAtmosphereData.#ctor">
@@ -30720,6 +32227,17 @@
              See: https://en.wikipedia.org/wiki/Speed_of_sound#Speed_of_sound_in_ideal_gases_and_air
              </remarks>
             </member>
+        <member name="M:ModApi.Planet.PlanetAtmosphereData.CalculateTemperature(System.Double,System.Double,System.Double)">
+             <summary>
+             Calculates the temperature.
+             </summary>
+             <param name="altitude">The altitude.</param>
+             <param name="height">The height in meters.</param>
+             <param name="surfaceTemperature">The surface temperature in Kelvin.</param>
+             <returns>
+             The temperature in Kelvin.
+             </returns>
+            </member>
         <member name="M:ModApi.Planet.PlanetAtmosphereData.CreateFromXml(System.Xml.Linq.XElement,ModApi.Planet.PlanetDataScript)">
              <summary>
              Creates an atmosphere data object from the specified XML.
@@ -30734,13 +32252,6 @@
              </summary>
              <param name="altitude">The altitude.</param>
              <returns>The air density.</returns>
-            </member>
-        <member name="M:ModApi.Planet.PlanetAtmosphereData.CalculateTemperature(System.Double)">
-             <summary>
-             Calculates the temperature.
-             </summary>
-             <param name="altitude">The altitude.</param>
-             <returns>The temperature.</returns>
             </member>
         <member name="M:ModApi.Planet.PlanetAtmosphereData.SaveXml(System.Xml.Linq.XElement)">
              <summary>
@@ -31029,6 +32540,25 @@
              </summary>
              <value>
              The type of the planet.
+             </value>
+            </member>
+        <member name="P:ModApi.Planet.IPlanetData.QuadSphereActivationDistance">
+             <summary>
+             Gets the distance from the center of the planet at which the quad sphere is enabled. If this is left at zero,
+             then a default value will be used, which is the diameter of the planet.
+             </summary>
+             <value>
+             The distance from the center of the planet that under which, the quad sphere is enabled.
+             </value>
+            </member>
+        <member name="P:ModApi.Planet.IPlanetData.QuadSphereTransitionDistance">
+             <summary>
+             Gets the distance over which the rendering is transitioned between the quad sphere and the scaled space renderer. The quad sphere
+             is 100% visible at QuadSphereActivationDistance and the scaled space renderer is 100% visible at QuadSphereActivationDistance +
+             QuadSphereTransitionDistance. If this is left at zero, then a default value will be used, which is the diameter of the planet.
+             </summary>
+             <value>
+             The quad sphere transition distance.
              </value>
             </member>
         <member name="P:ModApi.Planet.IPlanetData.Radius">
@@ -31374,6 +32904,25 @@
              </summary>
              <value>
              The type of the planet.
+             </value>
+            </member>
+        <member name="P:ModApi.Planet.PlanetDataScript.QuadSphereActivationDistance">
+             <summary>
+             Gets the distance from the center of the planet at which the quad sphere is enabled. If this is left at zero,
+             then a default value will be used, which is the diameter of the planet.
+             </summary>
+             <value>
+             The distance from the center of the planet that under which, the quad sphere is enabled.
+             </value>
+            </member>
+        <member name="P:ModApi.Planet.PlanetDataScript.QuadSphereTransitionDistance">
+             <summary>
+             Gets the distance over which the rendering is transitioned between the quad sphere and the scaled space renderer. The quad sphere
+             is 100% visible at QuadSphereActivationDistance and the scaled space renderer is 100% visible at QuadSphereActivationDistance +
+             QuadSphereTransitionDistance. If this is left at zero, then a default value will be used, which is the diameter of the planet.
+             </summary>
+             <value>
+             The quad sphere transition distance.
              </value>
             </member>
         <member name="P:ModApi.Planet.PlanetDataScript.Radius">
@@ -34813,21 +36362,6 @@
              High quality atmosphere rendering affects are applied.
              </summary>
             </member>
-        <member name="T:ModApi.Settings.AtmosphereQualitySettings.SunQuality">
-             <summary>
-             An enumeration defining the sun rendering quality levels.
-             </summary>
-            </member>
-        <member name="F:ModApi.Settings.AtmosphereQualitySettings.SunQuality.Low">
-             <summary>
-             Low quality sun rendering.
-             </summary>
-            </member>
-        <member name="F:ModApi.Settings.AtmosphereQualitySettings.SunQuality.High">
-             <summary>
-             High quality sun rendering.
-             </summary>
-            </member>
         <member name="P:ModApi.Settings.AtmosphereQualitySettings.Craft">
              <summary>
              Gets the atmosphere quality for craft rendering.
@@ -34842,14 +36376,6 @@
              </summary>
              <value>
              The quality for rendering planet atmospheres.
-             </value>
-            </member>
-        <member name="P:ModApi.Settings.AtmosphereQualitySettings.Sun">
-             <summary>
-             Gets the sun rendering quality.
-             </summary>
-             <value>
-             The sun rendering quality.
              </value>
             </member>
         <member name="P:ModApi.Settings.AtmosphereQualitySettings.Terrain">
@@ -34876,6 +36402,46 @@
              </returns>
             </member>
         <member name="M:ModApi.Settings.AtmosphereQualitySettings.InitializeSettings">
+             <summary>
+             Initializes the settings in the category.
+             </summary>
+            </member>
+        <member name="T:ModApi.Settings.AudioSettings">
+             <summary>
+             Audio settings.
+             </summary>
+             <seealso cref="T:ModApi.Settings.Core.SettingsCategory`1" />
+            </member>
+        <member name="M:ModApi.Settings.AudioSettings.#ctor">
+             <summary>
+             Initializes a new instance of the <see cref="T:ModApi.Settings.AudioSettings" /> class.
+             </summary>
+            </member>
+        <member name="P:ModApi.Settings.AudioSettings.MasterVolume">
+             <summary>
+             Gets the master volume.
+             </summary>
+             <value>
+             The master volume.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.AudioSettings.MusicVolume">
+             <summary>
+             Gets the music volume.
+             </summary>
+             <value>
+             The music volume.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.AudioSettings.SoundVolume">
+             <summary>
+             Gets the sound volume.
+             </summary>
+             <value>
+             The sound volume.
+             </value>
+            </member>
+        <member name="M:ModApi.Settings.AudioSettings.InitializeSettings">
              <summary>
              Initializes the settings in the category.
              </summary>
@@ -34920,12 +36486,6 @@
              Restores the setting from the specified XML.
              </summary>
              <param name="xml">The XML from which to restore the setting.</param>
-            </member>
-        <member name="M:ModApi.Settings.Core.BoolSetting.SaveToXml(System.Xml.Linq.XElement)">
-             <summary>
-             Saves the setting to the specified XML.
-             </summary>
-             <param name="xml">The XML to which to save the setting.</param>
             </member>
         <member name="T:ModApi.Settings.Core.BoolSetting.BoolSettingBuilder">
              <summary>
@@ -35374,12 +36934,6 @@
              </summary>
              <param name="xml">The XML from which to restore the setting.</param>
             </member>
-        <member name="M:ModApi.Settings.Core.EnumSetting`1.SaveToXml(System.Xml.Linq.XElement)">
-             <summary>
-             Saves the setting to the specified XML.
-             </summary>
-             <param name="xml">The XML to which to save the setting.</param>
-            </member>
         <member name="M:ModApi.Settings.Core.EnumSetting`1.SetInternalValueFromDisplayValue(System.String)">
              <summary>
              Sets the internal value from a display value.
@@ -35571,12 +37125,6 @@
              Restores the setting from the specified XML.
              </summary>
              <param name="xml">The XML from which to restore the setting.</param>
-            </member>
-        <member name="M:ModApi.Settings.Core.NumericSetting`1.SaveToXml(System.Xml.Linq.XElement)">
-             <summary>
-             Saves the setting to the specified XML.
-             </summary>
-             <param name="xml">The XML to which to save the setting.</param>
             </member>
         <member name="M:ModApi.Settings.Core.NumericSetting`1.Validate(`0)">
              <summary>
@@ -35902,6 +37450,14 @@
              The value of the setting.
              </value>
             </member>
+        <member name="P:ModApi.Settings.Core.Setting`1.OriginalValue">
+             <summary>
+             Gets the original value of the setting.
+             </summary>
+             <value>
+             The original value of the setting.
+             </value>
+            </member>
         <member name="P:ModApi.Settings.Core.Setting`1.WarningChecks">
              <summary>
              Gets the warning checks that are invoked when the setting changes.
@@ -35935,6 +37491,18 @@
              <summary>
              Reverts a pending change, updating the setting value to its original value.
              </summary>
+            </member>
+        <member name="M:ModApi.Settings.Core.Setting`1.SaveToXml(System.Xml.Linq.XElement)">
+             <summary>
+             Saves the setting to the specified XML.
+             </summary>
+             <param name="xml">The XML to which to save the setting.</param>
+            </member>
+        <member name="M:ModApi.Settings.Core.Setting`1.UpdateAndCommit(`0)">
+             <summary>
+             Updates the value of the setting and commits the change.
+             </summary>
+             <param name="value">The new value of the setting.</param>
             </member>
         <member name="M:ModApi.Settings.Core.Setting`1.CommitChanges(System.Boolean)">
              <summary>
@@ -36040,6 +37608,21 @@
              </summary>
              <param name="devices">The devices to which to apply this apply type.</param>
              <param name="applyType">The apply type of the setting.</param>
+             <returns>The setting builder.</returns>
+            </member>
+        <member name="M:ModApi.Settings.Core.Setting`1.SettingBuilder`2.SetDefault(`0)">
+             <summary>
+             Sets the default value of the setting.
+             </summary>
+             <param name="value">The default value of the setting.</param>
+             <returns>The setting builder.</returns>
+            </member>
+        <member name="M:ModApi.Settings.Core.Setting`1.SettingBuilder`2.SetDefault(ModApi.Settings.Core.DeviceFlags,`0)">
+             <summary>
+             Sets the default value of the setting.
+             </summary>
+             <param name="devices">The device to which to apply this default value.</param>
+             <param name="value">The default value of the setting.</param>
              <returns>The setting builder.</returns>
             </member>
         <member name="M:ModApi.Settings.Core.Setting`1.SettingBuilder`2.SetDescription(System.String)">
@@ -36187,6 +37770,14 @@
              The XML name of the category used when saving or loading settings to/from XML.
              </value>
             </member>
+        <member name="P:ModApi.Settings.Core.SettingsCategory.HasUnsavedChanges">
+             <summary>
+             Gets or sets a value indicating whether this settings category has unsaved changes.
+             </summary>
+             <value>
+               <c>true</c> if this settings category has unsaved changes; otherwise, <c>false</c>.
+             </value>
+            </member>
         <member name="P:ModApi.Settings.Core.SettingsCategory.Order">
              <summary>
              Gets the order in which this category should be displayed.
@@ -36278,11 +37869,12 @@
              Reverts pending changes for all settings in the category.
              </summary>
             </member>
-        <member name="M:ModApi.Settings.Core.SettingsCategory.SaveToXml(System.Xml.Linq.XElement)">
+        <member name="M:ModApi.Settings.Core.SettingsCategory.SaveToXml(System.Xml.Linq.XElement,System.Boolean)">
              <summary>
              Saves the settings in the category to the specified XML.
              </summary>
              <param name="settingsXml">The XML to which to save the settings.</param>
+             <param name="preserveUnsavedChangesFlag">If <c>true</c>, the unsaved changes flag will be preserved (rather than being set to <c>false</c>).</param>
             </member>
         <member name="M:ModApi.Settings.Core.SettingsCategory.SetPreset(ModApi.Settings.Core.SettingsCategoryPreset)">
              <summary>
@@ -36334,6 +37926,13 @@
              <param name="min">The minimum value of the setting.</param>
              <param name="max">The maximum value of the setting.</param>
              <param name="step">The step value of the setting range.</param>
+             <returns>The setting builder which uses a fluent API to configure the setting.</returns>
+            </member>
+        <member name="M:ModApi.Settings.Core.SettingsCategory.CreateString(System.String)">
+             <summary>
+             Creates a string setting.
+             </summary>
+             <param name="displayName">The display name of the setting.</param>
              <returns>The setting builder which uses a fluent API to configure the setting.</returns>
             </member>
         <member name="M:ModApi.Settings.Core.SettingsCategory.GetDefaultPreset">
@@ -36470,6 +38069,21 @@
              The custom preset.
              </summary>
             </member>
+        <member name="T:ModApi.Settings.Core.SettingsExtensions">
+             <summary>
+             A class containing extension methods related to the settings framework.
+             </summary>
+            </member>
+        <member name="M:ModApi.Settings.Core.SettingsExtensions.HasUnsavedChanges``1(System.Collections.Generic.IEnumerable{``0})">
+             <summary>
+             Determines whether any of the categories have unsaved changes.
+             </summary>
+             <typeparam name="T">The type of setting categories.</typeparam>
+             <param name="categories">The setting categories for which to check for unsaved changes.</param>
+             <returns>
+               <c>true</c> if any of the categories have unsaved changes; otherwise, <c>false</c>.
+             </returns>
+            </member>
         <member name="T:ModApi.Settings.Core.SettingState">
              <summary>
              An enumeration defining the different states for a setting.
@@ -36488,6 +38102,12 @@
         <member name="F:ModApi.Settings.Core.SettingState.Hidden">
              <summary>
              The setting is hidden, meaning it is fully functionally but not visible in the UI.
+             </summary>
+            </member>
+        <member name="F:ModApi.Settings.Core.SettingState.HiddenReadOnly">
+             <summary>
+             The setting is hidden, meaning it is fully functionally but not visible in the UI.
+             The setting is also read-only, meaning the value will loaded but never saved.
              </summary>
             </member>
         <member name="T:ModApi.Settings.Core.SettingVisibility">
@@ -36520,6 +38140,63 @@
              The standard performance warning when a setting is selected that is 
              too performance intensive for the current device and not officially supported.
              </summary>
+            </member>
+        <member name="T:ModApi.Settings.Core.StringSetting">
+             <summary>
+             A string based game setting.
+             </summary>
+             <seealso cref="T:ModApi.Settings.Core.Setting`1" />
+            </member>
+        <member name="M:ModApi.Settings.Core.StringSetting.#ctor(System.String,ModApi.Settings.Core.SettingsCategory)">
+             <summary>
+             Initializes a new instance of the <see cref="T:ModApi.Settings.Core.StringSetting" /> class.
+             </summary>
+             <param name="displayName">The display name of the setting.</param>
+             <param name="category">The category to which the setting belongs.</param>
+            </member>
+        <member name="M:ModApi.Settings.Core.StringSetting.Create(System.String,ModApi.Settings.Core.SettingsCategory)">
+             <summary>
+             Creates a string based game setting.
+             </summary>
+             <param name="displayName">The display name of the setting.</param>
+             <param name="category">The category to which the setting belongs.</param>
+             <returns>The setting builder.</returns>
+            </member>
+        <member name="M:ModApi.Settings.Core.StringSetting.op_Implicit(ModApi.Settings.Core.StringSetting)~System.String">
+             <summary>
+             Performs an implicit conversion from <see cref="T:ModApi.Settings.Core.StringSetting" /> to its underlying type."/&gt;.
+             </summary>
+             <param name="setting">The setting.</param>
+             <returns>
+             The result of the conversion.
+             </returns>
+            </member>
+        <member name="M:ModApi.Settings.Core.StringSetting.RestoreFromXml(System.Xml.Linq.XElement)">
+             <summary>
+             Restores the setting from the specified XML.
+             </summary>
+             <param name="xml">The XML from which to restore the setting.</param>
+            </member>
+        <member name="T:ModApi.Settings.Core.StringSetting.StringSettingBuilder">
+             <summary>
+             A setting builder object for a string based game setting.
+             </summary>
+             <seealso cref="T:ModApi.Settings.Core.Setting{`0}.SettingBuilder`2" />
+            </member>
+        <member name="M:ModApi.Settings.Core.StringSetting.StringSettingBuilder.#ctor(ModApi.Settings.Core.StringSetting)">
+             <summary>
+             Initializes a new instance of the <see cref="T:ModApi.Settings.Core.StringSetting.StringSettingBuilder" /> class.
+             </summary>
+             <param name="setting">The setting associated with the builder.</param>
+            </member>
+        <member name="M:ModApi.Settings.Core.StringSetting.StringSettingBuilder.op_Implicit(ModApi.Settings.Core.StringSetting.StringSettingBuilder)~ModApi.Settings.Core.StringSetting">
+             <summary>
+             Performs an implicit conversion from <see cref="T:ModApi.Settings.Core.StringSetting.StringSettingBuilder" /> to <see cref="T:ModApi.Settings.Core.StringSetting" />.
+             </summary>
+             <param name="builder">The builder.</param>
+             <returns>
+             The result of the conversion.
+             </returns>
             </member>
         <member name="T:ModApi.Settings.CraftQualitySettings">
              <summary>
@@ -36642,6 +38319,94 @@
              </returns>
             </member>
         <member name="M:ModApi.Settings.CraftQualitySettings.InitializeSettings">
+             <summary>
+             Initializes the settings in the category.
+             </summary>
+            </member>
+        <member name="T:ModApi.Settings.DesignerSettings">
+             <summary>
+             Designer settings.
+             </summary>
+             <seealso cref="T:ModApi.Settings.Core.SettingsCategory`1" />
+            </member>
+        <member name="M:ModApi.Settings.DesignerSettings.#ctor">
+             <summary>
+             Initializes a new instance of the <see cref="T:ModApi.Settings.DesignerSettings" /> class.
+             </summary>
+            </member>
+        <member name="P:ModApi.Settings.DesignerSettings.AngleSnap">
+             <summary>
+             Gets the angle snap setting.
+             </summary>
+             <value>
+             The angle snap setting.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.DesignerSettings.EnableAutoResize">
+             <summary>
+             Gets a setting indicating whether to enable automatic resize of fuselage parts when they are connected.
+             </summary>
+             <value>
+             A setting indicating whether to enable automatic resize of fuselage parts when they are connected.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.DesignerSettings.EnableAutoRotation">
+             <summary>
+             Gets a setting indicating whether to enable automatic rotation of parts when connecting.
+             </summary>
+             <value>
+             A setting indicating whether to enable automatic rotation of parts when connecting.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.DesignerSettings.EnableGizmos">
+             <summary>
+             Gets a setting indicating whether tools with gizmos for a part are automatically selected when a part is selected.
+             </summary>
+             <value>
+             A setting indicating whether tools with gizmos for a part are automatically selected when a part is selected.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.DesignerSettings.EnableTinkerPanel">
+             <summary>
+             Gets a setting indicating whether to enable the tinker panel in the part properties.
+             </summary>
+             <value>
+             A setting indicating whether to enable the tinker panel in the part properties.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.DesignerSettings.GridSize">
+             <summary>
+             Gets the setting defining the size of the grid.
+             </summary>
+             <value>
+             The setting defining the size of the grid.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.DesignerSettings.OptimizeCraftXml">
+             <summary>
+             Gets a setting indicating whether craft XML should be optimized where possible.
+             </summary>
+             <value>
+             A setting indicating whether craft XML should be optimized where possible.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.DesignerSettings.ShowAttachPoints">
+             <summary>
+             Gets a setting indicating whether to show attach points when the player is moving parts around.
+             </summary>
+             <value>
+             A setting indicating whether to show attach points when the player is moving parts around.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.DesignerSettings.ShowHiddenPartProperties">
+             <summary>
+             Gets a setting indicating whether hidden part properties are show in the designer.
+             </summary>
+             <value>
+             A setting indicating whether hidden part properties are show in the designer.
+             </value>
+            </member>
+        <member name="M:ModApi.Settings.DesignerSettings.InitializeSettings">
              <summary>
              Initializes the settings in the category.
              </summary>
@@ -36817,6 +38582,72 @@
              </summary>
              <param name="sender">The source of the event.</param>
              <param name="e">The <see cref="T:ModApi.Settings.Core.Events.SettingChangedEventArgs`1" /> instance containing the event data.</param>
+            </member>
+        <member name="T:ModApi.Settings.EnabledMod">
+             <summary>
+             A settings object representing a mod that has been enabled.
+             </summary>
+            </member>
+        <member name="M:ModApi.Settings.EnabledMod.#ctor(System.String,System.Version,System.DateTime,System.String)">
+             <summary>
+             Initializes a new instance of the <see cref="T:ModApi.Settings.EnabledMod" /> class.
+             </summary>
+             <param name="name">The name of the mod.</param>
+             <param name="version">The version of the mod.</param>
+             <param name="lastUpdated">The last updated date time of the mod.</param>
+             <param name="path">The path of the mod.</param>
+            </member>
+        <member name="P:ModApi.Settings.EnabledMod.LastUpdated">
+             <summary>
+             Gets the last updated date time of the mod.
+             </summary>
+             <value>
+             The last updated date time of the mod.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.EnabledMod.Name">
+             <summary>
+             Gets the name of the mod.
+             </summary>
+             <value>
+             The name of the mod.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.EnabledMod.Path">
+             <summary>
+             Gets the path of the mod.
+             </summary>
+             <value>
+             The path of the mod.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.EnabledMod.Version">
+             <summary>
+             Gets the version of the mod.
+             </summary>
+             <value>
+             The version of the mod.
+             </value>
+            </member>
+        <member name="M:ModApi.Settings.EnabledMod.ReadXml(System.Xml.Linq.XElement)">
+             <summary>
+             Reads the XML element and returns the enabled mod object represented by the XML.
+             </summary>
+             <param name="xml">The XML element to read.</param>
+             <returns>The enabled mod object represented by the XML.</returns>
+            </member>
+        <member name="M:ModApi.Settings.EnabledMod.GenerateXml">
+             <summary>
+             Generates XML representing this instance.
+             </summary>
+             <returns>The generated xml.</returns>
+            </member>
+        <member name="M:ModApi.Settings.EnabledMod.IsExactMatch(Jundroo.ModTools.ModInfo)">
+             <summary>
+             Determines whether the specified mod is an exact match for this instance.
+             </summary>
+             <param name="mod">The mod to check for a match.</param>
+             <returns><c>true</c> if the mod is an exact match.</returns>
             </member>
         <member name="T:ModApi.Settings.ExplosionsQualitySettings">
              <summary>
@@ -37011,6 +38842,255 @@
              </summary>
              <param name="enabled">if set to <c>true</c> [enabled].</param>
             </member>
+        <member name="T:ModApi.Settings.FlightSettings">
+             <summary>
+             Flight settings.
+             </summary>
+             <seealso cref="T:ModApi.Settings.Core.SettingsCategory`1" />
+            </member>
+        <member name="M:ModApi.Settings.FlightSettings.#ctor">
+             <summary>
+             Initializes a new instance of the <see cref="T:ModApi.Settings.FlightSettings" /> class.
+             </summary>
+            </member>
+        <member name="P:ModApi.Settings.FlightSettings.AmbientLightAtNightStrength">
+             <summary>
+             Gets the ambient light at night strength setting.
+             </summary>
+             <value>
+             The ambient light at night strength setting.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.FlightSettings.AmbientLightInSpaceStrength">
+             <summary>
+             Gets the ambient light in space strength setting.
+             </summary>
+             <value>
+             The ambient light in space strength setting.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.FlightSettings.FastForwardSpeed">
+             <summary>
+             Gets the slow motion speed.
+             </summary>
+             <value>
+             The the slow motion speed.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.FlightSettings.HeatDamage">
+             <summary>
+             Gets or sets the heat damage setting. True indicates that parts will take damage from
+             heat on re-entry.
+             </summary>
+             <value>
+             The heat damage setting.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.FlightSettings.ShowNavSphere">
+             <summary>
+             Gets the show nav sphere setting.
+             </summary>
+             <value>
+             The show nav sphere.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.FlightSettings.ShowNavSphereInMapView">
+             <summary>
+             Gets the show nav sphere in map view setting.
+             </summary>
+             <value>
+             The show nav sphere in map view setting.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.FlightSettings.SlowMotionSpeed">
+             <summary>
+             Gets the slow motion speed.
+             </summary>
+             <value>
+             The the slow motion speed.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.FlightSettings.VisibleFlightInputSliders">
+             <summary>
+             Gets the open flight input sliders.
+             </summary>
+             <value>
+             The open flight input sliders.
+             </value>
+            </member>
+        <member name="M:ModApi.Settings.FlightSettings.InitializeSettings">
+             <summary>
+             Initializes the settings in the category.
+             </summary>
+            </member>
+        <member name="T:ModApi.Settings.GeneralSettings">
+             <summary>
+             General game settings.
+             </summary>
+             <seealso cref="T:ModApi.Settings.Core.SettingsCategory`1" />
+            </member>
+        <member name="M:ModApi.Settings.GeneralSettings.#ctor">
+             <summary>
+             Initializes a new instance of the <see cref="T:ModApi.Settings.GeneralSettings" /> class.
+             </summary>
+            </member>
+        <member name="P:ModApi.Settings.GeneralSettings.FieldOfView">
+             <summary>
+             Gets the field of view setting.
+             </summary>
+             <value>
+             The field of view setting.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.GeneralSettings.RunInBackground">
+             <summary>
+             Gets the run in background setting.
+             </summary>
+             <value>
+             The run in background setting.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.GeneralSettings.SupportUnknownGamepadsOnAndroid">
+             <summary>
+             Gets the support unknown gamepads on android.
+             </summary>
+             <value>
+             The support unknown gamepads on android.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.GeneralSettings.UseDirectInput">
+             <summary>
+             Gets the use direct input.
+             </summary>
+             <value>
+             The use direct input.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.GeneralSettings.UserInterfaceScale">
+             <summary>
+             Gets the UI scale.
+             </summary>
+             <value>
+             The UI scale.
+             </value>
+            </member>
+        <member name="M:ModApi.Settings.GeneralSettings.InitializeSettings">
+             <summary>
+             Initializes the settings in the category.
+             </summary>
+            </member>
+        <member name="M:ModApi.Settings.GeneralSettings.CalculateDefaultUIScale(System.Int32,System.Int32,System.Single)">
+             <summary>
+             Calculates the default UI scale.
+             </summary>
+             <param name="screenWidth">Width of the screen.</param>
+             <param name="screenHeight">Height of the screen.</param>
+             <param name="dpi">The pixel density of the screen.</param>
+             <returns>
+             The default UI scale.
+             </returns>
+            </member>
+        <member name="T:ModApi.Settings.IApplicationSettings">
+             <summary>
+             The settings for the application.
+             </summary>
+            </member>
+        <member name="P:ModApi.Settings.IApplicationSettings.AppVersionLastRun">
+             <summary>
+             Gets the application version last run.
+             </summary>
+             <value>
+             The application version last run.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.IApplicationSettings.CurrentXmlVersion">
+             <summary>
+             Gets the current XML version.
+             </summary>
+             <value>
+             The current XML version.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.IApplicationSettings.DeviceId">
+             <summary>
+             Gets the device identifier.
+             </summary>
+             <value>
+             The device identifier.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.IApplicationSettings.EnabledMods">
+             <summary>
+             Gets the enabled mods.
+             </summary>
+             <value>
+             The enabled mods.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.IApplicationSettings.Game">
+             <summary>
+             Gets the game settings.
+             </summary>
+             <value>
+             The game settings.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.IApplicationSettings.GameStateId">
+             <summary>
+             Gets the ID of the most recent Game State that the player was using.
+             </summary>
+             <value>
+             The game state ID.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.IApplicationSettings.NumberOfApplicationRuns">
+             <summary>
+             Gets the number of application runs.
+             </summary>
+             <value>
+             The number of application runs.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.IApplicationSettings.Quality">
+             <summary>
+             Gets the game quality settings.
+             </summary>
+             <value>
+             The game quality settings.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.IApplicationSettings.ShowWhatsNew">
+             <summary>
+             Gets or sets a value indicating whether to show the whats new panel in the main menu.
+             </summary>
+             <value>
+               <c>true</c> if it should show the whats new; otherwise, <c>false</c>.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.IApplicationSettings.UserName">
+             <summary>
+             Gets the name of the user.
+             </summary>
+             <value>
+             The name of the user.
+             </value>
+            </member>
+        <member name="M:ModApi.Settings.IApplicationSettings.Save">
+             <summary>
+             Saves the settings to file.
+             </summary>
+            </member>
+        <member name="M:ModApi.Settings.IApplicationSettings.SaveIfNecessary">
+             <summary>
+             Saves the settings to file if there are any pending unsaved changes.
+             </summary>
+            </member>
+        <member name="M:ModApi.Settings.IApplicationSettings.SaveXml">
+             <summary>
+             Saves the XML.
+             </summary>
+             <returns>The settings XML.</returns>
+            </member>
         <member name="T:ModApi.Settings.IGameQualitySettings">
              <summary>
              Quality settings for the game.
@@ -37046,6 +39126,14 @@
              </summary>
              <value>
              The display quality settings.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.IGameQualitySettings.ImageEffects">
+             <summary>
+             Gets the image effects quality settings.
+             </summary>
+             <value>
+             The image effects quality settings.
              </value>
             </member>
         <member name="P:ModApi.Settings.IGameQualitySettings.Physics">
@@ -37098,6 +39186,159 @@
              Saves the quality settings to the specified XML.
              </summary>
              <param name="xml">The XML to which to save the quality settings.</param>
+            </member>
+        <member name="T:ModApi.Settings.IGameSettings">
+             <summary>
+             The settings for the game.
+             </summary>
+            </member>
+        <member name="P:ModApi.Settings.IGameSettings.Audio">
+             <summary>
+             Gets the audio settings.
+             </summary>
+             <value>
+             The audio settings.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.IGameSettings.Categories">
+             <summary>
+             Gets the quality setting categories.
+             </summary>
+             <value>
+             The quality setting categories.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.IGameSettings.Designer">
+             <summary>
+             Gets the designer game settings.
+             </summary>
+             <value>
+             The designer game settings.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.IGameSettings.Flight">
+             <summary>
+             Gets the flight game settings.
+             </summary>
+             <value>
+             The flight game settings.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.IGameSettings.General">
+             <summary>
+             Gets the general game settings.
+             </summary>
+             <value>
+             The general game settings.
+             </value>
+            </member>
+        <member name="M:ModApi.Settings.IGameSettings.SaveToXml(System.Xml.Linq.XElement)">
+             <summary>
+             Saves the game settings to the specified XML.
+             </summary>
+             <param name="xml">The XML to which to save the game settings.</param>
+            </member>
+        <member name="T:ModApi.Settings.ImageEffectsQualitySettings">
+             <summary>
+             VFX quality settings.
+             </summary>
+             <seealso cref="T:ModApi.Settings.Core.SettingsCategory`1" />
+            </member>
+        <member name="M:ModApi.Settings.ImageEffectsQualitySettings.#ctor">
+             <summary>
+             Initializes a new instance of the <see cref="T:ModApi.Settings.ImageEffectsQualitySettings" /> class.
+             </summary>
+            </member>
+        <member name="T:ModApi.Settings.ImageEffectsQualitySettings.ReEntryQuality">
+             <summary>
+             An enumeration defining the re-entry/drag rendering quality levels.
+             </summary>
+            </member>
+        <member name="F:ModApi.Settings.ImageEffectsQualitySettings.ReEntryQuality.Off">
+             <summary>
+             Re-entry effects are disabled.
+             </summary>
+            </member>
+        <member name="F:ModApi.Settings.ImageEffectsQualitySettings.ReEntryQuality.On">
+             <summary>
+             High quality re-entry rendering.
+             </summary>
+            </member>
+        <member name="P:ModApi.Settings.ImageEffectsQualitySettings.BloomIntensity">
+             <summary>
+             Gets the bloom intensity setting. Zero is off.
+             </summary>
+             <value>
+             The bloom intensity setting.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.ImageEffectsQualitySettings.Contrast">
+             <summary>
+             Gets the contrast setting.
+             </summary>
+             <value>
+             The contrast setting.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.ImageEffectsQualitySettings.Enabled">
+             <summary>
+             Gets the image effects enabled setting.
+             </summary>
+             <value>
+             The image effects enabled setting.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.ImageEffectsQualitySettings.ReEntry">
+             <summary>
+             Gets the re-entry effects quality.
+             </summary>
+             <value>
+             The re-entry effects quality.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.ImageEffectsQualitySettings.Saturation">
+             <summary>
+             Gets the saturation setting.
+             </summary>
+             <value>
+             The saturation setting.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.ImageEffectsQualitySettings.Sharpness">
+             <summary>
+             Gets the sharpness setting.
+             </summary>
+             <value>
+             The sharpness setting.
+             </value>
+            </member>
+        <member name="P:ModApi.Settings.ImageEffectsQualitySettings.SunFlareIntensity">
+             <summary>
+             Gets the sun flare intensity setting. Zero is off.
+             </summary>
+             <value>
+             The sun flare intensity setting.
+             </value>
+            </member>
+        <member name="M:ModApi.Settings.ImageEffectsQualitySettings.ApplyPreset(ModApi.Settings.Core.SettingsCategoryPreset,ModApi.Settings.Core.DeviceFlags)">
+             <summary>
+             Applies the current preset to all settings.
+             </summary>
+             <param name="preset">The current preset.</param>
+             <param name="devices">The device flags for the current device.</param>
+            </member>
+        <member name="M:ModApi.Settings.ImageEffectsQualitySettings.GetDefaultPreset">
+             <summary>
+             Gets the default preset for the category.
+             </summary>
+             <returns>
+             The default preset for the category.
+             </returns>
+            </member>
+        <member name="M:ModApi.Settings.ImageEffectsQualitySettings.InitializeSettings">
+             <summary>
+             Initializes the settings in the category.
+             </summary>
             </member>
         <member name="T:ModApi.Settings.PhysicsQualitySettings">
              <summary>
@@ -37562,19 +39803,34 @@
              High quality explosions.
              </summary>
             </member>
-        <member name="T:ModApi.Settings.VisualEffectsQualitySettings.ReEntryQuality">
+        <member name="T:ModApi.Settings.VisualEffectsQualitySettings.HeatDistortionQuality">
              <summary>
-             An enumeration defining the re-entry/drag rendering quality levels.
+             An enumeration defining the heat distortion rendering quality levels.
              </summary>
             </member>
-        <member name="F:ModApi.Settings.VisualEffectsQualitySettings.ReEntryQuality.Off">
+        <member name="F:ModApi.Settings.VisualEffectsQualitySettings.HeatDistortionQuality.Off">
              <summary>
-             Re-entry effects are disabled.
+             Heat distortion effects are disabled.
              </summary>
             </member>
-        <member name="F:ModApi.Settings.VisualEffectsQualitySettings.ReEntryQuality.On">
+        <member name="F:ModApi.Settings.VisualEffectsQualitySettings.HeatDistortionQuality.On">
              <summary>
-             High quality re-entry rendering.
+             Heat distortion effects are enabled.
+             </summary>
+            </member>
+        <member name="T:ModApi.Settings.VisualEffectsQualitySettings.MenuSunQuality">
+             <summary>
+             An enumeration defining the explosion effects quality levels.
+             </summary>
+            </member>
+        <member name="F:ModApi.Settings.VisualEffectsQualitySettings.MenuSunQuality.Low">
+             <summary>
+             Low quality main menu sun.
+             </summary>
+            </member>
+        <member name="F:ModApi.Settings.VisualEffectsQualitySettings.MenuSunQuality.High">
+             <summary>
+             High quality main menu sun.
              </summary>
             </member>
         <member name="T:ModApi.Settings.VisualEffectsQualitySettings.TireTrackQuality">
@@ -37602,14 +39858,6 @@
              High quality tire tracks.
              </summary>
             </member>
-        <member name="P:ModApi.Settings.VisualEffectsQualitySettings.BloomIntensity">
-             <summary>
-             Gets the bloom intensity setting. Zero is off.
-             </summary>
-             <value>
-             The bloom intensity setting.
-             </value>
-            </member>
         <member name="P:ModApi.Settings.VisualEffectsQualitySettings.CameraShake">
              <summary>
              Gets the settings that defines whether camera shake should be enabled.
@@ -37626,6 +39874,14 @@
              The explosions quality.
              </value>
             </member>
+        <member name="P:ModApi.Settings.VisualEffectsQualitySettings.HeatDistortion">
+             <summary>
+             Gets the heat distortion quality.
+             </summary>
+             <value>
+             The heat distortion quality.
+             </value>
+            </member>
         <member name="P:ModApi.Settings.VisualEffectsQualitySettings.LaunchSteam">
              <summary>
              Gets the setting that defines whether launch steam (from the sound suppression water system) should be enabled.
@@ -37634,12 +39890,12 @@
              The setting that defines whether launch steam (from the sound suppression water system) should be enabled.
              </value>
             </member>
-        <member name="P:ModApi.Settings.VisualEffectsQualitySettings.ReEntry">
+        <member name="P:ModApi.Settings.VisualEffectsQualitySettings.MainMenuSun">
              <summary>
-             Gets the re-entry effects quality.
+             Gets the main menu sun quality.
              </summary>
              <value>
-             The re-entry effects quality.
+             The main menu sun quality.
              </value>
             </member>
         <member name="P:ModApi.Settings.VisualEffectsQualitySettings.TireTracks">
@@ -39420,12 +41676,36 @@
              Occurs right before MapViewData generates XML for its current state.
              </summary>
             </member>
+        <member name="P:ModApi.State.MapView.MapViewData.IsDirty">
+             <summary>
+             Gets a value indicating whether this instance has been changed since being loaded.
+             </summary>
+             <value>
+               <c>true</c> if this instance has been changed since being loaded; otherwise, <c>false</c>.
+             </value>
+            </member>
         <member name="P:ModApi.State.MapView.MapViewData.MapItemDataSet">
              <summary>
              Gets the <see cref="T:ModApi.State.MapView.MapItemDataSet" /> containing data/options for MapItems in MapView.
              </summary>
              <value>
              The <see cref="T:ModApi.State.MapView.MapItemDataSet" /> containing data/options for MapItems in MapView.
+             </value>
+            </member>
+        <member name="P:ModApi.State.MapView.MapViewData.ManeuverNodesContainerElement">
+             <summary>
+             Gets or sets the maneuver nodes container element.
+             </summary>
+             <value>
+             The maneuver nodes container element.
+             </value>
+            </member>
+        <member name="P:ModApi.State.MapView.MapViewData.MapItemsContainerElement">
+             <summary>
+             Gets or sets the map items container element.
+             </summary>
+             <value>
+             The map items container element.
              </value>
             </member>
         <member name="M:ModApi.State.MapView.MapViewData.GenerateXml">
@@ -39447,6 +41727,11 @@
              </summary>
              <param name="nodeIdsToKeep">The node ids to keep.  All others will be removed.</param>
             </member>
+        <member name="M:ModApi.State.MapView.MapViewData.SetDirty">
+             <summary>
+             Sets the dirty flag fro MapViewData.
+             </summary>
+            </member>
         <member name="M:ModApi.State.MapView.MapViewData.UpdateManeuverNodeData(ModApi.Craft.ICraftNode,System.Xml.Linq.XElement)">
              <summary>
              Updates the maneuver node data for the specified craft.
@@ -39464,13 +41749,13 @@
              <summary>
              Loads the maneuver node data.
              </summary>
-             <param name="mapViewElement">The map view element.</param>
+             <param name="maneuverNodesContainerElement">The container XML element for maneuver nodes.</param>
             </member>
         <member name="M:ModApi.State.MapView.MapViewData.LoadNodeData(System.Xml.Linq.XElement)">
              <summary>
              Loads the node data.
              </summary>
-             <param name="mapViewElement">The map view element.</param>
+             <param name="mapItemsContainerElement">The container XML element for map items.</param>
             </member>
         <member name="T:ModApi.State.MapView.MapViewData.ManeuverNodeStateConstants">
              <summary>

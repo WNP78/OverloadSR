@@ -277,6 +277,11 @@
              The subparts property.
              </summary>
             </member>
+        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._stylesShareHeader">
+             <summary>
+             The styles share header
+             </summary>
+            </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.SavePart(ModApi.Craft.Parts.Editor.PartDefinition)">
              <summary>
              Saves the specified part.
@@ -289,12 +294,13 @@
              Shows the custom inspector GUI for part definitions.
              </summary>
             </member>
-        <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.SavePart(ModApi.Craft.Parts.Editor.PartDefinition,UnityEngine.GameObject,System.String)">
+        <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.SavePart(ModApi.Craft.Parts.Editor.PartDefinition,UnityEngine.GameObject,System.String,System.String)">
              <summary>
              Saves the specified part.
              </summary>
              <param name="part">The part to be saved.</param>
              <param name="prefab">The prefab for the part being saved (or <c>null</c> if it is using a prefab reference).</param>
+             <param name="prefabPath">The prefab path for the part being saved (or <c>null</c> if it is using a prefab reference).</param>
              <param name="xmlPath">The path where the XML for the part should be saved.</param>
             </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.OnEnable">
@@ -1157,144 +1163,6 @@
              <param name="list">The list being displayed.</param>
              <param name="options">The options for the list being displayed.</param>
             </member>
-        <member name="T:ModApi.Editor.Exporter">
-             <summary>
-             An class used for exporting the mod tools package from the editor.
-             </summary>
-            </member>
-        <member name="T:ModApi.Editor.Exporter.CompileStatus">
-             <summary>
-             An enumeration defining the script compilation statuses.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Exporter.CompileStatus.Idle">
-             <summary>
-             The idle status.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Exporter.CompileStatus.Compiling">
-             <summary>
-             The compiling status.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Exporter.CompileStatus.CompilationStarted">
-             <summary>
-             The compilation started status.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Exporter.CompileStatus.CompilationFailed">
-             <summary>
-             The compilation failed status.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Exporter.CompileStatus.CompilationComplete">
-             <summary>
-             The compilation complete status.
-             </summary>
-            </member>
-        <member name="P:ModApi.Editor.Exporter.DefaultBuildPath">
-             <summary>
-             Gets the default build path for the mod tools unity package.
-             </summary>
-             <value>
-             The default build path for the mod tools unity package.
-             </value>
-            </member>
-        <member name="M:ModApi.Editor.Exporter.BuildModToolsPackage">
-             <summary>
-             Builds the mod tools package.
-             </summary>
-            </member>
-        <member name="M:ModApi.Editor.Exporter.BuildModToolsPackage(System.String)">
-             <summary>
-             Builds the mod tools package.
-             </summary>
-             <param name="outputPath">The output path of the unity package.</param>
-            </member>
-        <member name="M:ModApi.Editor.Exporter.BuildPartXml(System.String)">
-             <summary>
-             Builds the part XML file to be included in the mod tools package.
-             </summary>
-             <param name="targetPath">The target path of the XML file to be built.</param>
-            </member>
-        <member name="M:ModApi.Editor.Exporter.BuildScripts">
-             <summary>
-             Builds all the scripts for an editor application.
-             </summary>
-             <returns><c>true</c> if successful; otherwise <c>false</c>.</returns>
-            </member>
-        <member name="M:ModApi.Editor.Exporter.CompileAssembly(ModApi.Editor.Exporter.ModToolsAssembly)">
-             <summary>
-             Compiles the specified mod tools assembly.
-             </summary>
-             <param name="assembly">The assembly to compile.</param>
-             <returns><c>true</c> if successful; otherwise <c>false</c>.</returns>
-            </member>
-        <member name="M:ModApi.Editor.Exporter.ExportModToolsPackage(System.String)">
-             <summary>
-             Exports the mod tools package via the Unity editor command line.
-             </summary>
-             <param name="outputPath">The output path of the unity package.</param>
-             <returns><c>true</c> if (probably) successful; <c>false</c> otherwise.</returns>
-            </member>
-        <member name="M:ModApi.Editor.Exporter.FixXmlDocumentationLineEndings(System.Collections.Generic.List{ModApi.Editor.Exporter.ModToolsAssembly})">
-             <summary>
-             Fixes the XML documentation line endings.
-             For some stupid reason, the mono build process adds a bunch of extra carriage returns.
-             </summary>
-             <param name="assemblies">The list of mod tool assemblies.</param>
-             <returns><c>true</c> if successful; otherwise <c>false</c>.</returns>
-            </member>
-        <member name="M:ModApi.Editor.Exporter.GetCompilationFiles(System.Collections.Generic.List{ModApi.Editor.Exporter.ModToolsAssembly})">
-             <summary>
-             Gets the compilation files used for building the mod tool assemblies.
-             </summary>
-             <param name="assemblies">The list of mod tool assemblies.</param>
-             <returns><c>true</c> if successful; otherwise <c>false</c>.</returns>
-            </member>
-        <member name="M:ModApi.Editor.Exporter.UpdateCompilationFiles(System.Collections.Generic.List{ModApi.Editor.Exporter.ModToolsAssembly})">
-             <summary>
-             Updates the compilation files, redirecting output and adding the XML documenation file.
-             </summary>
-             <param name="assemblies">The list of mod tool assemblies.</param>
-             <returns><c>true</c> if successful; otherwise <c>false</c>.</returns>
-            </member>
-        <member name="T:ModApi.Editor.Exporter.ModToolsAssembly">
-             <summary>
-             A class representing an assembly file to be packaged in the mod tools package.
-             </summary>
-            </member>
-        <member name="M:ModApi.Editor.Exporter.ModToolsAssembly.#ctor(System.String,System.Boolean)">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Editor.Exporter.ModToolsAssembly" /> class.
-             </summary>
-             <param name="assemblyName">The name of the assembly.</param>
-             <param name="isEditorAssembly">A value indicating if this assembly belongs in the Editor folder of the unity package to be created.</param>
-            </member>
-        <member name="P:ModApi.Editor.Exporter.ModToolsAssembly.AssemblyName">
-             <summary>
-             Gets or sets the name of the assembly.
-             </summary>
-             <value>
-             The name of the assembly.
-             </value>
-            </member>
-        <member name="P:ModApi.Editor.Exporter.ModToolsAssembly.CompilationFilePath">
-             <summary>
-             Gets or sets the compilation file path.
-             </summary>
-             <value>
-             The compilation file path.
-             </value>
-            </member>
-        <member name="P:ModApi.Editor.Exporter.ModToolsAssembly.IsEditorAssembly">
-             <summary>
-             Gets or sets a value indicating whether this assembly belongs in the Editor folder of the unity package to be created.
-             </summary>
-             <value>
-             <c>true</c> if this assembly belongs in the Editor folder of the unity package to be created; otherwise, <c>false</c>.
-             </value>
-            </member>
         <member name="T:ModApi.Editor.Extensions.IEnumerableExtensions">
              <summary>
              A class containing extension methods for IEnumerables.
@@ -1390,12 +1258,6 @@
         <member name="M:ModApi.Editor.MenuItems.CreateServiceProviderScript(UnityEditor.MenuCommand)">
              <summary>
              Creates the service provider script.
-             </summary>
-             <param name="menuCommand">The menu command.</param>
-            </member>
-        <member name="M:ModApi.Editor.MenuItems.ShowDebugPortsInfo(UnityEditor.MenuCommand)">
-             <summary>
-             Logs a list of possible ports that Unity is listening on for attaching a Visual Studio debugger for when multiple instances of Unity is running.
              </summary>
              <param name="menuCommand">The menu command.</param>
             </member>
@@ -1520,11 +1382,12 @@
              </summary>
              <param name="manifestSection">The mod manifest section for this plugin.</param>
             </member>
-        <member name="M:ModApi.Editor.ModBuilderWindowPlugin.OnBeforeGameObjectSaved(UnityEngine.GameObject)">
+        <member name="M:ModApi.Editor.ModBuilderWindowPlugin.OnBeforeGameObjectSaved(UnityEngine.GameObject,System.String)">
              <summary>
              Called when a game object is about to be saved.
              </summary>
-             <param name="prefabToSave">The prefab that is about to be saved.</param>
+             <param name="prefabContent">The prefab content being saved.</param>
+             <param name="prefabPath">The path of the prefab being saved.</param>
             </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.OnCompleteAndSaveStarted">
              <summary>
@@ -1590,12 +1453,13 @@
              <param name="gameObject">The game object to be saved.</param>
              <returns><c>true</c> if the game object should be saved, <c>false</c> otherwise.</returns>
             </member>
-        <member name="M:ModApi.Editor.ModBuilderWindowPlugin.SavePart(UnityEngine.GameObject,ModApi.Craft.Parts.Editor.PartDefinition)">
+        <member name="M:ModApi.Editor.ModBuilderWindowPlugin.SavePart(ModApi.Craft.Parts.Editor.PartDefinition,UnityEngine.GameObject,System.String)">
              <summary>
              Saves the specified part.
              </summary>
-             <param name="prefab">The prefab associated with the part or <c>null</c> if this part references an existing prefab.</param>
              <param name="part">The part being saved.</param>
+             <param name="prefab">The prefab associated with the part or <c>null</c> if this part references an existing prefab.</param>
+             <param name="prefabPath">The prefab path for the part being saved (or <c>null</c> if this part references an existing prefab).</param>
             </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.ScanModAssemblies(System.Boolean)">
              <summary>

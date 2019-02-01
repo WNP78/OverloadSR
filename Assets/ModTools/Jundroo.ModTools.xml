@@ -1384,18 +1384,18 @@
             </member>
         <member name="P:Jundroo.ModTools.Serialization.ScriptSerializerContext.PrefabPathMap">
              <summary>
-             Gets the prefab path map.
-             </summary>
-             <value>
-             The prefab path map.
-             </value>
-            </member>
-        <member name="P:Jundroo.ModTools.Serialization.ScriptSerializerContext.RootComponent">
-             <summary>
              Gets a dictionary that maps prefab asset paths to an actual game object.
              </summary>
              <value>
              A dictionary that maps prefab asset paths to an actual game object.
+             </value>
+            </member>
+        <member name="P:Jundroo.ModTools.Serialization.ScriptSerializerContext.RootComponent">
+             <summary>
+             Gets the root component being serialized.
+             </summary>
+             <value>
+             The root component being serialized.
              </value>
             </member>
         <member name="P:Jundroo.ModTools.Serialization.ScriptSerializerContext.RootObject">

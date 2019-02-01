@@ -330,6 +330,12 @@
              <param name="obj">The object for which to get prefab dependencies.</param>
              <param name="prefabPaths">The list of asset paths of dependent prefabs.</param>
             </member>
+        <member name="M:Jundroo.ModTools.Editor.ModBuilderWindow.UnpackAllPrefabs(UnityEngine.GameObject)">
+             <summary>
+             Unpacks all prefabs in the transform heirarchy (included the root object).
+             </summary>
+             <param name="obj">The root object for which to unpack all prefabs.</param>
+            </member>
         <member name="M:Jundroo.ModTools.Editor.ModBuilderWindow.CleanModAssetsFolder">
              <summary>
              Cleans the mod assets folder deleting all the files.
@@ -592,11 +598,12 @@
              </summary>
              <param name="manifestSection">The mod manifest section for this plugin.</param>
             </member>
-        <member name="M:Jundroo.ModTools.Editor.ModBuilderWindowPlugin.OnBeforeGameObjectSaved(UnityEngine.GameObject)">
+        <member name="M:Jundroo.ModTools.Editor.ModBuilderWindowPlugin.OnBeforeGameObjectSaved(UnityEngine.GameObject,System.String)">
              <summary>
              Called when a game object is about to be saved.
              </summary>
-             <param name="prefabToSave">The prefab that is about to be saved.</param>
+             <param name="prefabContent">The prefab content being saved.</param>
+             <param name="prefabPath">The path of the prefab being saved.</param>
             </member>
         <member name="M:Jundroo.ModTools.Editor.ModBuilderWindowPlugin.OnCompleteAndSaveStarted">
              <summary>
@@ -738,6 +745,29 @@
              </summary>
              <param name="name">The name of the game object.</param>
              <param name="path">The asset path of the game object.</param>
+            </member>
+        <member name="T:Jundroo.ModTools.Editor.MonoCecilTools">
+             <summary>
+             A collection of utilities and tools that make use of Mono.Cecil.
+             </summary>
+            </member>
+        <member name="M:Jundroo.ModTools.Editor.MonoCecilTools.RemoveAssemblyReferences(System.String,System.Func{Mono.Cecil.AssemblyNameReference,System.Boolean})">
+             <summary>
+             Removes assembly references matching the specified condition from the assembly at the specified path.
+             </summary>
+             <param name="path">The path of the assembly to update.</param>
+             <param name="condition">The condition for references to remove. A reference is removed if returning <c>true</c> and ignored if <c>false</c>.</param>
+            </member>
+        <member name="T:Jundroo.ModTools.Editor.MonoCecilTools.CustomAssemblyResolver">
+             <summary>
+             A custom assembly resolver for mono.cecil.
+             </summary>
+             <seealso cref="T:Mono.Cecil.DefaultAssemblyResolver" />
+            </member>
+        <member name="M:Jundroo.ModTools.Editor.MonoCecilTools.CustomAssemblyResolver.#ctor">
+             <summary>
+             Initializes a new instance of the <see cref="T:Jundroo.ModTools.Editor.MonoCecilTools.CustomAssemblyResolver" /> class.
+             </summary>
             </member>
         <member name="T:Jundroo.ModTools.Editor.ProjectAssemblies">
              <summary>
