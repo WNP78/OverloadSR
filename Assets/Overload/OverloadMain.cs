@@ -146,8 +146,9 @@ namespace WNP78.Overload
             {
                 StringBuilder s = new StringBuilder();
                 s.Append(match.Groups[1].Value);
-                s.Append("<");
-                s.AppendLine(match.Groups[2].Value);
+                s.Append('<');
+                s.Append(match.Groups[2].Value);
+                s.Append('\n');
                 s.Append(Regex2.Replace(match.Groups[3].Value, match.Groups[1].Value + "  $1\n"));
                 s.Append(match.Groups[1].Value);
                 s.Append(match.Groups[4].Value);
