@@ -153,7 +153,7 @@ namespace WNP78.Overload
                 s.Append(match.Groups[1].Value);
                 s.Append(match.Groups[4].Value);
                 return s.ToString();
-            });
+            }).Replace("\r", "");
         }
     }
 }
