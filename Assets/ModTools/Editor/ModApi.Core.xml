@@ -5,305 +5,299 @@
     </assembly>
     <members>
         <member name="T:ModApi.Core.Events.ModLoadedEventArgs">
-             <summary>
-             Event arguments for an event that fires when a mod has been loaded.
-             </summary>
-            </member>
+            <summary>
+            Event arguments for an event that fires when a mod has been loaded.
+            </summary>
+        </member>
         <member name="M:ModApi.Core.Events.ModLoadedEventArgs.#ctor(Jundroo.ModTools.Core.LoadedMod,ModApi.Core.ModManifestData)">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Core.Events.ModLoadedEventArgs" /> class.
-             </summary>
-             <param name="mod">The mod that was loaded.</param>
-             <param name="manifestData">The mod manifest data for the mod that was loaded.</param>
-            </member>
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Core.Events.ModLoadedEventArgs"/> class.
+            </summary>
+            <param name="mod">The mod that was loaded.</param>
+            <param name="manifestData">The mod manifest data for the mod that was loaded.</param>
+        </member>
         <member name="P:ModApi.Core.Events.ModLoadedEventArgs.ManifestData">
-             <summary>
-             Gets the mod manifest data for the mod that was loaded.
-             </summary>
-             <value>
-             The mod manifest data for the mod that was loaded.
-             </value>
-            </member>
+            <summary>
+            Gets the mod manifest data for the mod that was loaded.
+            </summary>
+            <value>
+            The mod manifest data for the mod that was loaded.
+            </value>
+        </member>
         <member name="P:ModApi.Core.Events.ModLoadedEventArgs.Mod">
-             <summary>
-             Gets the mod that was loaded.
-             </summary>
-             <value>
-             The mode that was loaded.
-             </value>
-            </member>
+            <summary>
+            Gets the mod that was loaded.
+            </summary>
+            <value>
+            The mode that was loaded.
+            </value>
+        </member>
         <member name="T:ModApi.Core.FileExtensions">
-             <summary>
-             A collection of constants.
-             </summary>
-            </member>
+            <summary>
+            A collection of constants.
+            </summary>
+        </member>
         <member name="F:ModApi.Core.FileExtensions.ModFileExtensionAndroid">
-             <summary>
-             The mod file extension for android players.
-             </summary>
-            </member>
+            <summary>
+            The mod file extension for android players.
+            </summary>
+        </member>
         <member name="F:ModApi.Core.FileExtensions.ModFileExtensionStandalone">
-             <summary>
-             The mod file extension for standalone players.
-             </summary>
-            </member>
+            <summary>
+            The mod file extension for standalone players.
+            </summary>
+        </member>
         <member name="T:ModApi.Core.IModManager">
-             <summary>
-             An interface for interacting with the game mod manager.
-             </summary>
-            </member>
+            <summary>
+            An interface for interacting with the game mod manager.
+            </summary>
+        </member>
         <member name="E:ModApi.Core.IModManager.ModLoaded">
-             <summary>
-             Occurs when a mod is loaded.
-             </summary>
-            </member>
+            <summary>
+            Occurs when a mod is loaded.
+            </summary>
+        </member>
         <member name="P:ModApi.Core.IModManager.Parts">
-             <summary>
-             Gets the collection of parts in all loaded mods.
-             </summary>
-             <value>
-             The collection of parts in all loaded mods
-             </value>
-            </member>
+            <summary>
+            Gets the collection of parts in all loaded mods.
+            </summary>
+            <value>
+            The collection of parts in all loaded mods
+            </value>
+        </member>
         <member name="T:ModApi.Core.ModManager">
-             <summary>
-             The mod manager for the game.
-             </summary>
-            </member>
+            <summary>
+            The mod manager for the game.
+            </summary>
+        </member>
         <member name="F:ModApi.Core.ModManager._ModManager">
-             <summary>
-             The generic mod manager instance.
-             </summary>
-            </member>
+            <summary>
+            The generic mod manager instance.
+            </summary>
+        </member>
         <member name="F:ModApi.Core.ModManager._mods">
-             <summary>
-             The list of loaded mods.
-             </summary>
-            </member>
+            <summary>
+            The list of loaded mods.
+            </summary>
+        </member>
         <member name="M:ModApi.Core.ModManager.#ctor">
-             <summary>
-             Prevents a default instance of the <see cref="T:ModApi.Core.ModManager" /> class from being created.
-             </summary>
-            </member>
+            <summary>
+            Prevents a default instance of the <see cref="T:ModApi.Core.ModManager"/> class from being created.
+            </summary>
+        </member>
         <member name="E:ModApi.Core.ModManager.ModLoaded">
-             <summary>
-             Occurs when a mod is loaded.
-             </summary>
-            </member>
+            <summary>
+            Occurs when a mod is loaded.
+            </summary>
+        </member>
         <member name="P:ModApi.Core.ModManager.CompressedModByteHeader">
-             <summary>
-             Gets the byte header for a compressed mod file.
-             </summary>
-             <value>
-             The byte header for a compressed mod file.
-             </value>
-            </member>
+            <summary>
+            Gets the byte header for a compressed mod file.
+            </summary>
+            <value>
+            The byte header for a compressed mod file.
+            </value>
+        </member>
         <member name="P:ModApi.Core.ModManager.Instance">
-             <summary>
-             Gets the singleton instance.
-             </summary>
-             <value>
-             The singleton instance.
-             </value>
-            </member>
+            <summary>
+            Gets the singleton instance.
+            </summary>
+            <value>
+            The singleton instance.
+            </value>
+        </member>
         <member name="P:ModApi.Core.ModManager.ModManifestSectionName">
-             <summary>
-             Gets the mod manifest section name for the game.
-             </summary>
-            </member>
+            <summary>
+            Gets the mod manifest section name for the game.
+            </summary>
+        </member>
         <member name="P:ModApi.Core.ModManager.Parts">
-             <summary>
-             Gets the collection of parts in all loaded mods.
-             </summary>
-             <value>
-             The collection of parts in all loaded mods
-             </value>
-            </member>
-        <member name="P:ModApi.Core.ModManager.ModFileExtensionAndroid">
-             <summary>
-             Gets the mod file extension for the android player (excluding the '.').
-             </summary>
-             <value>
-             The mod file extension for the android player (excluding the '.').
-             </value>
-            </member>
-        <member name="P:ModApi.Core.ModManager.ModFileExtensionStandalone">
-             <summary>
-             Gets the mod file extension for the standalone player (excluding the '.').
-             </summary>
-             <value>
-             The mod file extension for the standalone player (excluding the '.').
-             </value>
-            </member>
+            <summary>
+            Gets the collection of parts in all loaded mods.
+            </summary>
+            <value>
+            The collection of parts in all loaded mods
+            </value>
+        </member>
         <member name="M:ModApi.Core.ModManager.DecompressMod(System.String)">
-             <summary>
-             Decompresses the mod at the specified path.
-             </summary>
-             <param name="modPath">The path of the mod to decompress.</param>
-            </member>
+            <summary>
+            Decompresses the mod at the specified path.
+            </summary>
+            <param name="modPath">The path of the mod to decompress.</param>
+        </member>
         <member name="M:ModApi.Core.ModManager.DecompressMods(System.String,System.Boolean)">
-             <summary>
-             Decompresses any compressed mod files in the specified directory.
-             </summary>
-             <param name="directory">The directory in which to find mods to decompress.</param>
-             <param name="recursive">If set to <c>true</c> the directory will be recursively scanned.</param>
-            </member>
+            <summary>
+            Decompresses any compressed mod files in the specified directory.
+            </summary>
+            <param name="directory">The directory in which to find mods to decompress.</param>
+            <param name="recursive">If set to <c>true</c> the directory will be recursively scanned.</param>
+        </member>
         <member name="M:ModApi.Core.ModManager.AssemblyResolve(System.Object,System.ResolveEventArgs)">
-             <summary>
-             Handles the assembly resolve event for the app domain, looking for the assembly in the list of assemblies loaded from mods.
-             </summary>
-             <param name="sender">The sender.</param>
-             <param name="args">The <see cref="T:System.ResolveEventArgs" /> instance containing the event data.</param>
-             <returns>
-             The requested assembly if found, otherwise <c>null</c>.
-             </returns>
-            </member>
+            <summary>
+            Handles the assembly resolve event for the app domain, looking for the assembly in the list of assemblies loaded from mods.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="args">The <see cref="T:System.ResolveEventArgs" /> instance containing the event data.</param>
+            <returns>
+            The requested assembly if found, otherwise <c>null</c>.
+            </returns>
+        </member>
+        <member name="M:ModApi.Core.ModManager.GetModFilePaths(System.String,System.Boolean)">
+            <summary>
+            Gets the paths of any mod files in the specified directory.
+            </summary>
+            <param name="directory">The directory to search.</param>
+            <param name="recursive">If set to <c>true</c> the directory will be recursively scanned.</param>
+            <returns>
+            The paths of any mod files in the specified directory.
+            </returns>
+        </member>
         <member name="M:ModApi.Core.ModManager.OnModLoaded(Jundroo.ModTools.Core.LoadedMod,Jundroo.ModTools.Core.ModManifest)">
-             <summary>
-             Called when a mod is loaded.
-             </summary>
-             <param name="mod">The mod that was loaded.</param>
-             <param name="manifest">The mod manifest of the mod that was loaded.</param>
-            </member>
+            <summary>
+            Called when a mod is loaded.
+            </summary>
+            <param name="mod">The mod that was loaded.</param>
+            <param name="manifest">The mod manifest of the mod that was loaded.</param>
+        </member>
         <member name="M:ModApi.Core.ModManager.VerifyApiVersions(Jundroo.ModTools.ModInfo,Jundroo.ModTools.Core.ModManifest)">
-             <summary>
-             Verifies the current API versions match the API version that the mod was created with.
-             </summary>
-             <param name="mod">The mod.</param>
-             <param name="modManifest">The mod manifest.</param>
-             <returns><c>true</c> if API versions match; otherwise <c>false</c>.</returns>
-            </member>
+            <summary>
+            Verifies the current API versions match the API version that the mod was created with.
+            </summary>
+            <param name="mod">The mod.</param>
+            <param name="modManifest">The mod manifest.</param>
+            <returns><c>true</c> if API versions match; otherwise <c>false</c>.</returns>
+        </member>
         <member name="M:ModApi.Core.ModManager.InitializeDefaultServiceProviders">
-             <summary>
-             Initializes the default service providers.
-             </summary>
-            </member>
+            <summary>
+            Initializes the default service providers.
+            </summary>
+        </member>
         <member name="M:ModApi.Core.ModManager.ReadModManifest(Jundroo.ModTools.ModInfo,Jundroo.ModTools.Core.ModManifest)">
-             <summary>
-             Reads the mod manifest.
-             </summary>
-             <param name="modInfo">The mod information.</param>
-             <param name="manifest">The mod manifest.</param>
-             <returns>An object containing the data read from the mod manifest.</returns>
-            </member>
+            <summary>
+            Reads the mod manifest.
+            </summary>
+            <param name="modInfo">The mod information.</param>
+            <param name="manifest">The mod manifest.</param>
+            <returns>An object containing the data read from the mod manifest.</returns>
+        </member>
         <member name="T:ModApi.Core.ModManager.LoadedModData">
-             <summary>
-             A class containing information about a loaded mod.
-             </summary>
-            </member>
+            <summary>
+            A class containing information about a loaded mod.
+            </summary>
+        </member>
         <member name="M:ModApi.Core.ModManager.LoadedModData.#ctor(Jundroo.ModTools.Core.LoadedMod,ModApi.Core.ModManifestData)">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Core.ModManager.LoadedModData" /> class.
-             </summary>
-             <param name="mod">The mod.</param>
-             <param name="manifestData">The mod manifest data.</param>
-            </member>
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Core.ModManager.LoadedModData"/> class.
+            </summary>
+            <param name="mod">The mod.</param>
+            <param name="manifestData">The mod manifest data.</param>
+        </member>
         <member name="P:ModApi.Core.ModManager.LoadedModData.ManifestData">
-             <summary>
-             Gets the mod manifest data.
-             </summary>
-             <value>
-             The mod manifest data.
-             </value>
-            </member>
+            <summary>
+            Gets the mod manifest data.
+            </summary>
+            <value>
+            The mod manifest data.
+            </value>
+        </member>
         <member name="P:ModApi.Core.ModManager.LoadedModData.Mod">
-             <summary>
-             Gets the mod.
-             </summary>
-             <value>
-             The mod.
-             </value>
-            </member>
+            <summary>
+            Gets the mod.
+            </summary>
+            <value>
+            The mod.
+            </value>
+        </member>
         <member name="T:ModApi.Core.ModManifestData">
-             <summary>
-             A class representing the manifest data for a mod.
-             </summary>
-            </member>
+            <summary>
+            A class representing the manifest data for a mod.
+            </summary>
+        </member>
         <member name="M:ModApi.Core.ModManifestData.#ctor(Jundroo.ModTools.ModInfo)">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Core.ModManifestData" /> class.
-             </summary>
-             <param name="modInfo">The mod information.</param>
-            </member>
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Core.ModManifestData"/> class.
+            </summary>
+            <param name="modInfo">The mod information.</param>
+        </member>
         <member name="P:ModApi.Core.ModManifestData.ModInfo">
-             <summary>
-             Gets or sets the mod information.
-             </summary>
-             <value>
-             The mod information.
-             </value>
-            </member>
+            <summary>
+            Gets or sets the mod information.
+            </summary>
+            <value>
+            The mod information.
+            </value>
+        </member>
         <member name="P:ModApi.Core.ModManifestData.Parts">
-             <summary>
-             Gets or sets the parts included in the mod.
-             </summary>
-             <value>
-             The parts included in the mod.
-             </value>
-            </member>
+            <summary>
+            Gets or sets the parts included in the mod.
+            </summary>
+            <value>
+            The parts included in the mod.
+            </value>
+        </member>
         <member name="P:ModApi.Core.ModManifestData.PersistentGameObjects">
-             <summary>
-             Gets or sets the persistent objects included in the mod.
-             </summary>
-             <value>
-             The persistent objects included in the mod.
-             </value>
-            </member>
+            <summary>
+            Gets or sets the persistent objects included in the mod.
+            </summary>
+            <value>
+            The persistent objects included in the mod.
+            </value>
+        </member>
         <member name="T:ModApi.Core.ModPartInfo">
-             <summary>
-             An object representing a custom part included in a mod.
-             </summary>
-            </member>
+            <summary>
+            An object representing a custom part included in a mod.
+            </summary>
+        </member>
         <member name="M:ModApi.Core.ModPartInfo.#ctor(System.String,System.String,System.String)">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Core.ModPartInfo" /> struct.
-             </summary>
-             <param name="name">The name of the part.</param>
-             <param name="prefabPath">The path to the prefab associated with the part.</param>
-             <param name="xmlPath">The path for the XML defining the part.</param>
-            </member>
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Core.ModPartInfo" /> struct.
+            </summary>
+            <param name="name">The name of the part.</param>
+            <param name="prefabPath">The path to the prefab associated with the part.</param>
+            <param name="xmlPath">The path for the XML defining the part.</param>
+        </member>
         <member name="P:ModApi.Core.ModPartInfo.Name">
-             <summary>
-             Gets the name of the part.
-             </summary>
-             <value>
-             The name of the part.
-             </value>
-            </member>
+            <summary>
+            Gets the name of the part.
+            </summary>
+            <value>
+            The name of the part.
+            </value>
+        </member>
         <member name="P:ModApi.Core.ModPartInfo.PrefabPath">
-             <summary>
-             Gets the path to the prefab associated with the part.
-             </summary>
-             <value>
-             The path to the prefab associated with the part.
-             </value>
-            </member>
+            <summary>
+            Gets the path to the prefab associated with the part.
+            </summary>
+            <value>
+            The path to the prefab associated with the part.
+            </value>
+        </member>
         <member name="P:ModApi.Core.ModPartInfo.XmlPath">
-             <summary>
-             Gets the path for the XML defining the part.
-             </summary>
-             <value>
-             The path for the XML defining the part.
-             </value>
-            </member>
+            <summary>
+            Gets the path for the XML defining the part.
+            </summary>
+            <value>
+            The path for the XML defining the part.
+            </value>
+        </member>
         <member name="T:ModApi.Core.PersistentObjectInfo">
-             <summary>
-             An object containing information about a persistent object included in a mod.
-             </summary>
-            </member>
+            <summary>
+            An object containing information about a persistent object included in a mod.
+            </summary>
+        </member>
         <member name="M:ModApi.Core.PersistentObjectInfo.#ctor(System.String)">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Core.PersistentObjectInfo" /> struct.
-             </summary>
-             <param name="name">The name of the object.</param>
-            </member>
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Core.PersistentObjectInfo"/> struct.
+            </summary>
+            <param name="name">The name of the object.</param>
+        </member>
         <member name="P:ModApi.Core.PersistentObjectInfo.Name">
-             <summary>
-             Gets or sets the name of the object.
-             </summary>
-             <value>
-             The name of the object.
-             </value>
-            </member>
+            <summary>
+            Gets or sets the name of the object.
+            </summary>
+            <value>
+            The name of the object.
+            </value>
+        </member>
     </members>
 </doc>

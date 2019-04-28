@@ -5,1816 +5,2049 @@
     </assembly>
     <members>
         <member name="T:ModApi.Editor.Common.MinMaxRangeSliderDrawer">
-             <summary>
-             A property drawer for the MinMaxValue attribute.
-             </summary>
-             <seealso cref="T:UnityEditor.PropertyDrawer" />
-            </member>
+            <summary>
+            A property drawer for the MinMaxValue attribute.
+            </summary>
+            <seealso cref="T:UnityEditor.PropertyDrawer" />
+        </member>
         <member name="F:ModApi.Editor.Common.MinMaxRangeSliderDrawer.GUIStyles">
-             <summary>
-             The custom GUI styles for this class.
-             </summary>
-            </member>
+            <summary>
+            The custom GUI styles for this class.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Common.MinMaxRangeSliderDrawer.GetPropertyHeight(UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
-             <summary>
-             Override this method to specify how tall the GUI for this field is in pixels.
-             </summary>
-             <param name="property">The SerializedProperty to make the custom GUI for.</param>
-             <param name="label">The label of this property.</param>
-             <returns>
-             The height in pixels.
-             </returns>
-            </member>
+            <summary>
+            Override this method to specify how tall the GUI for this field is in pixels.
+            </summary>
+            <param name="property">The SerializedProperty to make the custom GUI for.</param>
+            <param name="label">The label of this property.</param>
+            <returns>
+            The height in pixels.
+            </returns>
+        </member>
         <member name="M:ModApi.Editor.Common.MinMaxRangeSliderDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
-             <summary>
-             Override this method to make your own GUI for the property.
-             </summary>
-             <param name="position">Rectangle on the screen to use for the property GUI.</param>
-             <param name="property">The SerializedProperty to make the custom GUI for.</param>
-             <param name="label">The label of this property.</param>
-            </member>
+            <summary>
+            Override this method to make your own GUI for the property.
+            </summary>
+            <param name="position">Rectangle on the screen to use for the property GUI.</param>
+            <param name="property">The SerializedProperty to make the custom GUI for.</param>
+            <param name="label">The label of this property.</param>
+        </member>
         <member name="T:ModApi.Editor.Common.MinMaxRangeSliderDrawer.CustomGUIStyles">
-             <summary>
-             Custom GUI styles for this class.
-             </summary>
-            </member>
+            <summary>
+            Custom GUI styles for this class.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Common.MinMaxRangeSliderDrawer.CustomGUIStyles.#ctor">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Editor.Common.MinMaxRangeSliderDrawer.CustomGUIStyles" /> class.
-             </summary>
-            </member>
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Editor.Common.MinMaxRangeSliderDrawer.CustomGUIStyles"/> class.
+            </summary>
+        </member>
         <member name="P:ModApi.Editor.Common.MinMaxRangeSliderDrawer.CustomGUIStyles.RightAlignLabel">
-             <summary>
-             Gets the right aligned label style.
-             </summary>
-             <value>
-             The right aligned label style.
-             </value>
-            </member>
+            <summary>
+            Gets the right aligned label style.
+            </summary>
+            <value>
+            The right aligned label style.
+            </value>
+        </member>
         <member name="T:ModApi.Editor.Common.MinMaxRangeDrawer">
-             <summary>
-             A default property drawer for the MinMaxValue structure.
-             </summary>
-             <seealso cref="T:UnityEditor.PropertyDrawer" />
-            </member>
+            <summary>
+            A default property drawer for the MinMaxValue structure.
+            </summary>
+            <seealso cref="T:UnityEditor.PropertyDrawer" />
+        </member>
         <member name="M:ModApi.Editor.Common.MinMaxRangeDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
-             <summary>
-             Override this method to make your own GUI for the property.
-             </summary>
-             <param name="position">Rectangle on the screen to use for the property GUI.</param>
-             <param name="property">The SerializedProperty to make the custom GUI for.</param>
-             <param name="label">The label of this property.</param>
-            </member>
+            <summary>
+            Override this method to make your own GUI for the property.
+            </summary>
+            <param name="position">Rectangle on the screen to use for the property GUI.</param>
+            <param name="property">The SerializedProperty to make the custom GUI for.</param>
+            <param name="label">The label of this property.</param>
+        </member>
         <member name="T:ModApi.Editor.Common.ReadOnlyInInspectorPropertyDrawer">
-             <summary>
-             The property drawer for the ReadOnlyInInspector attribute.
-             </summary>
-             <seealso cref="T:UnityEditor.PropertyDrawer" />
-            </member>
+            <summary>
+            The property drawer for the ReadOnlyInInspector attribute.
+            </summary>
+            <seealso cref="T:UnityEditor.PropertyDrawer" />
+        </member>
         <member name="M:ModApi.Editor.Common.ReadOnlyInInspectorPropertyDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
-             <summary>
-             Override this method to make your own GUI for the property.
-             </summary>
-             <param name="position">Rectangle on the screen to use for the property GUI.</param>
-             <param name="property">The SerializedProperty to make the custom GUI for.</param>
-             <param name="label">The label of this property.</param>
-            </member>
+            <summary>
+            Override this method to make your own GUI for the property.
+            </summary>
+            <param name="position">Rectangle on the screen to use for the property GUI.</param>
+            <param name="property">The SerializedProperty to make the custom GUI for.</param>
+            <param name="label">The label of this property.</param>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.PartDefinitionCameraEditor">
-             <summary>
-             A custom editor for part definitions.
-             </summary>
-             <seealso cref="T:UnityEditor.Editor" />
-            </member>
+            <summary>
+            A custom editor for part definitions.
+            </summary>
+            <seealso cref="T:UnityEditor.Editor" />
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionCameraEditor._cameraFocusTransform">
-             <summary>
-             The camera focus transform
-             </summary>
-            </member>
+            <summary>
+            The camera focus transform
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionCameraEditor.OnInspectorGUI">
-             <summary>
-             Shows the custom inspector GUI for part definitions.
-             </summary>
-            </member>
+            <summary>
+            Shows the custom inspector GUI for part definitions.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionCameraEditor.OnSelectionChanged">
-             <summary>
-             Called when [selection changed].
-             </summary>
-            </member>
+            <summary>
+            Called when [selection changed].
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionCameraEditor.OnDisable">
-             <summary>
-             Called when [disable].
-             </summary>
-            </member>
+            <summary>
+            Called when [disable].
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionCameraEditor.OnEnable">
-             <summary>
-             This function is called when the object becomes enabled and active.
-             </summary>
-            </member>
+            <summary>
+            This function is called when the object becomes enabled and active.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionCameraEditor.DisablePartCamerasExcept(ModApi.Craft.Parts.Editor.PartDefinitionCamera)">
-             <summary>
-             Disables the part cameras except the specified one.
-             </summary>
-             <param name="excludedPartDefCamera">The excluded part definition camera.</param>
-            </member>
+            <summary>
+            Disables the part cameras except the specified one.
+            </summary>
+            <param name="excludedPartDefCamera">The excluded part definition camera.</param>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionCameraEditor.OnCenterCameraClicked">
-             <summary>
-             Called when [center camera clicked].
-             </summary>
-            </member>
+            <summary>
+            Called when [center camera clicked].
+            </summary>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.PartDefinitionEditor">
-             <summary>
-             A custom editor for part definitions.
-             </summary>
-             <seealso cref="T:UnityEditor.Editor" />
-            </member>
+            <summary>
+            A custom editor for part definitions.
+            </summary>
+            <seealso cref="T:UnityEditor.Editor" />
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor.CreateNewModifierDisplayText">
-             <summary>
-             The display text for creating a new part modifier.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor.PartDefinitionCameraName">
-             <summary>
-             The part picture camera name
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor.PartDirectory">
-             <summary>
-             The part directory.
-             </summary>
-            </member>
+            <summary>
+            The display text for creating a new part modifier.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._editorInitialized">
-             <summary>
-             A value indicating whether or not the editor has been initialized.
-             </summary>
-            </member>
+            <summary>
+            A value indicating whether or not the editor has been initialized.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._isModProject">
-             <summary>
-             A value indicating if the editor is currently running within a mod project.
-             </summary>
-            </member>
+            <summary>
+            A value indicating if the editor is currently running within a mod project.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._modifierList">
-             <summary>
-             The list of available part modifiers.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._stockPartList">
-             <summary>
-             The list of existing parts.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._allowIndividualPartRemoval">
-             <summary>
-             A value indicating whether this part requires the ability to be removed individually (i.e. not only with entire Part Group).
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._autoActivateIfNoStageOrActivationGroup">
-             <summary>
-             A value indicating whether to automatically activate parts of this type if it doesn't belong to a stage or activation group.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._defaultColorIndexPrimary">
-             <summary>
-             The color index of the default primary color.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._defaultColorIndexTrim1">
-             <summary>
-             The color index of the default trim 1 color.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._defaultColorIndexTrim2">
-             <summary>
-             The color index of the default trim 2 color.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._defaultColorIndexTrim3">
-             <summary>
-             The color index of the default trim 3 color.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._defaultColorIndexTrim4">
-             <summary>
-             The color index of the default trim 4 color.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._designerInfo">
-             <summary>
-             The designer information property.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._id">
-             <summary>
-             The id property.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._includeInBodyDrag">
-             <summary>
-             The include in body drag property.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._initialized">
-             <summary>
-             The initialized property.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._mass">
-             <summary>
-             The mass property.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._mirrorConfig">
-             <summary>
-             The mirror config property.
-             </summary>
-            </member>
+            <summary>
+            The list of available part modifiers.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._modifierSelectedIndex">
-             <summary>
-             The selected index of the part modifier list.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._name">
-             <summary>
-             The name property.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._partCollisionHandling">
-             <summary>
-             The part collision handling property.
-             </summary>
-            </member>
+            <summary>
+            The selected index of the part modifier list.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._pendingScriptAttachmentType">
-             <summary>
-             The type of the script that is pending attachment to this game object (if any).
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._price">
-             <summary>
-             The price property.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._snapshotDistanceScaler">
-             <summary>
-             The snapshot distance scaler
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._snapshotRotation">
-             <summary>
-             The snapshot rotation from default.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._stockPartSelectedIndex">
-             <summary>
-             The selected index of the stock part list.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._subparts">
-             <summary>
-             The subparts property.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._subpartsSharePartStyle">
-             <summary>
-             The subparts property.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor._stylesShareHeader">
-             <summary>
-             The styles share header
-             </summary>
-            </member>
-        <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.SavePart(ModApi.Craft.Parts.Editor.PartDefinition)">
-             <summary>
-             Saves the specified part.
-             </summary>
-             <param name="part">The part to be saved..</param>
-             <exception cref="T:System.Exception">This method does not support being called within a mod project.</exception>
-            </member>
+            <summary>
+            The type of the script that is pending attachment to this game object (if any).
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.OnInspectorGUI">
-             <summary>
-             Shows the custom inspector GUI for part definitions.
-             </summary>
-            </member>
-        <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.SavePart(ModApi.Craft.Parts.Editor.PartDefinition,UnityEngine.GameObject,System.String,System.String)">
-             <summary>
-             Saves the specified part.
-             </summary>
-             <param name="part">The part to be saved.</param>
-             <param name="prefab">The prefab for the part being saved (or <c>null</c> if it is using a prefab reference).</param>
-             <param name="prefabPath">The prefab path for the part being saved (or <c>null</c> if it is using a prefab reference).</param>
-             <param name="xmlPath">The path where the XML for the part should be saved.</param>
-            </member>
+            <summary>
+            Shows the custom inspector GUI for part definitions.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.OnEnable">
-             <summary>
-             This function is called when the object becomes enabled and active.
-             </summary>
-            </member>
-        <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.CreatePartPictureCamera(ModApi.Craft.Parts.Editor.PartDefinition)">
-             <summary>
-             Creates the part picture camera.
-             </summary>
-             <param name="part">The part.</param>
-             <returns>The part picture camera.</returns>
-            </member>
-        <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.DisableParts(ModApi.Craft.Parts.Editor.PartDefinition)">
-             <summary>
-             Disables the parts.
-             </summary>
-             <param name="excludedPart">The excluded part.</param>
-            </member>
-        <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.EnableParts">
-             <summary>
-             Enables the parts.
-             </summary>
-            </member>
-        <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.GetPartPictureCamera(ModApi.Craft.Parts.Editor.PartDefinition)">
-             <summary>
-             Gets the part picture camera.
-             </summary>
-             <param name="part">The part.</param>
-             <returns>The part picture camera.</returns>
-            </member>
+            <summary>
+            This function is called when the object becomes enabled and active.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.InitializeEditor">
-             <summary>
-             Initializes the editor.
-             </summary>
-            </member>
-        <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.CloneStockPart(System.String)">
-             <summary>
-             Clones the stock part with the specified name.
-             </summary>
-             <param name="stockPartName">Name of the stock part to clone.</param>
-            </member>
+            <summary>
+            Initializes the editor.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.ApplyPendingModifierScriptAttachment">
+            <summary>
+            Applies the pending modifier script attachment if necessary.
+            This is used to attach a newly created modifier script after the editor finishes compiling it.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.OnAddAttachPointClicked">
-             <summary>
-             Called when the add attach point button is clicked.
-             </summary>
-            </member>
+            <summary>
+            Called when the add attach point button is clicked.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.OnAddModifierClicked(ModApi.Editor.Craft.Parts.PartDefinitionEditor.ModifierListEntry)">
-             <summary>
-             Called when the add modifier button is clicked.
-             </summary>
-             <param name="modifier">The selected modifier.</param>
-            </member>
+            <summary>
+            Called when the add modifier button is clicked.
+            </summary>
+            <param name="modifier">The modifier to be added.</param>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.OnNewDesignerPartClicked">
+            <summary>
+            Called when the new designer part button is clicked.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.OnSavePartClicked">
-             <summary>
-             Called when the save part button is clicked.
-             </summary>
-            </member>
-        <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.ShowInitializedGUI">
-             <summary>
-             Shows the initialized GUI.
-             </summary>
-            </member>
-        <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.ShowUninitializedGUI">
-             <summary>
-             Shows the uninitialized GUI.
-             </summary>
-            </member>
-        <member name="T:ModApi.Editor.Craft.Parts.PartDefinitionEditor.DesignerInfoProperties">
-             <summary>
-             A class containing the designer information properties.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor.DesignerInfoProperties.ActivationGroup">
-             <summary>
-             The activation group property.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor.DesignerInfoProperties.Category">
-             <summary>
-             The category property.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor.DesignerInfoProperties.Description">
-             <summary>
-             The description property.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor.DesignerInfoProperties.DisplayName">
-             <summary>
-             The display name property.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor.DesignerInfoProperties.DisplayOrder">
-             <summary>
-             The display order
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor.DesignerInfoProperties.Position">
-             <summary>
-             The position property.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor.DesignerInfoProperties.Rotation">
-             <summary>
-             The rotation property.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.Craft.Parts.PartDefinitionEditor.DesignerInfoProperties.ShowInDesigner">
-             <summary>
-             The show in designer property.
-             </summary>
-            </member>
-        <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.DesignerInfoProperties.#ctor(UnityEditor.SerializedProperty)">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartDefinitionEditor.DesignerInfoProperties" /> class.
-             </summary>
-             <param name="designerInfoProperty">The designer information property.</param>
-            </member>
+            <summary>
+            Called when the save part button is clicked.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.OnValidatePartClicked">
+            <summary>
+            Called when the validate part button is clicked.
+            </summary>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.PartDefinitionEditor.ModifierListEntry">
-             <summary>
-             A class representing an entry in the part modifier list.
-             </summary>
-            </member>
+            <summary>
+            A class representing an entry in the part modifier list.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.ModifierListEntry.#ctor(System.String,System.Boolean)">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartDefinitionEditor.ModifierListEntry" /> class.
-             </summary>
-             <param name="displayText">The display text of the entry.</param>
-             <param name="isPlaceholderText">If set to <c>true</c>, the entry is a placeholder text entry.</param>
-            </member>
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartDefinitionEditor.ModifierListEntry"/> class.
+            </summary>
+            <param name="displayText">The display text of the entry.</param>
+            <param name="isPlaceholderText">If set to <c>true</c>, the entry is a placeholder text entry.</param>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.ModifierListEntry.#ctor(System.String,System.Type)">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartDefinitionEditor.ModifierListEntry" /> class.
-             </summary>
-             <param name="displayText">The display text of the entry.</param>
-             <param name="modifierType">The type of the modifier.</param>
-            </member>
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartDefinitionEditor.ModifierListEntry"/> class.
+            </summary>
+            <param name="displayText">The display text of the entry.</param>
+            <param name="modifierType">The type of the modifier.</param>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.PartDefinitionEditor.ModifierListEntry.DisplayText">
-             <summary>
-             Gets the display text of the entry.
-             </summary>
-             <value>
-             The display text of the entry.
-             </value>
-            </member>
+            <summary>
+            Gets the display text of the entry.
+            </summary>
+            <value>
+            The display text of the entry.
+            </value>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.PartDefinitionEditor.ModifierListEntry.IsPlaceholderText">
-             <summary>
-             Gets a value indicating whether this entry is placeholder text.
-             </summary>
-             <value>
-             <c>true</c> if this entry is placeholder text; otherwise, <c>false</c>.
-             </value>
-            </member>
+            <summary>
+            Gets a value indicating whether this entry is placeholder text.
+            </summary>
+            <value>
+            <c>true</c> if this entry is placeholder text; otherwise, <c>false</c>.
+            </value>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.PartDefinitionEditor.ModifierListEntry.ModifierType">
-             <summary>
-             Gets the type of the modifier associated with the entry.
-             </summary>
-             <value>
-             The type of the modifier associated with the entry.
-             </value>
-            </member>
-        <member name="T:ModApi.Editor.Craft.Parts.PartDefinitionEditor.StockPartListEntry">
-             <summary>
-             A class representing an entry in the stock parts list.
-             </summary>
-            </member>
-        <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionEditor.StockPartListEntry.#ctor(System.String)">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartDefinitionEditor.StockPartListEntry" /> class.
-             </summary>
-             <param name="displayText">The display text of the entry.</param>
-            </member>
-        <member name="P:ModApi.Editor.Craft.Parts.PartDefinitionEditor.StockPartListEntry.DisplayText">
-             <summary>
-             Gets the display text of the entry.
-             </summary>
-             <value>
-             The display text of the entry.
-             </value>
-            </member>
+            <summary>
+            Gets the type of the modifier associated with the entry.
+            </summary>
+            <value>
+            The type of the modifier associated with the entry.
+            </value>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.PartDefinitionModifierReferenceEditor">
-             <summary>
-             A custom editor for a component that references a part modifier that already exists in the game.
-             </summary>
-            </member>
+            <summary>
+            A custom editor for a component that references a part modifier that already exists in the game.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionModifierReferenceEditor.OnInspectorGUI">
-             <summary>
-             Draws the custom inspector GUI.
-             </summary>
-            </member>
+            <summary>
+            Draws the custom inspector GUI.
+            </summary>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.PartDefinitionModifierReferencePropertyEditor">
-             <summary>
-             A custom editor for part modifier reference properties.
-             </summary>
-            </member>
+            <summary>
+            A custom editor for part modifier reference properties.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartDefinitionModifierReferencePropertyEditor.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
-             <summary>
-             Draws the custom GUI for the property.
-             </summary>
-             <param name="position">Rectangle on the screen to use for the property GUI.</param>
-             <param name="property">The SerializedProperty to make the custom GUI for.</param>
-             <param name="label">The label of this property.</param>
-            </member>
+            <summary>
+            Draws the custom GUI for the property.
+            </summary>
+            <param name="position">Rectangle on the screen to use for the property GUI.</param>
+            <param name="property">The SerializedProperty to make the custom GUI for.</param>
+            <param name="label">The label of this property.</param>
+        </member>
+        <member name="T:ModApi.Editor.Craft.Parts.PartEditorScriptBaseEditor">
+            <summary>
+            A base editor class for part related editor scripts.
+            </summary>
+            <seealso cref="T:UnityEditor.Editor" />
+        </member>
+        <member name="F:ModApi.Editor.Craft.Parts.PartEditorScriptBaseEditor._BindingFlags">
+            <summary>
+            The binding flags used to get serializeable fields.
+            </summary>
+        </member>
+        <member name="F:ModApi.Editor.Craft.Parts.PartEditorScriptBaseEditor._entries">
+            <summary>
+            The list of inspector entries.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartEditorScriptBaseEditor.OnInspectorGUI">
+            <summary>
+            Draws the custom inspector GUI.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartEditorScriptBaseEditor.OnDisable">
+            <summary>
+            This function is called when the behavior becomes disabled or inactive.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartEditorScriptBaseEditor.OnEnable">
+            <summary>
+            This function is called when the object becomes enabled and active.
+            </summary>
+        </member>
+        <member name="T:ModApi.Editor.Craft.Parts.PartEditorScriptBaseEditor.InspectorEntry">
+            <summary>
+            A class representing an inspector entry.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartEditorScriptBaseEditor.InspectorEntry.#ctor(UnityEditor.SerializedProperty,ModApi.Craft.Parts.Editor.Attributes.UnityInspectorPartAttribute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartEditorScriptBaseEditor.InspectorEntry"/> class.
+            </summary>
+            <param name="property">The property.</param>
+            <param name="attribute">The attribute.</param>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartEditorScriptBaseEditor.InspectorEntry.Attribute">
+            <summary>
+            Gets the attribute.
+            </summary>
+            <value>
+            The attribute.
+            </value>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartEditorScriptBaseEditor.InspectorEntry.Property">
+            <summary>
+            Gets the property.
+            </summary>
+            <value>
+            The property.
+            </value>
+        </member>
+        <member name="T:ModApi.Editor.Craft.Parts.PartManagerEditor">
+            <summary>
+            A custom inspector used to manage multiple parts in a part editor scene.
+            </summary>
+            <seealso cref="T:UnityEditor.Editor" />
+        </member>
+        <member name="F:ModApi.Editor.Craft.Parts.PartManagerEditor._createPartId">
+            <summary>
+            The create part identifier.
+            </summary>
+        </member>
+        <member name="F:ModApi.Editor.Craft.Parts.PartManagerEditor._partPrefabs">
+            <summary>
+            The part content prefabs.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartManagerEditor.OnInspectorGUI">
+            <summary>
+            Draws the GUI for a custom inspector used to manage multiple parts in a part editor scene.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartManagerEditor.OnDisable">
+            <summary>
+            This function is called when the behavior becomes disabled or inactive.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartManagerEditor.OnEnable">
+            <summary>
+            This function is called when the object becomes enabled and active.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartManagerEditor.RegeneratePartModifierClasses">
+            <summary>
+            Regenerates the part modifier scripts that allow part modifiers to be associated with game objects.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartManagerEditor.SaveAllParts">
+            <summary>
+            Saves all parts known to this manager.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartManagerEditor.ValidateAllParts">
+            <summary>
+            Performs some part validation checks, logging any warnings, errors, or other issues related to the collection of parts.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartManagerEditor.RefreshParts">
+            <summary>
+            Refreshes the parts.
+            </summary>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.PartMeshImportData">
-             <summary>
-             A set of configuration data used for importing a part mesh into the project.
-             </summary>
-            </member>
+            <summary>
+            A set of configuration data used for importing a part mesh into the project.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartMeshImportData._id">
-             <summary>
-             The id of the mesh.
-             </summary>
-            </member>
+            <summary>
+            The id of the mesh.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartMeshImportData._initialized">
-             <summary>
-             A value indicating whether this item has been initialized.
-             </summary>
-            </member>
+            <summary>
+            A value indicating whether this item has been initialized.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartMeshImportData._isCollider">
-             <summary>
-             A value indicating whether this mesh is used as a collider and not for rendering.
-             </summary>
-            </member>
+            <summary>
+            A value indicating whether this mesh is used as a collider and not for rendering.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartMeshImportData._mesh">
-             <summary>
-             The mesh reference.
-             </summary>
-            </member>
+            <summary>
+            The mesh reference.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartMeshImportData._submeshMap">
-             <summary>
-             The submesh map.
-             Each array index corresponds to a submesh index and the array value at that index
-             identifies the material level (Primary, Trim 1, etc.) used for that submesh.
-             </summary>
-            </member>
+            <summary>
+            The submesh map.
+            Each array index corresponds to a submesh index and the array value at that index
+            identifies the material level (Primary, Trim 1, etc.) used for that submesh.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartMeshImportData._subpartId">
-             <summary>
-             The subpart id of the mesh.
-             </summary>
-            </member>
+            <summary>
+            The subpart id of the mesh.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartMeshImportData.#ctor">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartMeshImportData" /> class.
-             </summary>
-            </member>
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartMeshImportData"/> class.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartMeshImportData.#ctor(UnityEngine.Mesh)">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartMeshImportData" /> class.
-             </summary>
-             <param name="mesh">The mesh.</param>
-            </member>
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartMeshImportData"/> class.
+            </summary>
+            <param name="mesh">The mesh.</param>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.PartMeshImportData.IsCollider">
-             <summary>
-             Gets or sets a value indicating whether this mesh is used as a collider and not for rendering.
-             </summary>
-             <value>
-               <c>true</c> if this mesh is used as a collider and not for rendering; otherwise, <c>false</c>.
-             </value>
-            </member>
+            <summary>
+            Gets or sets a value indicating whether this mesh is used as a collider and not for rendering.
+            </summary>
+            <value>
+              <c>true</c> if this mesh is used as a collider and not for rendering; otherwise, <c>false</c>.
+            </value>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.PartMeshImportData.Mesh">
-             <summary>
-             Gets or sets the mesh reference.
-             </summary>
-             <value>
-             The mesh reference.
-             </value>
-            </member>
+            <summary>
+            Gets or sets the mesh reference.
+            </summary>
+            <value>
+            The mesh reference.
+            </value>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.PartMeshImportData.SubmeshMap">
-             <summary>
-             Gets or sets the submesh map.
-             Each array index corresponds to a submesh index and the array value at that index
-             identifies the material level (Primary, Trim 1, etc.) used for that submesh.
-             </summary>
-             <value>
-             The submesh map.
-             </value>
-            </member>
+            <summary>
+            Gets or sets the submesh map.
+            Each array index corresponds to a submesh index and the array value at that index
+            identifies the material level (Primary, Trim 1, etc.) used for that submesh.
+            </summary>
+            <value>
+            The submesh map.
+            </value>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.PartMeshImportData.SubpartId">
-             <summary>
-             Gets or sets the subpart id.
-             </summary>
-             <value>
-             The subpart id.
-             </value>
-            </member>
+            <summary>
+            Gets or sets the subpart id.
+            </summary>
+            <value>
+            The subpart id.
+            </value>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartMeshImportData.Refresh(System.Int32,System.Boolean)">
-             <summary>
-             Refreshes the data in this item.
-             </summary>
-             <param name="submeshCount">The submesh count.</param>
-             <param name="isCollider">A value indicating if this mesh is used as a collider and not for rendering.</param>
-            </member>
+            <summary>
+            Refreshes the data in this item.
+            </summary>
+            <param name="submeshCount">The submesh count.</param>
+            <param name="isCollider">A value indicating if this mesh is used as a collider and not for rendering.</param>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.PartMeshImportDataDrawer">
-             <summary>
-             A default property drawer for the PartMeshImportData class.
-             </summary>
-             <seealso cref="T:UnityEditor.PropertyDrawer" />
-            </member>
+            <summary>
+            A default property drawer for the PartMeshImportData class.
+            </summary>
+            <seealso cref="T:UnityEditor.PropertyDrawer" />
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartMeshImportDataDrawer.GetPropertyHeight(UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
-             <summary>
-             Override this method to specify how tall the GUI for this field is in pixels.
-             </summary>
-             <param name="property">The SerializedProperty to make the custom GUI for.</param>
-             <param name="label">The label of this property.</param>
-             <returns>
-             The height in pixels.
-             </returns>
-            </member>
+            <summary>
+            Override this method to specify how tall the GUI for this field is in pixels.
+            </summary>
+            <param name="property">The SerializedProperty to make the custom GUI for.</param>
+            <param name="label">The label of this property.</param>
+            <returns>
+            The height in pixels.
+            </returns>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartMeshImportDataDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
-             <summary>
-             Override this method to make your own GUI for the property.
-             </summary>
-             <param name="position">Rectangle on the screen to use for the property GUI.</param>
-             <param name="property">The SerializedProperty to make the custom GUI for.</param>
-             <param name="label">The label of this property.</param>
-            </member>
+            <summary>
+            Override this method to make your own GUI for the property.
+            </summary>
+            <param name="position">Rectangle on the screen to use for the property GUI.</param>
+            <param name="property">The SerializedProperty to make the custom GUI for.</param>
+            <param name="label">The label of this property.</param>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.PartModelImportData">
-             <summary>
-             A set of configuration data used for importing a part model into the project.
-             </summary>
-            </member>
+            <summary>
+            A set of configuration data used for importing a part model into the project.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartModelImportData._id">
-             <summary>
-             The id of the model
-             </summary>
-            </member>
+            <summary>
+            The id of the model
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartModelImportData._meshes">
-             <summary>
-             The meshes included in the model.
-             </summary>
-            </member>
+            <summary>
+            The meshes included in the model.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartModelImportData._model">
-             <summary>
-             The model reference.
-             </summary>
-            </member>
+            <summary>
+            The model reference.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartModelImportData.#ctor">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartModelImportData" /> class.
-             </summary>
-            </member>
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartModelImportData"/> class.
+            </summary>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.PartModelImportData.Meshes">
-             <summary>
-             Gets or sets the meshes included in this model.
-             </summary>
-             <value>
-             The meshes included in this model.
-             </value>
-            </member>
+            <summary>
+            Gets or sets the meshes included in this model.
+            </summary>
+            <value>
+            The meshes included in this model.
+            </value>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.PartModelImportData.Model">
-             <summary>
-             Gets or sets the model reference.
-             </summary>
-             <value>
-             The model reference.
-             </value>
-            </member>
+            <summary>
+            Gets or sets the model reference.
+            </summary>
+            <value>
+            The model reference.
+            </value>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartModelImportData.Apply">
-             <summary>
-             Applies any changes in this configuration data to the model and then reimports the model if necessary.
-             </summary>
-            </member>
+            <summary>
+            Applies any changes in this configuration data to the model and then reimports the model if necessary.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartModelImportData.GetModelImporter">
-             <summary>
-             Gets the model importer for this item.
-             </summary>
-             <returns>The model importer for this item or <c>null</c>.</returns>
-            </member>
+            <summary>
+            Gets the model importer for this item.
+            </summary>
+            <returns>The model importer for this item or <c>null</c>.</returns>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartModelImportData.Refresh">
-             <summary>
-             Refreshes the data for this item.
-             </summary>
-            </member>
+            <summary>
+            Refreshes the data for this item.
+            </summary>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.PartModelImportDataSet">
-             <summary>
-             A set of part models and their associated configuration data used when importing the models.
-             </summary>
-             <seealso cref="T:UnityEngine.ScriptableObject" />
-            </member>
+            <summary>
+            A set of part models and their associated configuration data used when importing the models.
+            </summary>
+            <seealso cref="T:UnityEngine.ScriptableObject" />
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartModelImportDataSet._models">
-             <summary>
-             The models.
-             </summary>
-            </member>
+            <summary>
+            The models.
+            </summary>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.PartModelImportDataSet.Models">
-             <summary>
-             Gets or sets the models.
-             </summary>
-             <value>
-             The models.
-             </value>
-            </member>
+            <summary>
+            Gets or sets the models.
+            </summary>
+            <value>
+            The models.
+            </value>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartModelImportDataSet.Apply">
-             <summary>
-             Applies any pending changes for all models.
-             If configuration has changed, the models will be reimported.
-             </summary>
-            </member>
+            <summary>
+            Applies any pending changes for all models.
+            If configuration has changed, the models will be reimported.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartModelImportDataSet.Refresh">
-             <summary>
-             Refreshes the data for all models.
-             </summary>
-            </member>
+            <summary>
+            Refreshes the data for all models.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartModelImportDataSet.OnValidate">
-             <summary>
-             This function is called when the script is loaded or a value is changed in the inspector (Called in the editor only) .
-             </summary>
-            </member>
+            <summary>
+            This function is called when the script is loaded or a value is changed in the inspector (Called in the editor only) .
+            </summary>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.PartModelImportDataSetEditor">
-             <summary>
-             A custom editor script for part model import data sets.
-             </summary>
-             <seealso cref="T:UnityEditor.Editor" />
-            </member>
+            <summary>
+            A custom editor script for part model import data sets.
+            </summary>
+            <seealso cref="T:UnityEditor.Editor" />
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartModelImportDataSetEditor.OnInspectorGUI">
-             <summary>
-             Called every time the inspector GUI is drawn.
-             </summary>
-            </member>
+            <summary>
+            Called every time the inspector GUI is drawn.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartModelImportDataSetEditor.OnEnable">
-             <summary>
-             This function is called when the object becomes enabled and active.
-             </summary>
-            </member>
+            <summary>
+            This function is called when the object becomes enabled and active.
+            </summary>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.PartModelImporter">
-             <summary>
-             An asset post processor used to process and modify part models at asset import time.
-             </summary>
-             <seealso cref="T:UnityEditor.AssetPostprocessor" />
-            </member>
+            <summary>
+            An asset post processor used to process and modify part models at asset import time.
+            </summary>
+            <seealso cref="T:UnityEditor.AssetPostprocessor" />
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.PartModelImporter._isModProject">
-             <summary>
-             A value indicating whether the importer is running within a mod project.
-             </summary>
-            </member>
+            <summary>
+            A value indicating whether the importer is running within a mod project.
+            </summary>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.PartModelImporter.IsModProject">
-             <summary>
-             Gets a value indicating whether the importer is running within a mod project.
-             </summary>
-             <value>
-               <c>true</c> if the importer is running within a mod project; otherwise, <c>false</c>.
-             </value>
-            </member>
+            <summary>
+            Gets a value indicating whether the importer is running within a mod project.
+            </summary>
+            <value>
+              <c>true</c> if the importer is running within a mod project; otherwise, <c>false</c>.
+            </value>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartModelImporter.ImportPartModel(UnityEngine.GameObject,UnityEditor.AssetPostprocessor)">
-             <summary>
-             This function is to be called before the final part model prefab is created and before it is written to disk.
-             It is used to process models that have been configured as part models.
-             </summary>
-             <param name="obj">The root model object.</param>
-             <param name="postProcessor">The asset post processor.</param>
-            </member>
+            <summary>
+            This function is to be called before the final part model prefab is created and before it is written to disk.
+            It is used to process models that have been configured as part models.
+            </summary>
+            <param name="obj">The root model object.</param>
+            <param name="postProcessor">The asset post processor.</param>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartModelImporter.OnPostprocessModel(UnityEngine.GameObject)">
-             <summary>
-             This function is called before the final prefab is created and before it is written to disk.
-             It is used to process models that have been configured as part models.
-             </summary>
-             <param name="obj">The root model object.</param>
-            </member>
+            <summary>
+            This function is called before the final prefab is created and before it is written to disk.
+            It is used to process models that have been configured as part models.
+            </summary>
+            <param name="obj">The root model object.</param>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.PartModifierAttributeInfo">
-             <summary>
-             A class representing attribute information for a part modifier property.
-             </summary>
-            </member>
+            <summary>
+            A class representing attribute information for a part modifier property.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartModifierAttributeInfo.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartModifierAttributeInfo" /> class.
-             </summary>
-             <param name="name">The name of the property.</param>
-             <param name="exampleValues">The list of example values.</param>
-            </member>
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartModifierAttributeInfo"/> class.
+            </summary>
+            <param name="name">The name of the property.</param>
+            <param name="exampleValues">The list of example values.</param>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.PartModifierAttributeInfo.ExampleValues">
-             <summary>
-             Gets the example values for the property.
-             </summary>
-             <value>
-             The example values for the property.
-             </value>
-            </member>
+            <summary>
+            Gets the example values for the property.
+            </summary>
+            <value>
+            The example values for the property.
+            </value>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.PartModifierAttributeInfo.Name">
-             <summary>
-             Gets the name of the property.
-             </summary>
-             <value>
-             The name of the property.
-             </value>
-            </member>
+            <summary>
+            Gets the name of the property.
+            </summary>
+            <value>
+            The name of the property.
+            </value>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.PartModifierCreator">
-             <summary>
-             A class containing the functionality to create part modifier scripts.
-             </summary>
-            </member>
+            <summary>
+            A class containing the functionality to create part modifier scripts.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartModifierCreator.CreatePartModifier">
-             <summary>
-             Creates a part modifier.
-             </summary>
-             <returns>The result of the creation operation.</returns>
-            </member>
+            <summary>
+            Creates a part modifier.
+            </summary>
+            <returns>The result of the creation operation.</returns>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.PartModifierCreatorResult">
-             <summary>
-             A class representing the result of a part modifier creation.
-             </summary>
-            </member>
+            <summary>
+            A class representing the result of a part modifier creation.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.PartModifierCreatorResult.#ctor(System.String,System.String,System.String)">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartModifierCreatorResult" /> class.
-             </summary>
-             <param name="modifierType">Type of the modifier.</param>
-             <param name="modifierScriptType">Type of the modifier script.</param>
-             <param name="behaviourType">Type of the behavior.</param>
-            </member>
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartModifierCreatorResult"/> class.
+            </summary>
+            <param name="modifierType">Type of the modifier.</param>
+            <param name="modifierScriptType">Type of the modifier script.</param>
+            <param name="behaviourType">Type of the behavior.</param>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.PartModifierCreatorResult.BehaviourType">
-             <summary>
-             Gets the type of the behavior.
-             </summary>
-             <value>
-             The type of the behavior.
-             </value>
-            </member>
+            <summary>
+            Gets the type of the behavior.
+            </summary>
+            <value>
+            The type of the behavior.
+            </value>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.PartModifierCreatorResult.ModifierScriptType">
-             <summary>
-             Gets the type of the modifier script.
-             </summary>
-             <value>
-             The type of the modifier script.
-             </value>
-            </member>
+            <summary>
+            Gets the type of the modifier script.
+            </summary>
+            <value>
+            The type of the modifier script.
+            </value>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.PartModifierCreatorResult.ModifierType">
-             <summary>
-             Gets the type of the modifier.
-             </summary>
-             <value>
-             The type of the modifier.
-             </value>
-            </member>
+            <summary>
+            Gets the type of the modifier.
+            </summary>
+            <value>
+            The type of the modifier.
+            </value>
+        </member>
+        <member name="T:ModApi.Editor.Craft.Parts.PartUtility">
+            <summary>
+            A utility class for part related functionality in the Unity editor.
+            </summary>
+        </member>
+        <member name="F:ModApi.Editor.Craft.Parts.PartUtility.AttachPointsGameObjectName">
+            <summary>
+            The attach points game object name.
+            </summary>
+        </member>
+        <member name="F:ModApi.Editor.Craft.Parts.PartUtility.DesignerPartsGameObjectName">
+            <summary>
+            The designer parts game object name.
+            </summary>
+        </member>
+        <member name="F:ModApi.Editor.Craft.Parts.PartUtility.PartTypeGameObjectName">
+            <summary>
+            The part type game object name.
+            </summary>
+        </member>
+        <member name="F:ModApi.Editor.Craft.Parts.PartUtility.PrefabGameObjectName">
+            <summary>
+            The prefab game object name.
+            </summary>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.PartContentDirectory">
+            <summary>
+            Gets the part resource directory.
+            </summary>
+            <value>
+            The part resource directory.
+            </value>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.PartResourceDirectory">
+            <summary>
+            Gets the part resource directory.
+            </summary>
+            <value>
+            The part resource directory.
+            </value>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.AddAttachPoint(ModApi.Craft.Parts.Editor.PartDefinition)">
+            <summary>
+            Creates a new attach point for the specified part.
+            </summary>
+            <param name="part">The part to modify.</param>
+            <returns>The script for the new attach point.</returns>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.AddDesignerPart(ModApi.Craft.Parts.Editor.PartDefinition)">
+            <summary>
+            Creates a new designer part for the specified part.
+            </summary>
+            <param name="part">The part to modify.</param>
+            <returns>The designer part game object that was added.</returns>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.AddModifier``1(ModApi.Craft.Parts.Editor.PartDefinition)">
+            <summary>
+            Adds a new part modifier for the specified part.
+            </summary>
+            <typeparam name="T">The type of the modifier to add.</typeparam>
+            <param name="part">The part to modify.</param>
+            <returns>The added modifier script.</returns>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.AddModifier(ModApi.Craft.Parts.Editor.PartDefinition,System.Type)">
+            <summary>
+            Adds a new part modifier for the specified part.
+            </summary>
+            <param name="part">The part to modify.</param>
+            <param name="type">The type of the modifier to add.</param>
+            <returns>The added modifier script.</returns>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.CreatePart(System.String)">
+            <summary>
+            Creates the part with the specified ID.
+            </summary>
+            <param name="partId">The part identifier.</param>
+            <returns>The path of the create part prefab.</returns>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.GetPartContentPrefabs">
+            <summary>
+            Gets the part content prefabs.
+            </summary>
+            <returns>The part content prefabs.</returns>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.SaveAllParts">
+            <summary>
+            Saves all parts.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.SavePart(ModApi.Craft.Parts.Editor.PartDefinition)">
+            <summary>
+            Saves the specified part.
+            The part should be the root object of an open prefab or the root object of a prefab instance.
+            </summary>
+            <param name="part">The part to be saved.</param>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.ValidateAllParts">
+            <summary>
+            Validates all parts.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.ValidatePart(ModApi.Craft.Parts.Editor.PartDefinition)">
+            <summary>
+            Validates the specified part.
+            The part should be the root object of an open prefab or the root object of a prefab instance.
+            </summary>
+            <param name="part">The part to validate.</param>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.GetSavePartData(ModApi.Craft.Parts.Editor.PartDefinition,System.String)">
+            <summary>
+            Gets the data required to save the specified part.
+            </summary>
+            <param name="partDefinition">The part definition.</param>
+            <param name="prefabPath">The prefab path.</param>
+            <returns>The part save data or <c>null</c> if serious errors occur.</returns>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.SavePart(ModApi.Editor.Craft.Parts.PartUtility.SavePartData,UnityEngine.GameObject,System.String,System.String)">
+            <summary>
+            Saves the specified part.
+            </summary>
+            <param name="data">The part data to be saved.</param>
+            <param name="prefabContent">The prefab content for the part being saved (or <c>null</c> if it is using a prefab reference).</param>
+            <param name="prefabPath">The prefab path for the part being saved (or <c>null</c> if it is using a prefab reference).</param>
+            <param name="xmlPath">The path where the XML for the part should be saved.</param>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.SavePart(ModApi.Editor.Craft.Parts.PartUtility.SavePartData)">
+            <summary>
+            Saves the specified part.
+            </summary>
+            <param name="data">The save part data.</param>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.ValidatePart(ModApi.Editor.Craft.Parts.PartUtility.SavePartData)">
+            <summary>
+            Validates the part to be saved, logging any errors or issue that are ecountered.
+            </summary>
+            <param name="data">The part save data.</param>
+            <returns><c>true</c> if the part is valid enough to be saved, <c>false</c> is serious errors occurred.</returns>
+        </member>
+        <member name="T:ModApi.Editor.Craft.Parts.PartUtility.DesignerPartSavePartData">
+            <summary>
+            A collection of designer part data required to save a part.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.DesignerPartSavePartData.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartUtility.DesignerPartSavePartData"/> class.
+            </summary>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.DesignerPartSavePartData.DesignerPart">
+            <summary>
+            Gets or sets the designer part editor script.
+            </summary>
+            <value>
+            The designer part editor script.
+            </value>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.DesignerPartSavePartData.GameObject">
+            <summary>
+            Gets or sets the designer part game object.
+            </summary>
+            <value>
+            The designer part game object.
+            </value>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.DesignerPartSavePartData.PartModifiers">
+            <summary>
+            Gets or sets the part modifier editor scripts for the designer part.
+            </summary>
+            <value>
+            The part modifier editor scripts for the designer part.
+            </value>
+        </member>
+        <member name="T:ModApi.Editor.Craft.Parts.PartUtility.PartPrefabLoader">
+            <summary>
+            A class that wraps the functionality of loading a part prefab from a game object and unloading it when disposed (if necessary).
+            The primary purpose of this is to be used when saving parts that may be open in a prefab stage or saved from a prefab instance.
+            </summary>
+            <seealso cref="T:System.IDisposable" />
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.PartPrefabLoader.#ctor(ModApi.Craft.Parts.Editor.PartDefinition,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartUtility.PartPrefabLoader"/> class.
+            </summary>
+            <param name="partDefinition">The part definition.</param>
+            <param name="applyPendingOverrides">If set to <c>true</c> all pending overrides will be applied if the part is a prefab instance.</param>
+            <exception cref="T:System.Exception">
+            The part definition is not the root part of the prefab asset.
+            or
+            The prefab asset path of the prefab instance could not be determined.
+            or
+            The root object of the prefab does not contain a part definition component.
+            or
+            The part definition appears to not be a prefab root or prefab instance root.
+            </exception>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.PartPrefabLoader.Prefab">
+            <summary>
+            Gets the loaded prefab.
+            </summary>
+            <value>
+            The loaded prefab.
+            </value>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.PartPrefabLoader.PrefabPath">
+            <summary>
+            Gets the prefab path.
+            </summary>
+            <value>
+            The prefab path.
+            </value>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.PartPrefabLoader.UnloadOnDispose">
+            <summary>
+            Gets a value indicating whether the prefab needs to be unloaded upon disposal.
+            </summary>
+            <value>
+              <c>true</c> if prefab needs to be unloaded upon disposal; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.PartPrefabLoader.Dispose">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+        </member>
+        <member name="T:ModApi.Editor.Craft.Parts.PartUtility.SavePartData">
+            <summary>
+            A collection of data required to save a part.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Craft.Parts.PartUtility.SavePartData.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Editor.Craft.Parts.PartUtility.SavePartData"/> class.
+            </summary>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.SavePartData.AttachPoints">
+            <summary>
+            Gets or sets the attach point editor scripts.
+            </summary>
+            <value>
+            The attach point editor scripts.
+            </value>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.SavePartData.DesignerPartDefault">
+            <summary>
+            Gets or sets the default designer part editor script.
+            </summary>
+            <value>
+            The default designer part editor script.
+            </value>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.SavePartData.DesignerParts">
+            <summary>
+            Gets or sets the designer parts save data.
+            </summary>
+            <value>
+            The designer parts save data.
+            </value>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.SavePartData.GameObjectAttachPoints">
+            <summary>
+            Gets or sets the attach points game object.
+            </summary>
+            <value>
+            The attach points game object.
+            </value>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.SavePartData.GameObjectDesignerParts">
+            <summary>
+            Gets or sets the designer parts game object.
+            </summary>
+            <value>
+            The designer parts game object.
+            </value>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.SavePartData.GameObjectPartType">
+            <summary>
+            Gets or sets the part type game object.
+            </summary>
+            <value>
+            The part type game object.
+            </value>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.SavePartData.GameObjectPrefab">
+            <summary>
+            Gets or sets the runtime part prefab game object.
+            </summary>
+            <value>
+            The runtime part prefab game object.
+            </value>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.SavePartData.GameObjectRoot">
+            <summary>
+            Gets or sets the root game object of the prefab.
+            </summary>
+            <value>
+            The root game object of the prefab.
+            </value>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.SavePartData.PartModifiers">
+            <summary>
+            Gets or sets the part modifier editor scripts.
+            </summary>
+            <value>
+            The part modifier editor scripts.
+            </value>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.SavePartData.PartType">
+            <summary>
+            Gets or sets the part type editor script.
+            </summary>
+            <value>
+            The part type editor script.
+            </value>
+        </member>
+        <member name="P:ModApi.Editor.Craft.Parts.PartUtility.SavePartData.PrefabPath">
+            <summary>
+            Gets or sets the prefab path.
+            </summary>
+            <value>
+            The prefab path.
+            </value>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.StockPartData">
-             <summary>
-             A class used to query the XML data for the stock parts in the game.
-             </summary>
-            </member>
+            <summary>
+            A class used to query the XML data for the stock parts in the game.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.StockPartData._partXml">
-             <summary>
-             The stock part XML.
-             </summary>
-            </member>
+            <summary>
+            The stock part XML.
+            </summary>
+        </member>
         <member name="P:ModApi.Editor.Craft.Parts.StockPartData.PartXml">
-             <summary>
-             Gets the stock part XML.
-             </summary>
-             <value>
-             The stock part XML.
-             </value>
-            </member>
+            <summary>
+            Gets the stock part XML.
+            </summary>
+            <value>
+            The stock part XML.
+            </value>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.StockPartData.GetModifierAttributeInfo(System.String)">
-             <summary>
-             Gets the modifier attribute information for the specified modifier sorted by attribute name.
-             </summary>
-             <param name="modifierName">The name of the modifier for which to get attribute information.</param>
-             <returns>The requested attribute information.</returns>
-            </member>
+            <summary>
+            Gets the modifier attribute information for the specified modifier sorted by attribute name.
+            </summary>
+            <param name="modifierName">The name of the modifier for which to get attribute information.</param>
+            <returns>The requested attribute information.</returns>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.StockPartData.GetModifierNames">
-             <summary>
-             Gets the names of all part modifiers in the XML sorted alphabetically.
-             </summary>
-             <returns>The names of all part modifiers in the XML sorted alphabetically.</returns>
-            </member>
+            <summary>
+            Gets the names of all part modifiers in the XML sorted alphabetically.
+            </summary>
+            <returns>The names of all part modifiers in the XML sorted alphabetically.</returns>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.StockPartData.GetPartNames">
-             <summary>
-             Gets the list of stock part names.
-             </summary>
-             <returns>The list of stock part names.</returns>
-            </member>
+            <summary>
+            Gets the list of stock part names.
+            </summary>
+            <returns>The list of stock part names.</returns>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.StockPartData.GetPartXml(System.String)">
-             <summary>
-             Gets the XML for the specified part.
-             </summary>
-             <param name="partName">Name of the part for which to get the XML.</param>
-             <returns>The XML for the specified part.</returns>
-            </member>
+            <summary>
+            Gets the XML for the specified part.
+            </summary>
+            <param name="partName">Name of the part for which to get the XML.</param>
+            <returns>The XML for the specified part.</returns>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.StockPartData.LoadStockPartXml">
-             <summary>
-             Loads the stock part XML data.
-             </summary>
-             <returns>The XML document for the stock part data.</returns>
-            </member>
+            <summary>
+            Loads the stock part XML data.
+            </summary>
+            <returns>The XML document for the stock part data.</returns>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.Styles.PartStylesBuilder">
-             <summary>
-             An editor utility class that handles build related tasks associated with part styles.
-             </summary>
-            </member>
+            <summary>
+            An editor utility class that handles build related tasks associated with part styles.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.Styles.PartStylesBuilder._StylesResourcesRootPath">
-             <summary>
-             The styles root path.
-             </summary>
-            </member>
+            <summary>
+            The styles root path.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.Styles.PartStylesBuilder._StylesXmlPath">
-             <summary>
-             The styles XML path.
-             </summary>
-            </member>
+            <summary>
+            The styles XML path.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.Styles.PartStylesBuilder.RebuildPartStylesXml">
-             <summary>
-             Rebuilds the part styles XML.
-             </summary>
-            </member>
+            <summary>
+            Rebuilds the part styles XML.
+            </summary>
+        </member>
         <member name="T:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor">
-             <summary>
-             A custom editor for a part style set.
-             </summary>
-             <seealso cref="T:UnityEditor.Editor" />
-            </member>
+            <summary>
+            A custom editor for a part style set.
+            </summary>
+            <seealso cref="T:UnityEditor.Editor" />
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor._isModProject">
-             <summary>
-             A value indicating if the editor is running within a mod project.
-             </summary>
-            </member>
+            <summary>
+            A value indicating if the editor is running within a mod project.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor._dataKeys">
-             <summary>
-             The list of data keys.
-             </summary>
-            </member>
+            <summary>
+            The list of data keys.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor._dataKeysLastSelectedIndex">
-             <summary>
-             The last selected index of the data keys.
-             </summary>
-            </member>
+            <summary>
+            The last selected index of the data keys.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor._partId">
-             <summary>
-             The part identifier property.
-             </summary>
-            </member>
+            <summary>
+            The part identifier property.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor._styles">
-             <summary>
-             The styles list.
-             </summary>
-            </member>
+            <summary>
+            The styles list.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor._subpartIndex">
-             <summary>
-             The subpart index property.
-             </summary>
-            </member>
+            <summary>
+            The subpart index property.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor._textureLists">
-             <summary>
-             The list of texture lists.
-             </summary>
-            </member>
+            <summary>
+            The list of texture lists.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor.OnInspectorGUI">
-             <summary>
-             Called when the inspector GUI is drawn.
-             </summary>
-            </member>
+            <summary>
+            Called when the inspector GUI is drawn.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor.OnEnable">
-             <summary>
-             This function is called when the object becomes enabled and active.
-             </summary>
-            </member>
+            <summary>
+            This function is called when the object becomes enabled and active.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor.CreateTextureList(UnityEditor.SerializedProperty)">
-             <summary>
-             Creates the texture list.
-             </summary>
-             <param name="property">The property for which to create the list.</param>
-             <returns>The texture list.</returns>
-            </member>
+            <summary>
+            Creates the texture list.
+            </summary>
+            <param name="property">The property for which to create the list.</param>
+            <returns>The texture list.</returns>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor.DrawDataKeyElement(UnityEngine.Rect,System.Int32,System.Boolean,System.Boolean)">
-             <summary>
-             Draws the data key element.
-             </summary>
-             <param name="rect">The rectangle in which to draw.</param>
-             <param name="index">The index of the element to draw.</param>
-             <param name="isActive">If set to <c>true</c>, then, uh... i don't know.</param>
-             <param name="isFocused">if set to <c>true</c>, the list element is focused?.</param>
-            </member>
+            <summary>
+            Draws the data key element.
+            </summary>
+            <param name="rect">The rectangle in which to draw.</param>
+            <param name="index">The index of the element to draw.</param>
+            <param name="isActive">If set to <c>true</c>, then, uh... i don't know.</param>
+            <param name="isFocused">if set to <c>true</c>, the list element is focused?.</param>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor.DrawDataKeysHeader(UnityEngine.Rect)">
-             <summary>
-             Draws the data keys header.
-             </summary>
-             <param name="rect">The rectangle in which to draw.</param>
-            </member>
+            <summary>
+            Draws the data keys header.
+            </summary>
+            <param name="rect">The rectangle in which to draw.</param>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor.DrawStyleElement(UnityEngine.Rect,System.Int32,System.Boolean,System.Boolean)">
-             <summary>
-             Draws the style element.
-             </summary>
-             <param name="rect">The rectangle in which to draw.</param>
-             <param name="index">The index of the element to draw.</param>
-             <param name="isActive">If set to <c>true</c>, then, uh... i don't know.</param>
-             <param name="isFocused">if set to <c>true</c>, the list element is focused?.</param>
-            </member>
+            <summary>
+            Draws the style element.
+            </summary>
+            <param name="rect">The rectangle in which to draw.</param>
+            <param name="index">The index of the element to draw.</param>
+            <param name="isActive">If set to <c>true</c>, then, uh... i don't know.</param>
+            <param name="isFocused">if set to <c>true</c>, the list element is focused?.</param>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor.DrawStylesHeader(UnityEngine.Rect)">
-             <summary>
-             Draws the style list header.
-             </summary>
-             <param name="rect">The rectangle in which to draw.</param>
-            </member>
+            <summary>
+            Draws the style list header.
+            </summary>
+            <param name="rect">The rectangle in which to draw.</param>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor.OnDataKeyAdd(UnityEditorInternal.ReorderableList)">
-             <summary>
-             Called when a data key is added.
-             </summary>
-             <param name="list">The list.</param>
-            </member>
+            <summary>
+            Called when a data key is added.
+            </summary>
+            <param name="list">The list.</param>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor.OnDataKeyRemoved(UnityEditorInternal.ReorderableList)">
-             <summary>
-             Called when a data key is removed.
-             </summary>
-             <param name="list">The list.</param>
-            </member>
+            <summary>
+            Called when a data key is removed.
+            </summary>
+            <param name="list">The list.</param>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor.OnDataKeyReordered(UnityEditorInternal.ReorderableList)">
-             <summary>
-             Called when a data key is reordered.
-             </summary>
-             <param name="list">The list.</param>
-            </member>
+            <summary>
+            Called when a data key is reordered.
+            </summary>
+            <param name="list">The list.</param>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor.OnDataKeySelected(UnityEditorInternal.ReorderableList)">
-             <summary>
-             Called when a data key is selected.
-             </summary>
-             <param name="list">The list.</param>
-            </member>
+            <summary>
+            Called when a data key is selected.
+            </summary>
+            <param name="list">The list.</param>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor.OnStyleAdd(UnityEditorInternal.ReorderableList)">
-             <summary>
-             Called when a style is added.
-             </summary>
-             <param name="list">The list.</param>
-            </member>
+            <summary>
+            Called when a style is added.
+            </summary>
+            <param name="list">The list.</param>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor.OnStyleRemoved(UnityEditorInternal.ReorderableList)">
-             <summary>
-             Called when a style is removed.
-             </summary>
-             <param name="list">The list.</param>
-            </member>
+            <summary>
+            Called when a style is removed.
+            </summary>
+            <param name="list">The list.</param>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor.OnStyleSelected(UnityEditorInternal.ReorderableList)">
-             <summary>
-             Called when a style is selected.
-             </summary>
-             <param name="list">The list.</param>
-            </member>
+            <summary>
+            Called when a style is selected.
+            </summary>
+            <param name="list">The list.</param>
+        </member>
         <member name="M:ModApi.Editor.Craft.Parts.Styles.PartStyleSetDefinitionEditor.StyleElementHeight(System.Int32)">
-             <summary>
-             Gets the element height for a style element.
-             </summary>
-             <param name="index">The index of the style element.</param>
-             <returns>The requested element height.</returns>
-            </member>
+            <summary>
+            Gets the element height for a style element.
+            </summary>
+            <param name="index">The index of the style element.</param>
+            <returns>The requested element height.</returns>
+        </member>
         <member name="T:ModApi.Editor.EditorListOption">
-             <summary>
-             A collection of editor list option flags.
-             </summary>
-            </member>
+            <summary>
+            A collection of editor list option flags.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.EditorListOption.None">
-             <summary>
-             No options.
-             </summary>
-            </member>
+            <summary>
+            No options.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.EditorListOption.ListSize">
-             <summary>
-             The list size will be shown.
-             </summary>
-            </member>
+            <summary>
+            The list size will be shown.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.EditorListOption.ListLabel">
-             <summary>
-             The list label will be shown.
-             </summary>
-            </member>
+            <summary>
+            The list label will be shown.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.EditorListOption.ElementLabels">
-             <summary>
-             The element labels will be shown.
-             </summary>
-            </member>
+            <summary>
+            The element labels will be shown.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.EditorListOption.Buttons">
-             <summary>
-             The buttons will be shown.
-             </summary>
-            </member>
+            <summary>
+            The buttons will be shown.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.EditorListOption.AddDeleteButtonsOnly">
-             <summary>
-             Only the add and delete button will be shown.
-             </summary>
-            </member>
+            <summary>
+            Only the add and delete button will be shown.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.EditorListOption.Default">
-             <summary>
-             The default set of options.
-             </summary>
-            </member>
+            <summary>
+            The default set of options.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.EditorListOption.NoElementLabels">
-             <summary>
-             The default options for showing no element labels.
-             </summary>
-            </member>
+            <summary>
+            The default options for showing no element labels.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.EditorListOption.All">
-             <summary>
-             All default options enabled.
-             </summary>
-            </member>
+            <summary>
+            All default options enabled.
+            </summary>
+        </member>
         <member name="T:ModApi.Editor.EditorList">
-             <summary>
-             A class used for displaying custom lists in the editor.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.EditorList.addButtonContent">
-             <summary>
-             The add button content.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.EditorList.addButtonWidth">
-             <summary>
-             The add button width.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.EditorList.deleteButtonContent">
-             <summary>
-             The delete button content.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.EditorList.duplicateButtonContent">
-             <summary>
-             The duplicate button content.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.EditorList.miniButtonWidth">
-             <summary>
-             The mini button width.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.EditorList.moveButtonContent">
-             <summary>
-             The move button content.
-             </summary>
-            </member>
+            <summary>
+            A class used for displaying custom lists in the editor.
+            </summary>
+        </member>
+        <member name="F:ModApi.Editor.EditorList._addButtonContent">
+            <summary>
+            The add button content.
+            </summary>
+        </member>
+        <member name="F:ModApi.Editor.EditorList._addButtonWidth">
+            <summary>
+            The add button width.
+            </summary>
+        </member>
+        <member name="F:ModApi.Editor.EditorList._deleteButtonContent">
+            <summary>
+            The delete button content.
+            </summary>
+        </member>
+        <member name="F:ModApi.Editor.EditorList._duplicateButtonContent">
+            <summary>
+            The duplicate button content.
+            </summary>
+        </member>
+        <member name="F:ModApi.Editor.EditorList._miniButtonWidth">
+            <summary>
+            The mini button width.
+            </summary>
+        </member>
+        <member name="F:ModApi.Editor.EditorList._moveButtonContent">
+            <summary>
+            The move button content.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.EditorList.Show(UnityEditor.SerializedProperty,ModApi.Editor.EditorListOption)">
-             <summary>
-             Shows the specified list.
-             </summary>
-             <param name="list">The list to show.</param>
-             <param name="options">The options for the list being shown.</param>
-            </member>
+            <summary>
+            Shows the specified list.
+            </summary>
+            <param name="list">The list to show.</param>
+            <param name="options">The options for the list being shown.</param>
+        </member>
         <member name="M:ModApi.Editor.EditorList.ShowAddButton(UnityEditor.SerializedProperty)">
-             <summary>
-             Shows the add button.
-             </summary>
-             <param name="list">The list being displayed.</param>
-            </member>
+            <summary>
+            Shows the add button.
+            </summary>
+            <param name="list">The list being displayed.</param>
+        </member>
         <member name="M:ModApi.Editor.EditorList.ShowButtons(UnityEditor.SerializedProperty,System.Int32)">
-             <summary>
-             Shows the buttons for the list.
-             </summary>
-             <param name="list">The list being displayed.</param>
-             <param name="index">The index of the item in the list for which the buttons are to be displayed.</param>
-            </member>
+            <summary>
+            Shows the buttons for the list.
+            </summary>
+            <param name="list">The list being displayed.</param>
+            <param name="index">The index of the item in the list for which the buttons are to be displayed.</param>
+        </member>
         <member name="M:ModApi.Editor.EditorList.ShowDeleteButton(UnityEditor.SerializedProperty,System.Int32)">
-             <summary>
-             Shows the delete button.
-             </summary>
-             <param name="list">The list being displayed.</param>
-             <param name="index">The index of the item in the list for which the button is to be displayed.</param>
-            </member>
+            <summary>
+            Shows the delete button.
+            </summary>
+            <param name="list">The list being displayed.</param>
+            <param name="index">The index of the item in the list for which the button is to be displayed.</param>
+        </member>
         <member name="M:ModApi.Editor.EditorList.ShowElements(UnityEditor.SerializedProperty,ModApi.Editor.EditorListOption)">
-             <summary>
-             Shows the elements of the list.
-             </summary>
-             <param name="list">The list being displayed.</param>
-             <param name="options">The options for the list being displayed.</param>
-            </member>
+            <summary>
+            Shows the elements of the list.
+            </summary>
+            <param name="list">The list being displayed.</param>
+            <param name="options">The options for the list being displayed.</param>
+        </member>
         <member name="T:ModApi.Editor.Extensions.IEnumerableExtensions">
-             <summary>
-             A class containing extension methods for IEnumerables.
-             </summary>
-            </member>
+            <summary>
+            A class containing extension methods for IEnumerables.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Extensions.IEnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
-             <summary>
-             A shorthand for-each statement for IEnumerables.
-             </summary>
-             <typeparam name="T">The type of the enumerable.</typeparam>
-             <param name="enumerable">The enumerable.</param>
-             <param name="action">The action.</param>
-            </member>
+            <summary>
+            A shorthand for-each statement for IEnumerables.
+            </summary>
+            <typeparam name="T">The type of the enumerable.</typeparam>
+            <param name="enumerable">The enumerable.</param>
+            <param name="action">The action.</param>
+        </member>
         <member name="T:ModApi.Editor.Extensions.XAttributeExtensions">
-             <summary>
-             A class containing extension methods for XAttributes.
-             </summary>
-            </member>
+            <summary>
+            A class containing extension methods for XAttributes.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Extensions.XAttributeExtensions.ToVector3(System.Xml.Linq.XAttribute)">
-             <summary>
-             Converts the attribute to a Vector3.
-             </summary>
-             <param name="attribute">The attribute.</param>
-             <returns>The Vector3 or <c>null</c>.</returns>
-            </member>
+            <summary>
+            Converts the attribute to a Vector3.
+            </summary>
+            <param name="attribute">The attribute.</param>
+            <returns>The Vector3 or <c>null</c>.</returns>
+        </member>
         <member name="T:ModApi.Editor.Math.VectorPropertyDrawer">
-             <summary>
-             A custom property drawer for vectors type structures.
-             </summary>
-             <seealso cref="T:UnityEditor.PropertyDrawer" />
-            </member>
+            <summary>
+            A custom property drawer for vectors type structures.
+            </summary>
+            <seealso cref="T:UnityEditor.PropertyDrawer" />
+        </member>
         <member name="F:ModApi.Editor.Math.VectorPropertyDrawer._fieldCounts">
-             <summary>
-             A dictionary lookup of field counts keyed by class type name.
-             </summary>
-            </member>
+            <summary>
+            A dictionary lookup of field counts keyed by class type name.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Math.VectorPropertyDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
-             <summary>
-             Called when the GUI is drawn.
-             </summary>
-             <param name="position">Rectangle on the screen to use for the property GUI.</param>
-             <param name="property">The SerializedProperty to make the custom GUI for.</param>
-             <param name="label">The label of this property.</param>
-            </member>
+            <summary>
+            Called when the GUI is drawn.
+            </summary>
+            <param name="position">Rectangle on the screen to use for the property GUI.</param>
+            <param name="property">The SerializedProperty to make the custom GUI for.</param>
+            <param name="label">The label of this property.</param>
+        </member>
         <member name="M:ModApi.Editor.Math.VectorPropertyDrawer.GetFieldCount(UnityEditor.SerializedProperty)">
-             <summary>
-             Gets the field count for the specified property.
-             </summary>
-             <param name="property">The property for which to get the field count.</param>
-             <returns>The field count of the property.</returns>
-            </member>
+            <summary>
+            Gets the field count for the specified property.
+            </summary>
+            <param name="property">The property for which to get the field count.</param>
+            <returns>The field count of the property.</returns>
+        </member>
         <member name="T:ModApi.Editor.MenuItems">
-             <summary>
-             A class defining the custom editor menu items provided by the mod tools.
-             </summary>
-            </member>
+            <summary>
+            A class defining the custom editor menu items provided by the mod tools.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.MenuItems._projectDirectory">
-             <summary>
-             The directory of the unity project.
-             </summary>
-            </member>
+            <summary>
+            The directory of the unity project.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.MenuItems.CreatePartStyleSetDefinition(UnityEditor.MenuCommand)">
-             <summary>
-             Creates a new part style set definition.
-             </summary>
-             <param name="menuCommand">The menu command.</param>
-            </member>
+            <summary>
+            Creates a new part style set definition.
+            </summary>
+            <param name="menuCommand">The menu command.</param>
+        </member>
         <member name="M:ModApi.Editor.MenuItems.CreatePartTextureStyleDefinition(UnityEditor.MenuCommand)">
-             <summary>
-             Creates a new part texture style definition.
-             </summary>
-             <param name="menuCommand">The menu command.</param>
-            </member>
+            <summary>
+            Creates a new part texture style definition.
+            </summary>
+            <param name="menuCommand">The menu command.</param>
+        </member>
         <member name="M:ModApi.Editor.MenuItems.CreatePersistentObject(UnityEditor.MenuCommand)">
-             <summary>
-             A menu item to create a persistent object.
-             </summary>
-             <param name="menuCommand">The menu command.</param>
-            </member>
+            <summary>
+            A menu item to create a persistent object.
+            </summary>
+            <param name="menuCommand">The menu command.</param>
+        </member>
         <member name="M:ModApi.Editor.MenuItems.CreatePersistentObjectComponent(UnityEditor.MenuCommand)">
-             <summary>
-             A menu item to create a persistent object component.
-             </summary>
-             <param name="menuCommand">The menu command.</param>
-            </member>
+            <summary>
+            A menu item to create a persistent object component.
+            </summary>
+            <param name="menuCommand">The menu command.</param>
+        </member>
         <member name="M:ModApi.Editor.MenuItems.CreatePersistentObjectComponentValidation(UnityEditor.MenuCommand)">
-             <summary>
-             Validation for a menu item to create a persistent object component.
-             </summary>
-             <param name="menuCommand">The menu command.</param>
-             <returns>A value indicating whether or not the menu item is enabled.</returns>
-            </member>
+            <summary>
+            Validation for a menu item to create a persistent object component.
+            </summary>
+            <param name="menuCommand">The menu command.</param>
+            <returns>A value indicating whether or not the menu item is enabled.</returns>
+        </member>
         <member name="M:ModApi.Editor.MenuItems.CreateServiceProviderScript(UnityEditor.MenuCommand)">
-             <summary>
-             Creates the service provider script.
-             </summary>
-             <param name="menuCommand">The menu command.</param>
-            </member>
+            <summary>
+            Creates the service provider script.
+            </summary>
+            <param name="menuCommand">The menu command.</param>
+        </member>
         <member name="M:ModApi.Editor.MenuItems.ShowModBuilderWindow">
-             <summary>
-             Shows the mod builder window.
-             </summary>
-            </member>
+            <summary>
+            Shows the mod builder window.
+            </summary>
+        </member>
         <member name="T:ModApi.Editor.ModBuilderWindowPlugin">
-             <summary>
-             A plugin to the mod builder window providing game specific functionality.
-             </summary>
-            </member>
+            <summary>
+            A plugin to the mod builder window providing game specific functionality.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.ModBuilderWindowPlugin.RequiredUnityVersion">
-             <summary>
-             The required unity version for mods.
-             </summary>
-            </member>
+            <summary>
+            The required unity version for mods.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.ModBuilderWindowPlugin._parts">
-             <summary>
-             The list of parts to be saved in the mod.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.ModBuilderWindowPlugin._partsScrollPosition">
-             <summary>
-             The current scroll position of the parts list.
-             </summary>
-            </member>
+            <summary>
+            The list of parts to be saved in the mod.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.ModBuilderWindowPlugin._partsVisible">
-             <summary>
-             The current visibility of the parts list.
-             </summary>
-            </member>
+            <summary>
+            The current visibility of the parts list.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.ModBuilderWindowPlugin._persistentObjects">
-             <summary>
-             The list of persistent objects to be saved in the mod.
-             </summary>
-            </member>
-        <member name="F:ModApi.Editor.ModBuilderWindowPlugin._persistentObjectsScrollPosition">
-             <summary>
-             The current scroll position of the persistent objects list.
-             </summary>
-            </member>
+            <summary>
+            The list of persistent objects to be saved in the mod.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.ModBuilderWindowPlugin._persistentObjectsVisible">
-             <summary>
-             The current visibility of the persistent objects list.
-             </summary>
-            </member>
+            <summary>
+            The current visibility of the persistent objects list.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.ModBuilderWindowPlugin._wrongUnityVersion">
-             <summary>
-             A value indicating whether the user is using the wrong unity version.
-             </summary>
-            </member>
+            <summary>
+            A value indicating whether the user is using the wrong unity version.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.#ctor">
-             <summary>
-             Initializes a new instance of the <see cref="T:ModApi.Editor.ModBuilderWindowPlugin" /> class.
-             </summary>
-            </member>
+            <summary>
+            Initializes a new instance of the <see cref="T:ModApi.Editor.ModBuilderWindowPlugin"/> class.
+            </summary>
+        </member>
         <member name="P:ModApi.Editor.ModBuilderWindowPlugin.AdditionalAssets">
-             <summary>
-             Gets the additional assets to be included in the mod. This is a list of asset paths to be included in the mod's asset bundle.
-             </summary>
-             <value>
-             The additional assets to be included in the mod. This is a list of asset paths to be included in the mod's asset bundle.
-             </value>
-            </member>
+            <summary>
+            Gets the additional assets to be included in the mod. This is a list of asset paths to be included in the mod's asset bundle.
+            </summary>
+            <value>
+            The additional assets to be included in the mod. This is a list of asset paths to be included in the mod's asset bundle.
+            </value>
+        </member>
         <member name="P:ModApi.Editor.ModBuilderWindowPlugin.AssembliesToIgnore">
-             <summary>
-             Gets the assemblies to ignore when determining which assemblies need to be saved in the mod.
-             </summary>
-             <value>
-             The assemblies to ignore when determining which assemblies need to be saved in the mod.
-             </value>
-            </member>
+            <summary>
+            Gets the assemblies to ignore when determining which assemblies need to be saved in the mod.
+            </summary>
+            <value>
+            The assemblies to ignore when determining which assemblies need to be saved in the mod.
+            </value>
+        </member>
         <member name="P:ModApi.Editor.ModBuilderWindowPlugin.ManifestSectionName">
-             <summary>
-             Gets the name of the manifest section associated with this plugin.
-             </summary>
-             <value>
-             The name of the manifest section associated with this plugin.
-             </value>
-            </member>
+            <summary>
+            Gets the name of the manifest section associated with this plugin.
+            </summary>
+            <value>
+            The name of the manifest section associated with this plugin.
+            </value>
+        </member>
         <member name="P:ModApi.Editor.ModBuilderWindowPlugin.ModFileExtensionAndroid">
-             <summary>
-             Gets the mod file extension for the android player (excluding the '.').
-             </summary>
-             <value>
-             The mod file extension for the android player (excluding the '.').
-             </value>
-            </member>
+            <summary>
+            Gets the mod file extension for the android player (excluding the '.').
+            </summary>
+            <value>
+            The mod file extension for the android player (excluding the '.').
+            </value>
+        </member>
         <member name="P:ModApi.Editor.ModBuilderWindowPlugin.ModFileExtensionStandalone">
-             <summary>
-             Gets the mod file extension for the standalone player (excluding the '.').
-             </summary>
-             <value>
-             The mod file extension for the standalone player (excluding the '.').
-             </value>
-            </member>
+            <summary>
+            Gets the mod file extension for the standalone players (excluding the '.').
+            </summary>
+            <value>
+            The mod file extension for the standalone players (excluding the '.').
+            </value>
+        </member>
         <member name="P:ModApi.Editor.ModBuilderWindowPlugin.WindowTitle">
-             <summary>
-             Gets the window title.
-             </summary>
-             <value>
-             The window title.
-             </value>
-            </member>
+            <summary>
+            Gets the window title.
+            </summary>
+            <value>
+            The window title.
+            </value>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.GetSaveOptions(UnityEngine.GameObject)">
-             <summary>
-             Gets the save options for the specified game object or <c>null</c> if no specific options are needed.
-             </summary>
-             <param name="gameObject">The game object to save.</param>
-             <returns>The game object save options or <c>null</c> if no specific options are needed.</returns>
-            </member>
+            <summary>
+            Gets the save options for the specified game object or <c>null</c> if no specific options are needed.
+            </summary>
+            <param name="gameObject">The game object to save.</param>
+            <returns>The game object save options or <c>null</c> if no specific options are needed.</returns>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.Initialize">
-             <summary>
-             Initializes the plugin.
-             </summary>
-            </member>
+            <summary>
+            Initializes the plugin.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.LoadManifestData(System.Xml.Linq.XElement)">
-             <summary>
-             Loads the mod manifest data for the specified section associated with this plugin.
-             </summary>
-             <param name="manifestSection">The mod manifest section for this plugin.</param>
-            </member>
+            <summary>
+            Loads the mod manifest data for the specified section associated with this plugin.
+            </summary>
+            <param name="manifestSection">The mod manifest section for this plugin.</param>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.OnBeforeGameObjectSaved(UnityEngine.GameObject,System.String)">
-             <summary>
-             Called when a game object is about to be saved.
-             </summary>
-             <param name="prefabContent">The prefab content being saved.</param>
-             <param name="prefabPath">The path of the prefab being saved.</param>
-            </member>
+            <summary>
+            Called when a game object is about to be saved.
+            </summary>
+            <param name="prefabContent">The prefab content being saved.</param>
+            <param name="prefabPath">The path of the prefab being saved.</param>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.OnCompleteAndSaveStarted">
-             <summary>
-             Called when the user starts the process to complete and save the mod.
-             </summary>
-            </member>
+            <summary>
+            Called when the user starts the process to complete and save the mod.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.OnGameObjectRemoved(Jundroo.ModTools.Editor.ModGameObject)">
-             <summary>
-             Called when a game object is removed from the list of saved game objects.
-             </summary>
-             <param name="gameObject">The game object being removed.</param>
-            </member>
-        <member name="M:ModApi.Editor.ModBuilderWindowPlugin.OnGameObjectSaved(UnityEngine.GameObject)">
-             <summary>
-             Called when a game object is saved.
-             </summary>
-             <param name="savedPrefab">The prefab that was just saved.</param>
-            </member>
+            <summary>
+            Called when a game object is removed from the list of saved game objects.
+            </summary>
+            <param name="gameObject">The game object being removed.</param>
+        </member>
+        <member name="M:ModApi.Editor.ModBuilderWindowPlugin.OnGameObjectSaved(UnityEngine.GameObject,System.String)">
+            <summary>
+            Called when a game object is saved.
+            </summary>
+            <param name="savedPrefab">The prefab that was just saved.</param>
+            <param name="prefabPath">The path of the prefab that was just saved.</param>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.OnGUI_BeforeGameObjectList">
-             <summary>
-             Called during OnGUI before the game object list is output.
-             </summary>
-            </member>
+            <summary>
+            Called during OnGUI before the game object list is output.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.OnGUI_End">
-             <summary>
-             Called at the end of OnGUI.
-             </summary>
-            </member>
+            <summary>
+            Called at the end of OnGUI.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.OnInitializeComplete">
-             <summary>
-             Called when initialization is complete.
-             </summary>
-            </member>
+            <summary>
+            Called when initialization is complete.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.OnModStarted(System.String,System.String,System.Int32,System.Int32)">
-             <summary>
-             Called when a mod is started.
-             </summary>
-             <param name="modName">The name of the mod.</param>
-             <param name="modAuthor">The mod author.</param>
-             <param name="modVersionMajor">The mod major version number.</param>
-             <param name="modVersionMinor">The mod minor version number.</param>
-            </member>
+            <summary>
+            Called when a mod is started.
+            </summary>
+            <param name="modName">The name of the mod.</param>
+            <param name="modAuthor">The mod author.</param>
+            <param name="modVersionMajor">The mod major version number.</param>
+            <param name="modVersionMinor">The mod minor version number.</param>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.SaveManifestData(System.Xml.Linq.XElement)">
-             <summary>
-             Saves the mod manifest data to the specified XML element.
-             </summary>
-             <param name="manifestSection">The mod manifest section associated with this plugin.</param>
-            </member>
+            <summary>
+            Saves the mod manifest data to the specified XML element.
+            </summary>
+            <param name="manifestSection">The mod manifest section associated with this plugin.</param>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.SaveMod(System.String,System.String,Jundroo.ModTools.Core.ModTargetPlatform)">
-             <summary>
-             Give the plugin a chance to save the mod.
-             Returns <c>true</c> if the mod was saved, <c>false</c> otherwise.
-             </summary>
-             <param name="assetBundlePath">The asset bundle path.</param>
-             <param name="targetPath">The target path.</param>
-             <param name="targetPlatform">The target platform of the mod.</param>
-             <returns><c>true</c> if the mod was saved, <c>false</c> otherwise.</returns>
-            </member>
+            <summary>
+            Give the plugin a chance to save the mod.
+            Returns <c>true</c> if the mod was saved, <c>false</c> otherwise.
+            </summary>
+            <param name="assetBundlePath">The asset bundle path.</param>
+            <param name="targetPath">The target path.</param>
+            <param name="targetPlatform">The target platform of the mod.</param>
+            <returns><c>true</c> if the mod was saved, <c>false</c> otherwise.</returns>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.ShouldSaveGameObject(UnityEngine.GameObject)">
-             <summary>
-             Determines if the specified game object that the user is attempting to save should actually be saved.
-             </summary>
-             <param name="gameObject">The game object to be saved.</param>
-             <returns><c>true</c> if the game object should be saved, <c>false</c> otherwise.</returns>
-            </member>
+            <summary>
+            Determines if the specified game object that the user is attempting to save should actually be saved.
+            </summary>
+            <param name="gameObject">The game object to be saved.</param>
+            <returns><c>true</c> if the game object should be saved, <c>false</c> otherwise.</returns>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.SavePart(ModApi.Craft.Parts.Editor.PartDefinition,UnityEngine.GameObject,System.String)">
-             <summary>
-             Saves the specified part.
-             </summary>
-             <param name="part">The part being saved.</param>
-             <param name="prefab">The prefab associated with the part or <c>null</c> if this part references an existing prefab.</param>
-             <param name="prefabPath">The prefab path for the part being saved (or <c>null</c> if this part references an existing prefab).</param>
-            </member>
+            <summary>
+            Saves the specified part.
+            </summary>
+            <param name="part">The part being saved.</param>
+            <param name="prefab">The prefab associated with the part or <c>null</c> if this part references an existing prefab.</param>
+            <param name="prefabPath">The prefab path for the part being saved (or <c>null</c> if this part references an existing prefab).</param>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.ScanModAssemblies(System.Boolean)">
-             <summary>
-             Scans all the assemblies to be included in the mod.
-             </summary>
-             <param name="modCreated"><c>true</c> if assemblies are being scanned when the mod is first created, <c>false</c> otherwise.</param>
-            </member>
+            <summary>
+            Scans all the assemblies to be included in the mod.
+            </summary>
+            <param name="modCreated"><c>true</c> if assemblies are being scanned when the mod is first created, <c>false</c> otherwise.</param>
+        </member>
+        <member name="M:ModApi.Editor.ModBuilderWindowPlugin.UpdateAlwaysIncludedShaders">
+            <summary>
+            Removes all entries from the list of always included shaders.
+            We do this to hopefully force all shaders to be included in the mod asset bundles, which should
+            hopefully make them less likely to break due to Unity upgrades (but honestly... I don't know what I'm doing)
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.ModBuilderWindowPlugin.UpdateGraphicApis">
+            <summary>
+            Update our graphics APIs to include as many shaders as possible for each platform.
+            This is mainly to try and minimize mods breaking over time with Unity upgrades.
+            I doubt it will do a lot of good, but... we shall try anyway.
+            (it does bloat the asset bundle size though...)
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.UpdateLayers">
-             <summary>
-             Update the projects layers to use the same layers as the game
-             </summary>
-            </member>
+            <summary>
+            Update the projects layers to use the same layers as the game
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.ModBuilderWindowPlugin.UpdateTags">
-             <summary>
-             Update the projects tags to use the same tags as the game
-             </summary>
-            </member>
+            <summary>
+            Update the projects tags to use the same tags as the game
+            </summary>
+        </member>
         <member name="T:ModApi.Editor.Planet.Modifiers.Materials.DistanceBlendedTexturesConfigurationPropertyDrawer">
-             <summary>
-             A property drawer for <see cref="T:ModApi.Planet.Modifiers.Material.DistanceBlendedTexturesConfiguration" />
-             </summary>
-             <seealso cref="T:UnityEditor.PropertyDrawer" />
-            </member>
+            <summary>
+            A property drawer for <see cref="T:ModApi.Planet.Modifiers.Material.DistanceBlendedTexturesConfiguration"/>
+            </summary>
+            <seealso cref="T:UnityEditor.PropertyDrawer" />
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.Materials.DistanceBlendedTexturesConfigurationPropertyDrawer.GetPropertyHeight(UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
-             <summary>
-             Override this method to specify how tall the GUI for this field is in pixels.
-             </summary>
-             <param name="property">The SerializedProperty to make the custom GUI for.</param>
-             <param name="label">The label of this property.</param>
-             <returns>
-             The height in pixels.
-             </returns>
-            </member>
+            <summary>
+            Override this method to specify how tall the GUI for this field is in pixels.
+            </summary>
+            <param name="property">The SerializedProperty to make the custom GUI for.</param>
+            <param name="label">The label of this property.</param>
+            <returns>
+            The height in pixels.
+            </returns>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.Materials.DistanceBlendedTexturesConfigurationPropertyDrawer.OnGUI(UnityEngine.Rect,UnityEditor.SerializedProperty,UnityEngine.GUIContent)">
-             <summary>
-             Override this method to make your own GUI for the property.
-             </summary>
-             <param name="position">Rectangle on the screen to use for the property GUI.</param>
-             <param name="property">The SerializedProperty to make the custom GUI for.</param>
-             <param name="label">The label of this property.</param>
-            </member>
+            <summary>
+            Override this method to make your own GUI for the property.
+            </summary>
+            <param name="position">Rectangle on the screen to use for the property GUI.</param>
+            <param name="property">The SerializedProperty to make the custom GUI for.</param>
+            <param name="label">The label of this property.</param>
+        </member>
         <member name="T:ModApi.Editor.Planet.Modifiers.VertexData.ColorBandsEditor">
-             <summary>
-             The custom editor for the color bands vertex data modifier.
-             </summary>
-             <seealso cref="T:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor" />
-            </member>
+            <summary>
+            The custom editor for the color bands vertex data modifier.
+            </summary>
+            <seealso cref="T:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor" />
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.ColorBandsEditor._colorBandsFoldout">
-             <summary>
-             The color bands foldout value.
-             </summary>
-            </member>
+            <summary>
+            The color bands foldout value.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.ColorBandsEditor._colorBandsList">
-             <summary>
-             The color bands list.
-             </summary>
-            </member>
+            <summary>
+            The color bands list.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.ColorBandsEditor._colorBandsProperty">
-             <summary>
-             The color bands property.
-             </summary>
-            </member>
+            <summary>
+            The color bands property.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.ColorBandsEditor._dataIndexProperty">
-             <summary>
-             The data index property.
-             </summary>
-            </member>
+            <summary>
+            The data index property.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.ColorBandsEditor._maxInputValueProperty">
-             <summary>
-             The maximum input value property.
-             </summary>
-            </member>
+            <summary>
+            The maximum input value property.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.ColorBandsEditor._minInputValueProperty">
-             <summary>
-             The minimum input value property.
-             </summary>
-            </member>
+            <summary>
+            The minimum input value property.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.ColorBandsEditor._randomBandsFoldout">
-             <summary>
-             The random bands foldout value.
-             </summary>
-            </member>
+            <summary>
+            The random bands foldout value.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.ColorBandsEditor._randomColorBandsInputProperty">
-             <summary>
-             The random color bands input property.
-             </summary>
-            </member>
+            <summary>
+            The random color bands input property.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.ColorBandsEditor._randomColorBandsList">
-             <summary>
-             The random color bands list.
-             </summary>
-            </member>
+            <summary>
+            The random color bands list.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.ColorBandsEditor.DrawInspectorGUI(ModApi.Planet.Modifiers.VertexData.VertexDataPlanetModifier)">
-             <summary>
-             Draws the main portion of the inspector GUI.
-             </summary>
-             <param name="target">The target.</param>
-            </member>
+            <summary>
+            Draws the main portion of the inspector GUI.
+            </summary>
+            <param name="target">The target.</param>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.ColorBandsEditor.OnEnable">
-             <summary>
-             This function is called when the object becomes enabled and active.
-             </summary>
-            </member>
+            <summary>
+            This function is called when the object becomes enabled and active.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.ColorBandsEditor.DrawColorBandElement(UnityEngine.Rect,System.Int32,System.Boolean,System.Boolean)">
-             <summary>
-             Draws the color band list element.
-             </summary>
-             <param name="rect">The rectangle in which to draw the element.</param>
-             <param name="index">The list index of the element to be drawn.</param>
-             <param name="isActive"><c>true</c> if the element is active.</param>
-             <param name="isFocused"><c>true</c> if the element is focused.</param>
-            </member>
+            <summary>
+            Draws the color band list element.
+            </summary>
+            <param name="rect">The rectangle in which to draw the element.</param>
+            <param name="index">The list index of the element to be drawn.</param>
+            <param name="isActive"><c>true</c> if the element is active.</param>
+            <param name="isFocused"><c>true</c> if the element is focused.</param>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.ColorBandsEditor.DrawRandomColorBandElement(UnityEngine.Rect,System.Int32,System.Boolean,System.Boolean)">
-             <summary>
-             Draws the random color band list element.
-             </summary>
-             <param name="rect">The rectangle in which to draw the element.</param>
-             <param name="index">The list index of the element to be drawn.</param>
-             <param name="isActive"><c>true</c> if the element is active.</param>
-             <param name="isFocused"><c>true</c> if the element is focused.</param>
-            </member>
+            <summary>
+            Draws the random color band list element.
+            </summary>
+            <param name="rect">The rectangle in which to draw the element.</param>
+            <param name="index">The list index of the element to be drawn.</param>
+            <param name="isActive"><c>true</c> if the element is active.</param>
+            <param name="isFocused"><c>true</c> if the element is focused.</param>
+        </member>
         <member name="T:ModApi.Editor.Planet.Modifiers.VertexData.CratersEditor">
-             <summary>
-             A custom editor for the craters planet modifier.
-             </summary>
-             <seealso cref="T:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataNoiseEditor" />
-            </member>
+            <summary>
+            A custom editor for the craters planet modifier.
+            </summary>
+            <seealso cref="T:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataNoiseEditor" />
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.CratersEditor._craterNoiseFoldout">
-             <summary>
-             The crater noise foldout value.
-             </summary>
-            </member>
+            <summary>
+            The crater noise foldout value.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.CratersEditor._craterProperties">
-             <summary>
-             The crater properties.
-             </summary>
-            </member>
+            <summary>
+            The crater properties.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.CratersEditor.DrawInspectorGUI(ModApi.Planet.Modifiers.VertexData.VertexDataPlanetModifier)">
-             <summary>
-             Called when the inspector GUI is drawn.
-             </summary>
-             <param name="target">The target.</param>
-            </member>
+            <summary>
+            Called when the inspector GUI is drawn.
+            </summary>
+            <param name="target">The target.</param>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.CratersEditor.OnEnable">
-             <summary>
-             This function is called when the object becomes enabled and active.
-             </summary>
-            </member>
+            <summary>
+            This function is called when the object becomes enabled and active.
+            </summary>
+        </member>
         <member name="T:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataNoiseEditor">
-             <summary>
-             A custom editor for the vertex data noise planet modifiers.
-             </summary>
-             <seealso cref="T:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor" />
-            </member>
+            <summary>
+            A custom editor for the vertex data noise planet modifiers.
+            </summary>
+            <seealso cref="T:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor" />
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataNoiseEditor._domainWarping">
-             <summary>
-             The domain warping property.
-             </summary>
-            </member>
+            <summary>
+            The domain warping property.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataNoiseEditor._domainWarpingField">
-             <summary>
-             The domain warping field.
-             </summary>
-            </member>
+            <summary>
+            The domain warping field.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataNoiseEditor.DrawInspectorGUI(ModApi.Planet.Modifiers.VertexData.VertexDataPlanetModifier)">
-             <summary>
-             Called when the inspector GUI is drawn.
-             </summary>
-             <param name="target">The target.</param>
-            </member>
+            <summary>
+            Called when the inspector GUI is drawn.
+            </summary>
+            <param name="target">The target.</param>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataNoiseEditor.OnEnable">
-             <summary>
-             This function is called when the object becomes enabled and active.
-             </summary>
-            </member>
+            <summary>
+            This function is called when the object becomes enabled and active.
+            </summary>
+        </member>
         <member name="T:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor">
-             <summary>
-             A custom editor for vertex data planet modifiers.
-             </summary>
-             <seealso cref="T:UnityEditor.Editor" />
-            </member>
+            <summary>
+            A custom editor for vertex data planet modifiers.
+            </summary>
+            <seealso cref="T:UnityEditor.Editor" />
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor._modifierTypeNames">
-             <summary>
-             The list of vertex data planet modifier type names.
-             </summary>
-            </member>
+            <summary>
+            The list of vertex data planet modifier type names.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor._modifierTypes">
-             <summary>
-             The list of vertex data planet modifier types.
-             </summary>
-            </member>
+            <summary>
+            The list of vertex data planet modifier types.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor._allPassOptionsList">
-             <summary>
-             The supported pass type list of all options (including unsupported).
-             </summary>
-            </member>
+            <summary>
+            The supported pass type list of all options (including unsupported).
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor._modifierTypeAfterSelectedIndex">
-             <summary>
-             The selected index of the modifier type drop down that appears at the end of the script data.
-             </summary>
-            </member>
+            <summary>
+            The selected index of the modifier type drop down that appears at the end of the script data.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor._modifierTypeBeforeSelectedIndex">
-             <summary>
-             The selected index of the modifier type drop down that appears before the rest of the script data.
-             </summary>
-            </member>
+            <summary>
+            The selected index of the modifier type drop down that appears before the rest of the script data.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor._name">
-             <summary>
-             The name property.
-             </summary>
-            </member>
+            <summary>
+            The name property.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor._order">
-             <summary>
-             The order property.
-             </summary>
-            </member>
+            <summary>
+            The order property.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor._pass">
-             <summary>
-             The pass property.
-             </summary>
-            </member>
+            <summary>
+            The pass property.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor._properties">
-             <summary>
-             The properties to be displayed.
-             </summary>
-            </member>
+            <summary>
+            The properties to be displayed.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor._supportedPassOptions">
-             <summary>
-             The supported pass type options.
-             </summary>
-            </member>
+            <summary>
+            The supported pass type options.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor._supportedPassOptionsList">
-             <summary>
-             The supported pass type options list.
-             </summary>
-            </member>
-        <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor.#ctor">
-             <summary>
-             Initializes static members of the <see cref="T:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor" /> class.
-             </summary>
-            </member>
+            <summary>
+            The supported pass type options list.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor.#cctor">
+            <summary>
+            Initializes static members of the <see cref="T:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor"/> class.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor.OnInspectorGUI">
-             <summary>
-             Called when the inspector GUI is drawn.
-             </summary>
-            </member>
+            <summary>
+            Called when the inspector GUI is drawn.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor.DrawAddModifierAfterButton">
-             <summary>
-             Draws the button and drop down used to add modifiers at the bottom of the UI.
-             </summary>
-            </member>
+            <summary>
+            Draws the button and drop down used to add modifiers at the bottom of the UI.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor.DrawAddModifierBeforeButton">
-             <summary>
-             Draws the button and drop down used to add modifiers at the top of the UI.
-             </summary>
-            </member>
+            <summary>
+            Draws the button and drop down used to add modifiers at the top of the UI.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor.DrawInspectorGUI(ModApi.Planet.Modifiers.VertexData.VertexDataPlanetModifier)">
-             <summary>
-             Draws the main portion of the inspector GUI.
-             </summary>
-             <param name="target">The target.</param>
-            </member>
+            <summary>
+            Draws the main portion of the inspector GUI.
+            </summary>
+            <param name="target">The target.</param>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor.DrawInspectorGUIBegin(ModApi.Planet.Modifiers.VertexData.VertexDataPlanetModifier)">
-             <summary>
-             Draws the beginning portion of the inspector GUI.
-             </summary>
-             <param name="target">The target.</param>
-            </member>
+            <summary>
+            Draws the beginning portion of the inspector GUI.
+            </summary>
+            <param name="target">The target.</param>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor.DrawInspectorGUIEnd(ModApi.Planet.Modifiers.VertexData.VertexDataPlanetModifier)">
-             <summary>
-             Draws the ending portion of the inspector GUI end.
-             </summary>
-             <param name="target">The target.</param>
-            </member>
+            <summary>
+            Draws the ending portion of the inspector GUI end.
+            </summary>
+            <param name="target">The target.</param>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor.GetSerializeableProperties(System.Type,System.Boolean,System.Collections.Generic.List{UnityEditor.SerializedProperty})">
-             <summary>
-             Gets the serializeable properties.
-             </summary>
-             <param name="type">The type.</param>
-             <param name="includeBaseClasses">If set to <c>true</c> serializeable properties for
-             base classes will be included (up to the VertexDataPlanetModifier base class).</param>
-             <param name="properties">The properties.</param>
-            </member>
+            <summary>
+            Gets the serializeable properties.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="includeBaseClasses">If set to <c>true</c> serializeable properties for
+            base classes will be included (up to the VertexDataPlanetModifier base class).</param>
+            <param name="properties">The properties.</param>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor.OnEnable">
-             <summary>
-             This function is called when the object becomes enabled and active.
-             </summary>
-            </member>
+            <summary>
+            This function is called when the object becomes enabled and active.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor.GetTypes(System.Reflection.Assembly)">
-             <summary>
-             Gets the types in the specified assembly.
-             </summary>
-             <param name="assembly">The assembly for which to get types.</param>
-             <returns>The types in the specified assembly or an empty type list.</returns>
-            </member>
+            <summary>
+            Gets the types in the specified assembly.
+            </summary>
+            <param name="assembly">The assembly for which to get types.</param>
+            <returns>The types in the specified assembly or an empty type list.</returns>
+        </member>
         <member name="M:ModApi.Editor.Planet.Modifiers.VertexData.VertexDataPlanetModifierEditor.DrawAddModifierButton(System.Int32@,System.Int32)">
-             <summary>
-             Draws the add modifier button and dropdown.
-             </summary>
-             <param name="selectedIndex">The selected index.</param>
-             <param name="siblingIndexOffset">The sibling index offset.</param>
-            </member>
+            <summary>
+            Draws the add modifier button and dropdown.
+            </summary>
+            <param name="selectedIndex">The selected index.</param>
+            <param name="siblingIndexOffset">The sibling index offset.</param>
+        </member>
         <member name="T:ModApi.Editor.Planet.PlanetBiomeEditor">
-             <summary>
-             A custom editor for the solar system data script.
-             </summary>
-             <seealso cref="T:UnityEditor.Editor" />
-            </member>
+            <summary>
+            A custom editor for the solar system data script.
+            </summary>
+            <seealso cref="T:UnityEditor.Editor" />
+        </member>
         <member name="M:ModApi.Editor.Planet.PlanetBiomeEditor.OnInspectorGUI">
-             <summary>
-             Called when the inspector GUI is drawn.
-             </summary>
-            </member>
+            <summary>
+            Called when the inspector GUI is drawn.
+            </summary>
+        </member>
         <member name="T:ModApi.Editor.Planet.PlanetTerrainDataScriptEditor">
-             <summary>
-             A custom editor for the planet terrain data script.
-             </summary>
-             <seealso cref="T:UnityEditor.Editor" />
-            </member>
+            <summary>
+            A custom editor for the planet terrain data script.
+            </summary>
+            <seealso cref="T:UnityEditor.Editor" />
+        </member>
         <member name="F:ModApi.Editor.Planet.PlanetTerrainDataScriptEditor._randomIgnoreListProperty">
-             <summary>
-             The random ignore list property.
-             </summary>
-            </member>
+            <summary>
+            The random ignore list property.
+            </summary>
+        </member>
         <member name="F:ModApi.Editor.Planet.PlanetTerrainDataScriptEditor._randomOptionsProperty">
-             <summary>
-             The random options property.
-             </summary>
-            </member>
+            <summary>
+            The random options property.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Planet.PlanetTerrainDataScriptEditor.OnInspectorGUI">
-             <summary>
-             Implement this function to make a custom inspector.
-             </summary>
-            </member>
+            <summary>
+            Implement this function to make a custom inspector.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Planet.PlanetTerrainDataScriptEditor.OnEnable">
-             <summary>
-             This function is called when the object becomes enabled and active.
-             </summary>
-            </member>
+            <summary>
+            This function is called when the object becomes enabled and active.
+            </summary>
+        </member>
         <member name="T:ModApi.Editor.Planet.SolarSystemDataScriptEditor">
-             <summary>
-             A custom editor for the solar system data script.
-             </summary>
-             <seealso cref="T:UnityEditor.Editor" />
-            </member>
+            <summary>
+            A custom editor for the solar system data script.
+            </summary>
+            <seealso cref="T:UnityEditor.Editor" />
+        </member>
         <member name="M:ModApi.Editor.Planet.SolarSystemDataScriptEditor.OnInspectorGUI">
-             <summary>
-             Implement this function to make a custom inspector.
-             </summary>
-            </member>
+            <summary>
+            Implement this function to make a custom inspector.
+            </summary>
+        </member>
         <member name="M:ModApi.Editor.Planet.SolarSystemDataScriptEditor.GetDefaultSolarSystemPath">
-             <summary>
-             Gets the default solar system path.
-             </summary>
-             <returns>The default solar system path.</returns>
-            </member>
+            <summary>
+            Gets the default solar system path.
+            </summary>
+            <returns>The default solar system path.</returns>
+        </member>
+        <member name="T:ModApi.Editor.PrefabUtilityExt">
+            <summary>
+            A class containing utility methods for working with prefabs.
+            </summary>
+        </member>
+        <member name="M:ModApi.Editor.PrefabUtilityExt.IsInPrefabStage(UnityEngine.GameObject)">
+            <summary>
+            Determines whether the specified game object exists in a prefab stage.
+            </summary>
+            <param name="obj">The game object.</param>
+            <returns>
+              <c>true</c> if the specified game object exists in a prefab stage; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:ModApi.Editor.PrefabUtilityExt.IsPrefabStageRoot(UnityEngine.GameObject)">
+            <summary>
+            Determines whether the specified game object is the root object in a prefab stage.
+            </summary>
+            <param name="obj">The game object.</param>
+            <returns>
+              <c>true</c> if the specified game object is the root object in a prefab stage; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:ModApi.Editor.PrefabUtilityExt.SavePrefabStage(UnityEngine.GameObject)">
+            <summary>
+            Saves the prefab stage which includes the specified object.
+            </summary>
+            <param name="obj">A game object that is part of the prefab stage to save.</param>
+            <exception cref="T:System.InvalidOperationException">Unable to save the prefab because the specified game object is not part of a prefab stage.</exception>
+            <exception cref="T:System.Exception">An error occurred saving the prefab.</exception>
+        </member>
     </members>
 </doc>
