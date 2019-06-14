@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XmlLayout xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\XmlLayout.xsd">
+  <Include path="Ui/Xml/Design/DesignStyles.xml" />
+  <Defaults>
+    <Color name="TutorialPanel" color="#111111F0" />
+    <ContentButton class="tutorial-button" buttonColors="Button|ButtonHover|ButtonPressed|ButtonDisabled" width="32" height="32" tooltipPosition="Above" />
+  </Defaults>
+  <Panel id="tutorial">
+    <Image id="tutorial-highlight" width="64" height="64" sprite="Ui/Sprites/Border/Square-2px" type="Sliced" fillCenter="false" active="false" />
+    <VerticalLayout pivot="0.5 0" id="tutorial-panel" class="draggable" color="TutorialPanel" childForceExpandHeight="false" contentSizeFitter="vertical" width="700" height="100" rectAlignment="LowerCenter" offsetXY="0 85" padding="5 5 5 5" spacing="5">
+      <TextMeshPro id="tutorial-step-text" color="White" autoSizeTextContainer="true" margin="10 0 10 0" />
+      <Panel preferredHeight="5" />
+      <TextMeshPro color="Primary" id="tutorial-instruction-text" />
+      <Panel preferredHeight="5" />
+      <Panel id="tutorial-button-panel" preferredHeight="25" active="false">
+        <Button class="btn btn-primary" width="150" rectAlignment="MiddleCenter" onClick="OnButtonClicked();">
+          <TextMeshPro text="Okay" />
+        </Button>
+      </Panel>
+    </VerticalLayout>
+  </Panel>
+</XmlLayout>

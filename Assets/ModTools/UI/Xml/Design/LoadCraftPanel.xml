@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XmlLayout xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\XmlLayout.xsd">
+  <Include path="Ui/Xml/Design/DesignStyles.xml" />
+  <Defaults>
+    <Panel class="list-item" preferredHeight="32" rectAlignment="UpperCenter" raycastTarget="true" hoverClass="list-item-hover" pressClass="list-item-press" onClick="OnListItemClicked(this);" />
+    <Panel class="list-item-hover" color="Button" />
+    <Panel class="list-item-press" color="ButtonHover" />
+    <Image class="delete-button" active="false" />
+    <Image class="list-item-hover:delete-button" active="true" />
+    <Image class="delete-button" onClick="OnDeleteItemClicked(this);" />
+  </Defaults>
+  <Panel height="100%">
+    <Panel height="32" padding="0 2 0 0" rectAlignment="UpperCenter">
+      <TextMeshProInputField id="search-input" text="" class="search-input" onValueChanged="FilterItems(value);">
+        <TMP_Placeholder text="Search..." />
+        <TMP_Text text="" />
+      </TextMeshProInputField>
+    </Panel>
+    <VerticalScrollView offsetMax="0 -35">
+      <VerticalLayout id="content" contentSizeFitter="vertical" childAlignment="UpperCenter" childForceExpandHeight="false" pivot="0 1">
+        <Panel id="template" class="list-item audio-btn-click" active="false">
+          <TextMeshPro internalId="name" offsetMin="10 0" alignment="Left" text="Craft Name" />
+          <Image class="border" rectAlignment="LowerCenter" height="1" />
+          <Image class="delete-button audio-btn-click" rectAlignment="MiddleRight">
+            <Image class="delete-button-icon" />
+          </Image>
+        </Panel>
+      </VerticalLayout>
+    </VerticalScrollView>
+  </Panel>
+</XmlLayout>

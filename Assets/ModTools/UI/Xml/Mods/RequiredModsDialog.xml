@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XmlLayout xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\XmlLayout.xsd">
+  <Include path="Ui/Xml/Styles.xml" />
+  <Defaults>
+    <ContentButton class="list-item" preferredHeight="80" buttonColors="Button|ButtonHover|ButtonPressed|Button" rectAlignment="UpperCenter" navigation="None" />
+    <TextMeshPro class="mod-status-valid" Color="Success" />
+    <TextMeshPro class="mod-status-invalid" Color="Danger" />
+  </Defaults>
+  <Panel id="panel" showAnimation="FadeIn" hideAnimation="FadeOut" animationDuration="0.1" class="dialog-background">
+    <VerticalLayout id="form" class="panel border" width="575" contentSizeFitter="vertical" spacing="0" padding="25">
+      <TextMeshPro id="header-title" class="text-header" text="Mods Required" />
+      <Panel offsetXY="20 0" padding="0 0 15 15">
+        <TextMeshPro id="header-description" />
+      </Panel>
+      <VerticalScrollView preferredHeight="400">
+        <VerticalLayout id="items-parent" contentSizeFitter="vertical" spacing="10" padding="0 10 0 0" childAlignment="UpperCenter" pivot="0 1" rectAlignment="UpperLeft">
+          <ContentButton id="mod-template" class="btn list-item" active="false">
+            <Panel width="375" rectAlignment="MiddleLeft">
+              <TextMeshPro internalId="name" class="text-lg" color="ValueText" offsetMin="20 45" offsetMax="0 -5" alignment="Left" text="Mod Name" />
+              <TextMeshPro internalId="author" offsetMin="20 25" offsetMax="0 -35" alignment="Left" text="Author: Jundroo" />
+              <TextMeshPro internalId="version" offsetMin="20 5" offsetMax="0 -55" alignment="Left" text="Version: 1.0 - 2019-05-30 16:35:35" />
+            </Panel>
+            <Panel width="125" rectAlignment="MiddleRight">
+              <TextMeshPro internalId="status" offsetMin="0 0" offsetXY="0 0" alignment="center" text="Not Installed" />
+            </Panel>
+          </ContentButton>
+          <ContentButton id="mod-code-template" class="btn list-item" preferredHeight="100" active="false">
+            <Panel width="375" rectAlignment="MiddleLeft">
+              <TextMeshPro internalId="name" class="text-lg" color="ValueText" offsetMin="20 65" offsetMax="0 -5" alignment="Left" text="Mod Name" />
+              <TextMeshPro internalId="author" offsetMin="20 45" offsetMax="0 -35" alignment="Left" text="Author: Jundroo" />
+              <TextMeshPro internalId="version" offsetMin="20 25" offsetMax="0 -55" alignment="Left" text="Version: 1.0 - 2019-05-30 16:35:35" />
+              <TextMeshPro internalId="code-execution" class="mod-status-invalid" offsetMin="20 5" offsetMax="0 -75" alignment="Left" text="Requires Code Execution" />
+            </Panel>
+            <Panel width="125" rectAlignment="MiddleRight">
+              <TextMeshPro internalId="status" offsetMin="0 0" offsetXY="0 0" alignment="center" text="Not Installed" />
+            </Panel>
+          </ContentButton>
+        </VerticalLayout>
+      </VerticalScrollView>
+      <Panel preferredHeight="50">
+        <Button id="cancel-button" class="btn audio-btn-back" rectAlignment="LowerLeft" width="150" onClick="OnCancelButtonClicked();">
+          <TextMeshPro text="CANCEL" />
+        </Button>
+        <Button id="okay-button" class="btn btn-primary audio-btn-big" rectAlignment="LowerRight" width="150" onClick="OnOkayButtonClicked();">
+          <TextMeshPro text="CONTINUE" />
+        </Button>
+      </Panel>
+    </VerticalLayout>
+  </Panel>
+</XmlLayout>

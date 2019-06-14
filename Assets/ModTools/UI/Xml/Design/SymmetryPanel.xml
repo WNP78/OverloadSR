@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XmlLayout xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\XmlLayout.xsd">
+  <Include path="Ui/Xml/Design/DesignStyles.xml" />
+  <Defaults>
+    <Panel class="tooltip-mirror" tooltip="Mirror mode will clone the part across the mirrow plane. It will also enable any mirrored settings on the part, such as reversing the direction of a wheel." />
+    <Panel class="tooltip-radial" tooltip="Radial Modes clone the part, equally spaced, around the circumference of the fuel tank." />
+  </Defaults>
+  <VerticalLayout childForceExpandHeight="false" padding="20" spacing="10">
+    <Button id="select-root-button" class="btn btn-primary" rectAlignment="LowerLeft" width="150" onClick="OnSelectRootButtonClicked();">
+      <TextMeshPro text="SELECT ROOT" />
+    </Button>
+    <Panel id="spinner" preferredHeight="35" class="spinner row">
+      <TextMeshPro text="Mode" alignment="Left" rectAlignment="MiddleLeft" />
+      <Spinner name="Symmetry.ModeSpinner" id="radial-spinner" rectAlignment="MiddleRight" width="70%">
+        <TextMeshPro text="Mirror" />
+      </Spinner>
+    </Panel>
+    <TextMeshPro id="message-text" text="Message Text" />
+    <Button id="bake-symmetry-button" class="btn" rectAlignment="LowerLeft" width="150" onClick="OnBakeSymmetryButtonClicked();">
+      <TextMeshPro text="BREAK SYMMETRY" />
+    </Button>
+    <TextMeshPro id="info-text" class="label" text="Symmetry Mode can be enabled for parts connected to the side of a fuel tank. It will dynamically create clones of the part around the circumference of the fuel tank. " />
+  </VerticalLayout>
+</XmlLayout>
