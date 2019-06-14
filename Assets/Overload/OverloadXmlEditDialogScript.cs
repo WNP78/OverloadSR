@@ -20,11 +20,11 @@ namespace WNP78.Overload
 
         public static OverloadXmlEditDialogScript Create(Transform parent, string xml, Action<XElement> onSave)
         {
-            OverloadXmlEditDialogScript dialog = (OverloadXmlEditDialogScript)OverloadMain.UiUtilities.GetMethod("CreateDialog", ReflectionUtils.allBindingFlags).MakeGenericMethod(new Type[] { typeof(OverloadXmlEditDialogScript) }).Invoke(null, new object[] { parent, true });
+            OverloadXmlEditDialogScript dialog = (OverloadXmlEditDialogScript)OverloadMain.Instance.UiUtilities.GetMethod("CreateDialog", ReflectionUtils.allBindingFlags).MakeGenericMethod(new Type[] { typeof(OverloadXmlEditDialogScript) }).Invoke(null, new object[] { parent, true });
             dialog.xml = xml;
             dialog.onSave = onSave;
             Action<IXmlLayoutController> action = x => dialog.OnLayoutRebuilt(x.XmlLayout);
-            OverloadMain.CreateXmlLayoutFromXml.Invoke(null, new object[] { OverloadMain.DialogXML, dialog.gameObject, dialog, action });
+            OverloadMain.Instance.CreateXmlLayoutFromXml.Invoke(null, new object[] { OverloadMain.Instance.DialogXML, dialog.gameObject, dialog, action });
             return dialog;
         }
 
