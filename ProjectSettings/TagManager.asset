@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - OrthoLights
   layers:
   - Default
   - TransparentFX
@@ -13,6 +14,14 @@ TagManager:
   - UI
   - 
   - 
+  - ScaledSpace
+  - PartPicture
+  - MapView
+  - MapViewItem
+  - AttachPoint
+  - AttachPointSurface
+  - AttachPointLayerCantReceive
+  - CustomPostEffectIgnore
   - 
   - 
   - 
@@ -24,19 +33,11 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - NavSphere
+  - DockingPort
+  - Terrain
+  - IgnoreCraft
+  - Craft
   m_SortingLayers:
   - name: Default
     uniqueID: 0
