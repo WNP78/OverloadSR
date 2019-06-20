@@ -1,0 +1,7 @@
+<XmlLayout xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\ModTools\UI\XmlLayout.xsd">
+	<Include path="Ui/Xml/Design/DesignStyles.xml" />
+
+  <Button id="overload-button" class="btn" width="150" onClick="OverloadButtonClicked()">
+    <TextMeshPro text="EDIT XML" />
+  </Button>
+</XmlLayout>

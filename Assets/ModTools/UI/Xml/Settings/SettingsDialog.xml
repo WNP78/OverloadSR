@@ -78,7 +78,7 @@
                 </TextMeshProInputField>
               </Panel>
             </Panel>
-            <VerticalScrollView>
+            <VerticalScrollView id="items-scroll">
               <VerticalLayout id="items-parent" childForceExpandHeight="false" contentSizeFitter="vertical" childAlignment="UpperLeft" pivot="0 1" spacing="5" padding="0 5 0 0"></VerticalLayout>
             </VerticalScrollView>
           </Panel>

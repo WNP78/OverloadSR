@@ -950,7 +950,7 @@
             Handles the Changed event of the MusicVolume control.
             </summary>
       <param name="sender">The source of the event.</param>
-      <param name="e">The <see cref="!:ModApi.Settings.Core.Events.SettingChangedEventArgs&lt;System.Single&gt;" /> instance containing the event data.</param>
+      <param name="e">The <see cref="!:ModApi.Settings.Core.Events.SettingChangedEventArgs&lt;float&gt;" /> instance containing the event data.</param>
     </member>
     <member name="M:Assets.Scripts.Audio.MusicPlayer.OnDestroy">
       <summary>
@@ -9434,8 +9434,16 @@
     </member>
     <member name="F:Assets.Scripts.Craft.Parts.Modifiers.GyroscopeScript._powerConsumption">
       <summary>
-            The power consumption
+            The power consumption.
             </summary>
+    </member>
+    <member name="P:Assets.Scripts.Craft.Parts.Modifiers.GyroscopeScript.PowerConsumption">
+      <summary>
+            Gets the power consumption of the gyro per second.
+            </summary>
+      <value>
+            The power consumption of the gyro per second.
+            </value>
     </member>
     <member name="M:Assets.Scripts.Craft.Parts.Modifiers.GyroscopeScript.ModApi#GameLoop#Interfaces#IFlightFixedUpdate#FlightFixedUpdate(ModApi.GameLoop.FlightFrameData@)">
       <summary>
@@ -24803,11 +24811,12 @@
             </summary>
       <param name="subassemblyPart">The subassembly part.</param>
     </member>
-    <member name="M:Assets.Scripts.Design.DesignerPartList.LoadXml(System.String)">
+    <member name="M:Assets.Scripts.Design.DesignerPartList.LoadXml(System.String,System.String)">
       <summary>
             Loads the XML.
             </summary>
       <param name="xml">The XML.</param>
+      <param name="category">Optional paramater that, if not <c>null</c>, will only load designer parts from the specified category.</param>
       <returns>The list of parts loaded from the XML.</returns>
       <exception cref="T:System.Exception">Failed to load xml.</exception>
     </member>
@@ -28086,6 +28095,11 @@
             Moves the part.
             </summary>
       <param name="eventData">The event data.</param>
+    </member>
+    <member name="M:Assets.Scripts.Design.PartListPanelScript.OnDestroy">
+      <summary>
+            This function is called when the MonoBehaviour will be destroyed.
+            </summary>
     </member>
     <member name="M:Assets.Scripts.Design.PartListPanelScript.Start">
       <summary>
@@ -90573,7 +90587,7 @@
             </summary>
       <param name="designerPart">The designer part.</param>
       <returns>
-            The loaded IPartScript.
+            The loaded IPartScript or <c>null</c> if it could not be loaded.
             </returns>
     </member>
     <member name="M:Assets.Scripts.Tools.PartViewerScript.SavePartPicture(ModApi.Craft.Parts.DesignerPart,UnityEngine.Texture2D)">
