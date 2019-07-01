@@ -23,7 +23,10 @@ namespace WNP78.Overload
         private void Start()
         {
             valueInput.onValueChanged.AddListener(OnValueChanged);
-            nameInput.onValueChanged.AddListener(OnNameChanged);
+            foreach (var f in GetComponentsInChildren<TMP_InputField>())
+            {
+                f.gameObject.AddComponent<US.UI.InputFieldScrollFixer>();
+            }
         }
         void OnNameChanged(string name)
         {
@@ -40,6 +43,7 @@ namespace WNP78.Overload
         {
             xAttribute.Remove();
             dialogScript.rows.Remove(this);
+            Destroy(gameObject);
         }
         public void Initialise(XAttribute attribute, OverloadXmlEditDialogScript parent)
         {

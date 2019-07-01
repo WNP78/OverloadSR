@@ -4,11 +4,11 @@
 	<Panel id="panel" showAnimation="FadeIn" hideAnimation="FadeOut" animationDuration="0.1" class="dialog-background">
 		<Panel id="form" class="panel border" width="70%" height="70%" padding="20">
 			<VerticalLayout spacing="10" childAlignment="UpperCenter" childForceExpandHeight="false" offsetMax="0 -40">
-        <Panel class="row">
+        <Panel class="row" flexibleHeight="0">
           <TextMeshPro class="text-lg" text="EDIT PART XML" rectAlignment="UpperCenter" height="40" alignment="Top"/>
         </Panel>
 
-        <Panel class="row">
+        <Panel class="row" flexibleHeight="0">
           <HorizontalLayout childForceExpandWidth="false" childAlignment="MiddleCenter">
             <Spinner id="overload-spinner" values="Part;Drag;Config" value="Part" flexibleWidth="0" preferredWidth="200" >
               <TextMeshPro />
@@ -16,28 +16,30 @@
           </HorizontalLayout>
         </Panel>
 
-        <Panel class="row" minHeight="40">
-          <TableLayout columnWidths="0,0,0,40" cellSpacing="5">
-            <Row id="row-template" active="false">
-              <Cell>
-                <TextMeshProInputField internalId="name-input">
-                  <TMP_Placeholder text="Name" alignment="Left" />
-                  <TMP_Text text="" alignment="Left" richText="false" />
-                </TextMeshProInputField>
-              </Cell>
-              <Cell columnSpan="2">
-                <TextMeshProInputField internalId="value-input">
-                  <TMP_Placeholder text="Value" alignment="Left" />
-                  <TMP_Text text="" alignment="Left" richText="false" />
-                </TextMeshProInputField>
-              </Cell>
-              <Cell>
-                <Button class="btn btn-danger" text="X" preferredWidth="30" internalId="delete-button">
-                  <TextMeshPro text="X" />
-                </Button>
-              </Cell>
-            </Row>
-          </TableLayout>
+        <Panel class="row" flexibleHeight="1">
+          <VerticalScrollView allowDragging="true">
+            <TableLayout columnWidths="0,0,0,30" cellSpacing="5" autoCalculateHeight="true">
+              <Row id="row-template" active="false" preferredHeight="30">
+                <Cell>
+                  <TextMeshProInputField internalId="name-input">
+                    <TMP_Placeholder text="Name" alignment="Left" />
+                    <TMP_Text text="" alignment="Left" richText="false" />
+                  </TextMeshProInputField>
+                </Cell>
+                <Cell columnSpan="2">
+                  <TextMeshProInputField internalId="value-input">
+                    <TMP_Placeholder text="Value" alignment="Left" />
+                    <TMP_Text text="" alignment="Left" richText="false" />
+                  </TextMeshProInputField>
+                </Cell>
+                <Cell>
+                  <Button class="btn btn-danger" text="X" internalId="delete-button">
+                    <TextMeshPro text="X" />
+                  </Button>
+                </Cell>
+              </Row>
+            </TableLayout>
+          </VerticalScrollView>
         </Panel>
         
 		<!--		<Panel class="row" preferredHeight="50" flexibleHeight="1">
@@ -46,7 +48,7 @@
 						<TMP_Text text="" alignment="TopLeft" richText="false" />
 					</TextMeshProInputField>
 				</Panel> -->
-        <Panel class="row">
+        <Panel class="row" flexibleHeight="0">
 			    <HorizontalLayout preferredHeight="50" spacing="10" childForceExpandWidth="false" childAlignment="MiddleRight">
 				    <Button id="cancel-button" class="btn btn-danger" preferredWidth="150" onclick="OnCancelButtonClicked()" alignment="right">
 					    <TextMeshPro text="CANCEL" />

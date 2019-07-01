@@ -60,8 +60,18 @@ namespace WNP78.Overload
             spinner.Values.Clear();
             foreach (var el in _xml.DescendantsAndSelf())
             {
-                elements.Add(el.Name.LocalName, el);
-                spinner.Values.Add(el.Name.LocalName);
+                string name = el.Name.LocalName;
+                if (spinner.Values.Contains(name))
+                {
+                    int i = 2;
+                    while (spinner.Values.Contains(name + " " + i))
+                    {
+                        i++;
+                    }
+                    name = name + " " + i;
+                }
+                elements.Add(name, el);
+                spinner.Values.Add(name);
             }
             spinner.Value = _xml.Name.LocalName;
             spinner.OnValueChanged += OnSpinnerChange;
@@ -77,9 +87,8 @@ namespace WNP78.Overload
             {
                 row.Deactivate();
             }
-            foreach (var attr in currentElement.Attributes())
+            foreach (var attr in currentElement.Attributes().ToList())
             {
-                Debug.Log(attr.Name.LocalName);
                 if (i < rows.Count)
                 {
                     rows[i].Initialise(attr, this);

@@ -19,7 +19,7 @@ namespace WNP78.Overload
 {
     public class OverloadMain : GameMod
     {
-        public static OverloadMain Instance { get; } = GetModInstance<OverloadMain>();
+        public static OverloadMain Instance { get; private set; }
         public bool Active
         {
             get { return Game.Instance.Designer != null; }
@@ -30,13 +30,13 @@ namespace WNP78.Overload
         public Type Symmmetry;
         ConstructorInfo PartDataConstructor;
         OverloadButtonScript buttonScript;
-
         readonly Regex Regex1 = new Regex("(.*?)<(\\w+) ([^>]+)(\\/?>)"); // selects element bodies
         readonly Regex Regex2 = new Regex("\\s*(\\w+=\"[^\"]*\")\\s*/?"); // separates out attributes
 
         protected override void OnModInitialized()
         {
             base.OnModInitialized();
+            Instance = this;
             Game.Instance.SceneManager.SceneLoaded += OnSceneLoaded;
             CraftBuilder = ReflectionUtils.GetType("Assets.Scripts.Craft.CraftBuilder");
             UiUtilities = ReflectionUtils.GetType("Assets.Scripts.Ui.UiUtilities");
