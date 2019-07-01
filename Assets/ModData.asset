@@ -15,7 +15,18 @@ MonoBehaviour:
   _assemblies:
   - Overload.dll
   _author: WNP78
-  _description: 
+  _description: 'Allows the editing of a part''s raw XML attributes from the designer,
+    instead of editing the craft''s XML save file in the game''s files. To get started,
+    enable the mod and then select a part and open the part properties window, and
+    there should be an extra "Edit XML" button at the top of the part properties window.
+    For some more information on how some of the properties you can edit work, you
+    can look here:
+
+    https://wnp78.github.io/Sr2Xml/
+
+    The descriptions are not complete, so if anyone would like to help out by filling
+    in info, that would be welcomed, but make sure to read on the page how to add
+    descriptions, rather than editing the generated files directly.'
   _loadPriority: 1000
   _name: Overload
   _otherAssets: []
