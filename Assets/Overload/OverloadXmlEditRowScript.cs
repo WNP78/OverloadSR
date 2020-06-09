@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UI.Xml;
 using TMPro;
@@ -27,6 +27,8 @@ namespace WNP78.Overload
             {
                 f.gameObject.AddComponent<US.UI.InputFieldScrollFixer>();
             }
+
+            StartCoroutine(FixThingies());
         }
         void OnNameChanged(string name)
         {
@@ -57,6 +59,14 @@ namespace WNP78.Overload
         {
             xAttribute = null;
             gameObject.SetActive(false);
+        }
+        IEnumerator FixThingies()
+        {
+            nameInput.SetTextWithoutNotify("");
+            valueInput.SetTextWithoutNotify("");
+            yield return null;
+            nameInput.text = xAttribute.Name.LocalName;
+            valueInput.text = xAttribute.Value;
         }
     }
 }
